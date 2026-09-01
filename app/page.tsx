@@ -64,7 +64,7 @@ function ChapterVisual({ kind, label }: { kind: string; label: string }) {
     return (
       <div className="chapter-visual visual-decision" role="img" aria-label={label}>
         <div className="scenario-bars" aria-hidden="true">
-          <span /><span /><span /><span /><span /><i />
+          <span /><span /><span /><span /><span />
         </div>
         <div className="visual-caption" aria-hidden="true">
           <span>60%</span><span>Scenario range</span><span>70%</span>
@@ -231,6 +231,119 @@ export default function Home() {
           ))}
         </div>
 
+        <section className="visual-methods" aria-labelledby="visual-methods-title">
+          <div className="shell visual-methods-heading" data-reveal>
+            <div>
+              <p className="overline">Visual methods</p>
+              <h2 id="visual-methods-title">Three views of the analytical evidence behind the case studies.</h2>
+            </div>
+            <p>
+              The diagrams make model structure, validation results and statistical relationships
+              easier to inspect. Every number comes from the submitted project evidence; conceptual
+              elements are labelled as such.
+            </p>
+          </div>
+
+          <div className="shell visual-methods-grid">
+            <article className="method-panel method-panel--network" data-reveal>
+              <header>
+                <span>01 · Model architecture</span>
+                <h3>Feed-forward neural network</h3>
+                <p>Conceptual structure of the SAS Enterprise Miner method used for churn classification.</p>
+              </header>
+              <div
+                className="portfolio-network"
+                role="img"
+                aria-label="Conceptual neural network with input features, a hidden representation and a churn output"
+              >
+                <div className="portfolio-network-layer">
+                  <span /><span /><span /><span />
+                  <strong>Input features</strong>
+                </div>
+                <div className="portfolio-network-links" aria-hidden="true">
+                  <i /><i /><i /><i /><i />
+                </div>
+                <div className="portfolio-network-layer portfolio-network-layer--hidden">
+                  <span /><span /><span />
+                  <strong>Hidden layer</strong>
+                </div>
+                <div className="portfolio-network-links portfolio-network-links--output" aria-hidden="true">
+                  <i /><i /><i />
+                </div>
+                <div className="portfolio-network-layer portfolio-network-layer--output">
+                  <span />
+                  <strong>Churn output</strong>
+                </div>
+              </div>
+              <p className="method-note">
+                Conceptual topology. The submitted evidence does not retain the trained network weights or exact node count.
+              </p>
+              <NativeLink className="method-link" href="/work/predictive-analytics#evidence">
+                Inspect predictive evidence
+              </NativeLink>
+            </article>
+
+            <article className="method-panel method-panel--validation" data-reveal>
+              <header>
+                <span>02 · Validation comparison</span>
+                <h3>Misclassification rate</h3>
+                <p>Validation results from 4,000 records. The scale begins at zero; lower is better.</p>
+              </header>
+              <div
+                className="validation-chart"
+                role="img"
+                aria-label="Validation misclassification rate: decision tree 10.52 percent, logistic regression 6.18 percent, neural network 4.42 percent"
+              >
+                <div className="validation-row">
+                  <span>Decision tree</span><strong>10.52%</strong>
+                  <i style={{ '--value': '87.7%' } as CSSProperties} />
+                </div>
+                <div className="validation-row">
+                  <span>Logistic regression</span><strong>6.18%</strong>
+                  <i style={{ '--value': '51.5%' } as CSSProperties} />
+                </div>
+                <div className="validation-row validation-row--best">
+                  <span>Neural network</span><strong>4.42%</strong>
+                  <i style={{ '--value': '36.8%' } as CSSProperties} />
+                </div>
+                <div className="validation-axis" aria-hidden="true"><span>0%</span><span>12%</span></div>
+              </div>
+              <p className="method-note">40 / 30 / 30 training, validation and test partition. No oversampling reported.</p>
+              <NativeLink className="method-link" href="/work/predictive-analytics#evidence">
+                Review the model comparison
+              </NativeLink>
+            </article>
+
+            <article className="method-panel method-panel--mediation" data-reveal>
+              <header>
+                <span>03 · Relationship model</span>
+                <h3>Trust in the mediation analysis</h3>
+                <p>Cross-sectional evidence from 139 complete eligible responses.</p>
+              </header>
+              <div
+                className="mediation-chart"
+                role="img"
+                aria-label="Personalisation, trust and loyalty mediation model. Personalisation and trust correlation r equals point 591. Indirect effect equals point 303 with 95 percent confidence interval point 199 to point 422."
+              >
+                <div className="mediation-node"><span>AI-driven</span><strong>Personalisation</strong></div>
+                <div className="mediation-path"><span>association</span><strong>r = .591</strong><i aria-hidden="true">→</i></div>
+                <div className="mediation-node mediation-node--signal"><span>Customer</span><strong>Trust</strong></div>
+                <div className="mediation-path mediation-path--plain"><span>mediating path</span><i aria-hidden="true">→</i></div>
+                <div className="mediation-node"><span>Customer</span><strong>Loyalty</strong></div>
+              </div>
+              <dl className="mediation-result">
+                <div><dt>Indirect effect</dt><dd>.303</dd></div>
+                <div><dt>95% confidence interval</dt><dd>[.199, .422]</dd></div>
+                <div><dt>Bootstrap samples</dt><dd>10,000</dd></div>
+              </dl>
+              <p className="method-note">The design supports association and mediation estimates, not a causal claim.</p>
+              <NativeLink className="method-link" href="/work/customer-intelligence#evidence">
+                Inspect dissertation evidence
+              </NativeLink>
+            </article>
+          </div>
+        </section>
+
         <section className="attribution">
           <div className="shell attribution-grid" data-reveal>
             <p className="overline">Transparent attribution</p>
@@ -317,4 +430,3 @@ export default function Home() {
     </>
   );
 }
-
