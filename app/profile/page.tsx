@@ -67,7 +67,7 @@ export default function ProfilePage() {
             <article className="snapshot-card snapshot-language" data-reveal>
               <span className="snapshot-label">Languages</span>
               <strong>English + German</strong>
-              <small>577-day Duolingo streak · September 2026</small>
+              <small>570+ day Duolingo streak</small>
             </article>
             <article className="snapshot-card snapshot-status" data-reveal>
               <span className="snapshot-label">Current stage</span>
@@ -91,8 +91,8 @@ export default function ProfilePage() {
               <p>
                 Adjusting meant learning a new school environment, building relationships
                 and becoming confident in English while retaining German. I still maintain
-                my German through daily Duolingo practice, with a 577-day streak as of
-                September 2026.
+                my German through daily Duolingo practice, with a streak of more than
+                570 consecutive days confirmed in September 2026.
               </p>
             </div>
 
@@ -125,11 +125,11 @@ export default function ProfilePage() {
           <div className="shell">
             <div className="milestones-heading" data-reveal>
               <p className="overline">Selected milestones</p>
-              <h2 id="milestones-title">My progress includes a 2:1, certified marketing training and 577 consecutive days of German practice.</h2>
+              <h2 id="milestones-title">My progress includes a 2:1, certified marketing training and more than 570 consecutive days of German practice.</h2>
             </div>
             <div className="milestones-grid">
               <article data-reveal>
-                <strong>577</strong>
+                <strong>570+</strong>
                 <span>days of continuous Duolingo practice</span>
                 <small>Confirmed September 2026</small>
               </article>
@@ -329,4 +329,3 @@ export default function ProfilePage() {
     </>
   );
 }
-
