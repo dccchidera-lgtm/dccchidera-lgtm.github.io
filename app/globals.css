@@ -1139,6 +1139,7 @@ html[data-scrolled] .site-header {
 .chapter-link {
   display: inline-flex;
   align-items: center;
+  min-width: 44px;
   min-height: 44px;
   gap: 0.38rem;
   margin-top: 1rem;
@@ -4627,7 +4628,7 @@ a.contact-row:hover {
     text-transform: uppercase;
   }
 
-  .quick-index-row > div::before {
+  .quick-index-row > div[data-label]::before {
     display: none;
   }
 
