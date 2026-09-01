@@ -9,7 +9,10 @@ export function PageFooter() {
           <br />
           grounded in verifiable evidence.
         </p>
-        <NativeLink href="/contact">Get in touch</NativeLink>
+        <div className="page-footer-actions">
+          <NativeLink href="/contact">Get in touch</NativeLink>
+          <a href="/Daniel_Christopher_Public_CV.pdf" download>Download CV</a>
+        </div>
       </div>
       <div className="shell page-footer-meta">
         <span>Daniel Christopher</span>
@@ -18,4 +21,3 @@ export function PageFooter() {
     </footer>
   );
 }
-
