@@ -52,6 +52,11 @@ export default function ContactPage() {
               <span>LinkedIn</span>
               <strong>Daniel Christopher</strong>
             </a>
+            <a href="/Daniel_Christopher_Public_CV.pdf" className="contact-row" download>
+              <span>CV</span>
+              <strong>Download the one-page analyst CV</strong>
+              <span>PDF</span>
+            </a>
             <div className="contact-row contact-location" data-reveal>
               <span>Based in</span>
               <strong>Manchester, United Kingdom</strong>
@@ -70,4 +75,3 @@ export default function ContactPage() {
     </>
   );
 }
-
