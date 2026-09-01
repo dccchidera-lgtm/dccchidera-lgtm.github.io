@@ -4632,6 +4632,12 @@ a.contact-row:hover {
     display: none;
   }
 
+  .quick-index-row > div a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
   .quick-index-note {
     align-items: flex-start;
     flex-direction: column;
