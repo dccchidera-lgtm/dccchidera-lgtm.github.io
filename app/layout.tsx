@@ -3,6 +3,7 @@ import { SiteEffects } from "@/components/site-effects";
 import { publicPath } from "@/lib/paths";
 import "./globals.css";
 import "./visual-polish.css";
+import "./layout-refinement.css";
 
 const siteUrl = "https://dccchidera-lgtm.github.io";
 

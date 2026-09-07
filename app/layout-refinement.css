@@ -1,0 +1,44 @@
+/* Final spacing and portrait treatment; retain the editorial structure. */
+.profile-opening { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .8fr); align-items: center; gap: clamp(2rem, 5vw, 5rem); margin-top: 1.5rem; }
+.profile-hero .profile-opening h1 { font-size: clamp(3rem, 5.4vw, 5.2rem); line-height: 1.02; letter-spacing: -.055em; margin: 0; text-wrap: pretty; }
+.profile-opening h1 br { display: none; }
+.profile-hero .profile-opening h1 span { display: block; line-height: 1.06; margin-top: .25em; }
+.profile-portrait { margin: 0; min-width: 0; }
+.profile-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 33%; border-radius: 3px; }
+.profile-portrait figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .4rem; margin-top: .8rem; color: var(--secondary-label); font-size: .875rem; }
+.profile-hero-foot { align-items: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--separator); }
+.profile-opening-links { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9375rem; }
+.profile-opening-links a { display: inline-flex; align-items: center; min-height: 44px; border-bottom: 1px solid var(--separator); }
+.profile-opening-links a:hover { color: var(--link); border-color: currentColor; }
+.profile-hero { padding-bottom: 3rem; }
+.profile-snapshot { padding-block: 3.5rem 5rem; }
+.snapshot-grid { gap: 1rem; }
+.snapshot-about { justify-content: flex-start; }
+.snapshot-about h2 { margin-top: 3.5rem; font-size: clamp(2rem, 3.5vw, 3.25rem); line-height: 1.08; }
+.snapshot-card strong { font-size: clamp(1.45rem, 2.2vw, 2.1rem); line-height: 1.15; }
+.snapshot-label { font-size: .75rem; letter-spacing: .06em; }
+.snapshot-grid article::after { display: none; }
+.snapshot-card { box-shadow: none; }
+.profile-navigator a, .case-navigator a { white-space: nowrap; font-size: .875rem; }
+.chapter-copy p, .case-section > p, .profile-hero-foot > p { line-height: 1.65; }
+.chapter-top, .candidate-facts dt, .fact > span, .work-filters button { font-size: .875rem; }
+.chapter-copy { padding-block: clamp(3rem, 6vw, 5rem); }
+.chapter h2 { font-size: clamp(3.2rem, 6.6vw, 6.5rem); line-height: 1.02; letter-spacing: -.055em; }
+.contact-row { padding-block: 1.75rem; }
+.contact-intro { line-height: 1.65; }
+.contact-footer { padding-block: 2rem; }
+.case-takeaway { margin-bottom: .5rem; }
+.research-workflow li p, .spectrum-grid p { line-height: 1.6; }
+@media (max-width: 760px) {
+  .profile-opening { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .profile-hero .profile-opening h1 { font-size: clamp(2.6rem, 9vw, 4rem); }
+  .profile-portrait { max-width: 420px; width: 100%; }
+  .profile-portrait img { aspect-ratio: 4 / 5; }
+  .profile-hero-foot { grid-template-columns: 1fr; gap: 1rem; margin-top: 1.75rem; }
+  .profile-snapshot { padding-block: 2rem 3rem; }
+  .snapshot-about h2 { margin-top: 2.75rem; }
+  .chapter-inner { padding-top: 3rem; }
+  .chapter h2 { font-size: clamp(2.6rem, 9vw, 4rem); }
+  .chapter-top { gap: .7rem; font-size: .75rem; }
+  .contact-row { gap: .6rem; }
+}

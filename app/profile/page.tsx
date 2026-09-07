@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import { publicPath } from '@/lib/paths';
 import { NativeLink } from '@/components/native-link';
 import { PageFooter } from '@/components/page-footer';
 import { ProfileNavigator } from '@/components/profile-navigator';
@@ -24,21 +26,24 @@ export default function ProfilePage() {
         <section className="page-hero profile-hero">
           <div className="shell">
             <small>Profile</small>
+            <div className="profile-opening">
             <h1>
               I approach business and technology questions
               <br />
               <span>through customer context and analytical evidence.</span>
             </h1>
+            <figure className="profile-portrait">
+              <Image src={publicPath('/daniel-portrait.webp')} alt="Daniel Christopher wearing a black suit on a staircase" width={1000} height={1500} sizes="(max-width: 760px) 100vw, 400px" priority />
+              <figcaption><span>Daniel Christopher</span><span>Manchester, UK</span></figcaption>
+            </figure>
+            </div>
             <div className="profile-hero-foot">
               <p>
                 Manchester-based Business Analytics postgraduate with a 2:1 in Digital
                 Marketing, bringing customer understanding, structured analysis and an
                 adaptable international perspective to early-career roles.
               </p>
-              <div className="profile-signature" aria-label="Daniel Christopher monogram">
-                <span>DC</span>
-                <small>Manchester · UK</small>
-              </div>
+              <div className="profile-opening-links"><a href={publicPath('/Daniel_Christopher_Public_CV.pdf')} download>Download CV ↗</a><NativeLink href="/contact">Get in touch ↗</NativeLink></div>
             </div>
           </div>
         </section>
