@@ -1,41 +1,54 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-
-type Theme = 'auto' | 'light' | 'dark';
-
-const nextTheme: Record<Theme, Theme> = {
-  auto: 'light',
-  light: 'dark',
-  dark: 'auto',
+"use client";
+import { useEffect, useSyncExternalStore } from "react";
+type Theme = "auto" | "light" | "dark";
+const next: Record<Theme, Theme> = {
+  auto: "light",
+  light: "dark",
+  dark: "auto",
 };
-
+let volatileTheme: Theme | null = null;
+function snapshot(): Theme {
+  try {
+    const value = localStorage.getItem("portfolio-theme");
+    return value === "dark" || value === "light" ? value : "auto";
+  } catch {
+    return volatileTheme ?? "auto";
+  }
+}
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  window.addEventListener("portfolio-theme", callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("portfolio-theme", callback);
+  };
+}
 export function ThemeSwitch() {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window === 'undefined') return 'auto';
-    const saved = window.localStorage.getItem('portfolio-theme') as Theme | null;
-    return saved && saved in nextTheme ? saved : 'auto';
-  });
-
+  const theme = useSyncExternalStore(
+    subscribe,
+    snapshot,
+    () => "auto" as Theme,
+  );
   useEffect(() => {
-    if (theme === 'auto') delete document.documentElement.dataset.theme;
-    else document.documentElement.dataset.theme = theme;
-
-    window.localStorage.setItem('portfolio-theme', theme);
+    document.documentElement.dataset.theme = theme;
   }, [theme]);
-
+  function change() {
+    volatileTheme = next[theme];
+    try {
+      localStorage.setItem("portfolio-theme", volatileTheme);
+    } catch {}
+    window.dispatchEvent(new Event("portfolio-theme"));
+  }
   return (
     <button
       className="theme-switch"
       type="button"
-      suppressHydrationWarning
-      onClick={() => setTheme((current) => nextTheme[current])}
-      aria-label={`Colour theme: ${theme}. Activate to change.`}
+      onClick={change}
+      aria-label={`Theme: ${theme}. Change to ${next[theme]}.`}
       title={`Theme: ${theme}`}
     >
-      <span aria-hidden="true" />
-      {theme}
+      <span aria-hidden="true">◐</span>
+      <span className="theme-label">{theme}</span>
     </button>
   );
 }
-
