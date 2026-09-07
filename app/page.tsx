@@ -1,11 +1,120 @@
-import { NativeLink } from "@/components/native-link";
-import { SiteHeader } from "@/components/site-header";
-import { PageFooter } from "@/components/page-footer";
-import { ModelExplorer } from "@/components/model-explorer";
-import { InteractiveEvidenceLab } from "@/components/interactive-evidence-lab";
-import { ProjectCards } from "@/components/project-cards";
-import { cases } from "@/lib/cases";
-import { publicPath } from "@/lib/paths";
+import type { CSSProperties } from 'react';
+import { CaseQuickIndex } from '@/components/case-quick-index';
+import { CaseFinder } from '@/components/case-finder';
+import { InteractiveEvidenceLab } from '@/components/interactive-evidence-lab';
+import { NativeLink } from '@/components/native-link';
+import { SiteHeader } from '@/components/site-header';
+
+const cases = [
+  {
+    number: '01',
+    name: 'Decision Intelligence',
+    title: 'Comparing scenarios and optimisation',
+    muted: 'for a management decision',
+    description:
+      'A four-person team project combining a management dashboard, margin scenarios and optimisation to support a location and store-configuration decision.',
+    type: 'Team project',
+    href: '/work/decision-intelligence',
+    visual: 'decision',
+    visualLabel: 'Scenario range from 60 to 70 percent leading to an optimisation decision',
+    tone: 'paper',
+  },
+  {
+    number: '02',
+    name: 'Customer Intelligence',
+    title: 'Examining trust in the relationship',
+    muted: 'between personalisation and loyalty',
+    description:
+      'Individual MSc research into the statistical links among AI-driven personalisation, trust and customer loyalty in UK ecommerce.',
+    type: 'Individual dissertation',
+    href: '/work/customer-intelligence',
+    visual: 'trust',
+    visualLabel: '139 responses analysed with a personalisation and trust correlation of point 591',
+    tone: 'ink',
+  },
+  {
+    number: '03',
+    name: 'Data Management',
+    title: 'Translating business data flows',
+    muted: 'into a relational SQL prototype',
+    description:
+      'A four-person team project moving from data-flow and entity models to a working relational SQL prototype.',
+    type: 'Team project',
+    href: '/work/process-redesign',
+    visual: 'data',
+    visualLabel: 'Data flow diagram translated to entity relationship design and SQL',
+    tone: 'paper',
+  },
+  {
+    number: '04',
+    name: 'Predictive Analytics',
+    title: 'Comparing churn models',
+    muted: 'for targeted retention decisions',
+    description:
+      'An individual comparison of three churn classifiers in SAS Enterprise Miner, using a 4,000-record gym-membership dataset.',
+    type: 'Individual project',
+    href: '/work/predictive-analytics',
+    visual: 'model',
+    visualLabel: 'Validation misclassification comparison: tree 10.52 percent, logistic regression 6.18 percent, neural network 4.42 percent',
+    tone: 'mist',
+  },
+];
+
+function ChapterVisual({ kind, label }: { kind: string; label: string }) {
+  if (kind === 'decision') {
+    return (
+      <div className="chapter-visual visual-decision" role="img" aria-label={label}>
+        <div className="scenario-bars" aria-hidden="true">
+          <span /><span /><span /><span /><span />
+        </div>
+        <div className="visual-caption" aria-hidden="true">
+          <span>60%</span><span>Scenario range</span><span>70%</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (kind === 'trust') {
+    return (
+      <div className="chapter-visual visual-trust" role="img" aria-label={label}>
+        <div className="trust-orbits" aria-hidden="true">
+          <span /><span /><span /><i />
+        </div>
+        <div className="visual-stat" aria-hidden="true">
+          <strong>r = .591</strong><span>personalisation × trust</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (kind === 'data') {
+    return (
+      <div className="chapter-visual visual-data" role="img" aria-label={label}>
+        <div className="data-flow" aria-hidden="true">
+          <span>DFD</span><i>→</i><span>ERD</span><i>→</i><span>SQL</span>
+        </div>
+        <div className="data-nodes" aria-hidden="true">
+          <span /><span /><span /><span /><i /><b />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="chapter-visual visual-model" role="img" aria-label={label}>
+      <div className="model-row" aria-hidden="true">
+        <span>Decision tree</span><i style={{ '--score': '100%' } as CSSProperties} /><b>10.52%</b>
+      </div>
+      <div className="model-row" aria-hidden="true">
+        <span>Logistic regression</span><i style={{ '--score': '59%' } as CSSProperties} /><b>6.18%</b>
+      </div>
+      <div className="model-row best" aria-hidden="true">
+        <span>Neural network</span><i style={{ '--score': '42%' } as CSSProperties} /><b>4.42%</b>
+      </div>
+      <p aria-hidden="true">Validation misclassification · lower is better</p>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -14,154 +123,216 @@ export default function Home() {
         Skip to content
       </a>
       <SiteHeader />
+
       <main id="main-content">
-        <section className="home-hero shell">
-          <div className="hero-copy">
-            <p className="overline">Daniel Christopher · Manchester, UK</p>
-            <h1>
-              Customer curiosity.
-              <br />
-              <span>Analytical clarity.</span>
+        <section className="hero">
+          <div className="shell hero-inner">
+            <div className="hero-kicker hero-reveal">
+              <p className="overline">Analytics × digital marketing · Manchester, UK</p>
+              <span><i /> Available for analytical and technology-facing roles</span>
+            </div>
+            <h1 className="hero-title">
+              <span className="hero-reveal">Daniel Christopher.</span>
+              <span className="secondary display-serif hero-reveal">I study customer behaviour, test the evidence and explain the decision it supports.</span>
             </h1>
-            <p className="hero-description">
-              I turn business questions into research, models and clear
-              recommendations. Business Analytics postgraduate with a Digital
-              Marketing foundation.
-            </p>
-            <div className="hero-cta">
-              <NativeLink className="button primary" href="/work">
-                Explore my work <span aria-hidden="true">↗</span>
-              </NativeLink>
-              <a
-                className="button"
-                href={publicPath("/Daniel_Christopher_Public_CV.pdf")}
-                download
-              >
-                Download CV <span className="file-label">PDF</span>
-              </a>
-            </div>
-            <p className="availability">
-              Open to analyst and customer insight opportunities
-            </p>
-          </div>
-          <ModelExplorer />
-          <div className="hero-baseline">
-            <span>Business analytics × digital marketing</span>
-            <a href="#selected-work">Scroll to the evidence ↓</a>
-          </div>
-        </section>
-        <section className="proof-strip" aria-label="Portfolio at a glance">
-          <div className="shell proof-grid">
-            <div>
-              <strong>04</strong>
-              <span>MSc case studies</span>
-            </div>
-            <div>
-              <strong>139</strong>
-              <span>Research responses</span>
-            </div>
-            <div>
-              <strong>4,000</strong>
-              <span>Churn study records</span>
-            </div>
-            <div>
-              <strong>EN / DE</strong>
-              <span>English and German</span>
-            </div>
-          </div>
-        </section>
-        <section className="section shell" id="selected-work">
-          <div className="section-heading">
-            <div>
-              <p className="overline">01 / Selected work</p>
-              <h2>Questions worth answering.</h2>
-            </div>
-            <NativeLink className="text-link" href="/work">
-              Browse all work ↗
-            </NativeLink>
-          </div>
-          <ProjectCards projects={cases} />
-          <p className="section-note">
-            2 individual projects · 2 team projects. Each case explains the
-            method, findings, contribution and limits.
-          </p>
-        </section>
-        <section className="research-spotlight">
-          <div className="shell spotlight-grid">
-            <div>
-              <p className="overline">02 / Research spotlight</p>
-              <h2>
-                Personalisation gets attention.
+            <div className="hero-footer">
+              <div className="hero-intro hero-reveal">
+                <p>
+                  I combine business analytics, digital marketing and customer understanding
+                  to make evidence easier to act on.
+                </p>
+                <a className="arrow-link" href="#find-a-case">
+                  Find a relevant case
+                </a>
+              </div>
+              <ol className="hero-method hero-reveal" aria-label="Analytical workflow">
+                <li><span>01</span>Question</li>
+                <li><span>02</span>Method</li>
+                <li><span>03</span>Evidence</li>
+                <li><span>04</span>Action</li>
+              </ol>
+              <small className="hero-reveal">
+                MSc Business Analytics
                 <br />
-                <span>Trust deserves it too.</span>
+                Dissertation submitted · final result pending
+              </small>
+            </div>
+          </div>
+        </section>
+
+        <section className="candidate-facts" aria-label="Candidate profile at a glance">
+          <dl className="shell candidate-facts-grid">
+            <div data-reveal><dt>Qualifications</dt><dd>MSc Business Analytics · BA Digital Marketing 2:1</dd></div>
+            <div data-reveal><dt>Status</dt><dd>Dissertation submitted</dd></div>
+            <div data-reveal><dt>Based in</dt><dd>Manchester, UK</dd></div>
+            <div data-reveal><dt>Role range</dt><dd>Analytics · MarTech · Digital transformation</dd></div>
+            <div data-reveal><dt>Languages</dt><dd>English · German</dd></div>
+          </dl>
+        </section>
+
+        <section className="proof-strip" aria-label="Portfolio evidence at a glance">
+          <div className="shell proof-grid">
+            <article data-reveal>
+              <strong>04</strong>
+              <span>verified case studies</span>
+            </article>
+            <article data-reveal>
+              <strong>139</strong>
+              <span>complete dissertation responses</span>
+            </article>
+            <article data-reveal>
+              <strong>4,000</strong>
+              <span>records in the churn study</span>
+            </article>
+            <article data-reveal>
+              <strong>2 / 2</strong>
+              <span>individual / team cases, each clearly attributed</span>
+            </article>
+          </div>
+        </section>
+
+        <CaseQuickIndex />
+
+        <div className="signal-marquee" aria-hidden="true">
+          <div>
+            <span>Research design</span><i>/</i><span>Decision modelling</span><i>/</i>
+            <span>SQL & data structure</span><i>/</i><span>Predictive analytics</span><i>/</i>
+            <span>Research design</span><i>/</i><span>Decision modelling</span><i>/</i>
+            <span>SQL & data structure</span><i>/</i><span>Predictive analytics</span><i>/</i>
+          </div>
+        </div>
+
+        <div id="find-a-case">
+          <CaseFinder />
+        </div>
+
+        <div id="work">
+          {cases.map((item) => (
+            <section className={`chapter ${item.tone}`} key={item.number}>
+              <div className="chapter-inner">
+                <div className="chapter-top">
+                  <span>{item.number}</span>
+                  <span>{item.name}</span>
+                  <span>{item.type}</span>
+                </div>
+                <ChapterVisual kind={item.visual} label={item.visualLabel} />
+                <div className="chapter-copy" data-reveal>
+                  <h2>
+                    {item.title}
+                    <br />
+                    <span>{item.muted}</span>
+                  </h2>
+                  <p>{item.description}</p>
+                  <NativeLink className="chapter-link" href={item.href}>
+                    View case study
+                  </NativeLink>
+                </div>
+              </div>
+            </section>
+          ))}
+        </div>
+
+        <section className="visual-methods" id="visual-methods" aria-labelledby="visual-methods-title">
+          <div className="shell visual-methods-heading" data-reveal>
+            <div>
+              <p className="overline">Visual methods</p>
+              <h2 id="visual-methods-title">Three views of the analytical evidence behind the case studies.</h2>
+            </div>
+            <p>
+              The diagrams make model structure, validation results and statistical relationships
+              easier to inspect. Every number comes from the submitted project evidence; conceptual
+              elements are labelled as such.
+            </p>
+          </div>
+
+          <div className="shell">
+            <InteractiveEvidenceLab />
+          </div>
+        </section>
+
+        <section className="attribution">
+          <div className="shell attribution-grid" data-reveal>
+            <p className="overline">Transparent attribution</p>
+            <p>
+              Two cases are individual projects. Two were completed in four-person teams
+              with no fixed specialist roles: tasks were divided as evenly as possible,
+              and every member covered the full assignment.
+            </p>
+          </div>
+        </section>
+
+        <section className="research-feature">
+          <div className="shell research-feature-grid" data-reveal>
+            <div>
+              <small>MSc research · flagship individual study</small>
+              <h2>
+                AI personalisation and loyalty were associated.{' '}
+                <span>Trust was central to the observed pattern.</span>
               </h2>
               <p>
-                In my study of 139 UK online shoppers, trust remained associated
-                with loyalty when personalisation was included in the same
-                model. Personalisation’s direct coefficient was small and
-                statistically non significant.
+                Research into AI-driven personalisation, customer trust and loyalty in UK
+                ecommerce, based on 139 complete eligible responses.
               </p>
-              <NativeLink className="button primary" href="/research">
-                Explore the findings ↗
+              <NativeLink className="arrow-link" href="/research">
+                Explore the research
               </NativeLink>
             </div>
-            <div className="finding-card">
-              <span>Estimated indirect effect through trust</span>
-              <strong>.303</strong>
-              <div className="confidence-interval">
-                <span>.199</span>
-                <span>95% bootstrap interval</span>
-                <span>.422</span>
-              </div>
-              <p>
-                10,000 bootstrap samples. Statistical association; this survey
-                does not establish causation.
-              </p>
-            </div>
+            <aside className="research-method-card" aria-label="Research method summary">
+              <span>Method stack</span>
+              <strong>Survey → quality checks → EFA → regression → mediation</strong>
+              <dl>
+                <div><dt>Variables</dt><dd>45</dd></div>
+                <div><dt>Bootstrap samples</dt><dd>10,000</dd></div>
+                <div><dt>Interpretation</dt><dd>Non-causal</dd></div>
+              </dl>
+            </aside>
           </div>
         </section>
-        <section className="section shell" id="visual-methods">
-          <div className="section-heading">
-            <div>
-              <p className="overline">03 / Explore the analysis</p>
-              <h2>Look inside the evidence.</h2>
-            </div>
-            <p>
-              Compare model results and explore the reasoning behind the
-              research.
-            </p>
-          </div>
-          <InteractiveEvidenceLab />
-        </section>
-        <section className="section about-preview shell">
-          <div>
-            <p className="overline">04 / A little about me</p>
-            <h2>
-              The customer context.
+
+        <section className="profile-feature">
+          <div className="shell profile-grid" data-reveal>
+            <h2 data-reveal>
+              Raised in Germany, developed in the UK, bringing digital marketing into
               <br />
-              <span>The analytical discipline.</span>
+              <span>business analytics.</span>
             </h2>
-          </div>
-          <div>
-            <p>
-              Digital marketing taught me to ask what matters to an audience.
-              Business analytics gave me the methods to test the answer. I bring
-              both perspectives, plus English and German, to my next role.
-            </p>
-            <div className="tag-list">
-              <span>SQL</span>
-              <span>Excel</span>
-              <span>SPSS</span>
-              <span>SAS Enterprise Miner</span>
-              <span>Qualtrics</span>
+            <div className="profile-copy">
+              <span className="profile-eyebrow">About Daniel</span>
+              <p>
+                I was raised in Germany and moved to the UK during Year 8. That experience
+                shaped how I adapt and communicate; my two degrees now let me examine a
+                business question through both customer and analytical lenses.
+              </p>
+              <div className="profile-facts" aria-label="Profile highlights">
+                <span>Raised in Germany</span>
+                <span>English + German</span>
+                <span>570+ day practice streak</span>
+                <span>Analytics + digital marketing</span>
+              </div>
+              <div className="profile-links">
+                <NativeLink className="arrow-link" href="/profile">
+                  Profile
+                </NativeLink>
+                <NativeLink className="arrow-link" href="/work">
+                  All work
+                </NativeLink>
+              </div>
             </div>
-            <NativeLink className="text-link" href="/profile">
-              Meet Daniel ↗
-            </NativeLink>
           </div>
         </section>
+
+        <footer className="footer">
+          <div className="footer-inner">
+            <h2>
+              I am open to analytical and technology-facing work where <span>clear evidence informs the decision.</span>
+            </h2>
+            <div className="footer-bottom">
+              <span>Daniel Christopher · 2026</span>
+              <NativeLink href="/contact">Get in touch</NativeLink>
+            </div>
+          </div>
+        </footer>
       </main>
-      <PageFooter />
     </>
   );
 }

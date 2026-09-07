@@ -334,7 +334,7 @@ export function ModelExplorer({
       aria-label="Interactive analytical models"
     >
       <div className="model-heading">
-        <span>THE MODEL ROOM</span>
+        <span>Analytical model</span>
         <span>Interactive 3D</span>
       </div>
       <div className="model-modes" aria-label="Choose a model">

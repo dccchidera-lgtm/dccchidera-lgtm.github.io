@@ -1,5 +1,13 @@
 # Portfolio audit and redesign
 
+## Restoration following owner feedback
+
+The owner preferred the original design. The restoration returns the homepage, full case chapters, profile, work list, research page, navigation appearance, typography, palette, cursor spotlight and reveal effects to the original baseline. The earlier redesign notes below are a historical record, not a description of the restored design.
+
+Retained improvements include unique canonical URLs, guarded clipboard and theme preferences, native modal menu and search with the original styling, and corrected button group semantics. The 2 analytical 3D models are optional disclosures in the relevant case study evidence sections. They no longer occupy the homepage hero. Original CV and social preview assets are unchanged.
+
+The restoration is checked with the repository lint, typecheck and static production build. Browser visual and interaction testing has not been performed.
+
 Reviewed 7 September 2026. Baseline: commit 091939788b7b219c3aeba6fdcdbaf9f247dbfb2c.
 
 The portfolio contains useful assessed work and appropriately separates individual work, shared outputs, validation results and commercial impact. The main opportunity was to make that evidence easier to find and assess.

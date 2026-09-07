@@ -30,7 +30,8 @@ export function ThemeSwitch() {
     () => "auto" as Theme,
   );
   useEffect(() => {
-    document.documentElement.dataset.theme = theme;
+    if (theme === "auto") delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = theme;
   }, [theme]);
   function change() {
     volatileTheme = next[theme];
@@ -47,8 +48,8 @@ export function ThemeSwitch() {
       aria-label={`Theme: ${theme}. Change to ${next[theme]}.`}
       title={`Theme: ${theme}`}
     >
-      <span aria-hidden="true">◐</span>
-      <span className="theme-label">{theme}</span>
+      <span aria-hidden="true" />
+      {theme}
     </button>
   );
 }
