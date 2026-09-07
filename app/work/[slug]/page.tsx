@@ -7,6 +7,7 @@ import { NativeLink } from '@/components/native-link';
 import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
 import { cases, getCase } from '@/lib/cases';
+import { projectSummaries } from '@/lib/project-summaries';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -71,6 +72,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <p className="overline">{project.name}</p>
             <h1>{project.title}</h1>
             <p className="case-lead">{project.lead}</p>
+            <div className="case-takeaway"><span>Key finding</span><p>{projectSummaries[slug].result}</p><a href="#evidence">Explore the evidence ↓</a></div>
           </div>
         </section>
 
@@ -114,10 +116,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <h2>The results support the following interpretation.</h2>
                 <p className="large-copy">{project.evidence}</p>
                 <CaseEvidenceVisual slug={project.slug} />
-                {(project.slug === 'customer-intelligence' || project.slug === 'predictive-analytics') && (
+                {(
                   <details className="case-model-disclosure">
                     <summary>Explore the model in 3D</summary>
-                    <ModelExplorer initialMode={project.slug === 'customer-intelligence' ? 'trust' : 'network'} />
+                    <ModelExplorer initialMode={project.slug === 'customer-intelligence' ? 'trust' : project.slug === 'predictive-analytics' ? 'network' : project.slug === 'process-redesign' ? 'data' : 'decision'} />
                   </details>
                 )}
               </section>

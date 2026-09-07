@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import { publicPath } from '@/lib/paths';
 import { ModelExplorer } from '@/components/model-explorer';
 import { CaseQuickIndex } from '@/components/case-quick-index';
 import { CaseFinder } from '@/components/case-finder';
@@ -61,60 +61,9 @@ const cases = [
   },
 ];
 
-function ChapterVisual({ kind, label }: { kind: string; label: string }) {
-  if (kind === 'decision') {
-    return (
-      <div className="chapter-visual visual-decision" role="img" aria-label={label}>
-        <div className="scenario-bars" aria-hidden="true">
-          <span /><span /><span /><span /><span />
-        </div>
-        <div className="visual-caption" aria-hidden="true">
-          <span>60%</span><span>Scenario range</span><span>70%</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (kind === 'trust') {
-    return (
-      <div className="chapter-visual visual-trust" role="img" aria-label={label}>
-        <div className="trust-orbits" aria-hidden="true">
-          <span /><span /><span /><i />
-        </div>
-        <div className="visual-stat" aria-hidden="true">
-          <strong>r = .591</strong><span>personalisation × trust</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (kind === 'data') {
-    return (
-      <div className="chapter-visual visual-data" role="img" aria-label={label}>
-        <div className="data-flow" aria-hidden="true">
-          <span>DFD</span><i>→</i><span>ERD</span><i>→</i><span>SQL</span>
-        </div>
-        <div className="data-nodes" aria-hidden="true">
-          <span /><span /><span /><span /><i /><b />
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="chapter-visual visual-model" role="img" aria-label={label}>
-      <div className="model-row" aria-hidden="true">
-        <span>Decision tree</span><i style={{ '--score': '100%' } as CSSProperties} /><b>10.52%</b>
-      </div>
-      <div className="model-row" aria-hidden="true">
-        <span>Logistic regression</span><i style={{ '--score': '59%' } as CSSProperties} /><b>6.18%</b>
-      </div>
-      <div className="model-row best" aria-hidden="true">
-        <span>Neural network</span><i style={{ '--score': '42%' } as CSSProperties} /><b>4.42%</b>
-      </div>
-      <p aria-hidden="true">Validation misclassification · lower is better</p>
-    </div>
-  );
+function ChapterVisual({ kind }: { kind: string; label: string }) {
+  const mode = kind === 'model' ? 'network' : kind === 'trust' ? 'trust' : kind === 'data' ? 'data' : 'decision';
+  return <div className="chapter-visual chapter-visual--interactive"><ModelExplorer compact initialMode={mode} /></div>;
 }
 
 export default function Home() {
@@ -136,6 +85,11 @@ export default function Home() {
               <span className="hero-reveal">Daniel Christopher.</span>
               <span className="secondary display-serif hero-reveal">I study customer behaviour, test the evidence and explain the decision it supports.</span>
             </h1>
+            <div className="recruiter-actions">
+              <NativeLink href="/work" className="button">Explore selected work</NativeLink>
+              <a href={publicPath('/Daniel_Christopher_Public_CV.pdf')} download>Download CV <span aria-hidden="true">↗</span></a>
+              <NativeLink href="/contact">Contact Daniel</NativeLink>
+            </div>
             <div className="hero-footer">
               <div className="hero-intro hero-reveal">
                 <p>

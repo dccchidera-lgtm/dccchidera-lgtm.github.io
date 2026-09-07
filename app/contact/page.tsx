@@ -35,6 +35,7 @@ export default function ContactPage() {
               with me on LinkedIn.
             </p>
             <CopyEmail />
+            <div className="recruiter-actions"><a href="mailto:dccchidera@gmail.com">Email Daniel ↗</a><a href={publicPath('/Daniel_Christopher_Public_CV.pdf')} download>Download CV ↗</a></div>
           </div>
         </section>
 

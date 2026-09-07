@@ -3,12 +3,33 @@
 import { useEffect, useRef, useState } from "react";
 import { NativeLink } from "@/components/native-link";
 
-type Mode = "trust" | "network";
+type Mode = "trust" | "network" | "decision" | "data";
+const modelInfo: Record<Mode, { title: string; path: string; caption: string; detail: string }> = {
+  trust: { title: 'Trust & loyalty', path: 'customer-intelligence', caption: 'Personalisation → Trust → Loyalty', detail: 'Personalisation → trust: B = .575. Trust → loyalty: B = .526. Statistical associations, not proof of causation. Geometry does not encode effect size.' },
+  network: { title: 'Neural network', path: 'predictive-analytics', caption: 'Customer attributes → Hidden layer → Churn score', detail: 'Conceptual architecture only. Node counts and connections are illustrative, not the exact trained SAS network or its weights.' },
+  decision: { title: 'Decision pathways', path: 'decision-intelligence', caption: 'Assumptions → Scenarios → Decision', detail: 'Conceptual decision workflow from the team project. Three branches illustrate comparison, not the actual scenario count, calculated values or a proven optimal outcome.' },
+  data: { title: 'Data relationships', path: 'process-redesign', caption: 'Entities → Relationships → SQL', detail: 'Conceptual relational structure from the team project. The displayed entities and links are illustrative, not the submitted ERD or a production database.' },
+};
 type Controls = {
   rotate: (amount: number) => void;
   reset: () => void;
   play: (value: boolean) => void;
 };
+
+function ModelFallback({ mode }: { mode: Mode }) {
+  const points = mode === 'trust' ? [[110,210],[300,70],[490,210]]
+    : mode === 'decision' ? [[90,160],[300,60],[300,160],[300,260],[510,160]]
+    : mode === 'data' ? [[120,80],[300,160],[480,80],[160,260],[440,260]]
+    : [[110,70],[110,130],[110,190],[110,250],[300,50],[300,105],[300,160],[300,215],[300,270],[490,160]];
+  const edges = mode === 'trust' ? [[0,1],[1,2],[0,2]]
+    : mode === 'decision' ? [[0,1],[0,2],[0,3],[1,4],[2,4],[3,4]]
+    : mode === 'data' ? [[0,1],[1,2],[1,3],[1,4]]
+    : points.slice(0,4).flatMap((_, i) => [4,5,6,7,8].map(j => [i,j])).concat([4,5,6,7,8].map(i=>[i,9]));
+  return <svg className="model-static" viewBox="0 0 600 320" role="img" aria-label={`${modelInfo[mode].caption}. Conceptual diagram.`}>
+    {edges.map(([a,b],i)=><line key={i} x1={points[a][0]} y1={points[a][1]} x2={points[b][0]} y2={points[b][1]} stroke="#83b7d8" strokeOpacity=".5" strokeWidth="2" />)}
+    {points.map(([x,y],i)=>mode === 'data' ? <rect key={i} x={x-19} y={y-19} width="38" height="38" rx="5" fill="#9bd4f5" stroke="#e4f5ff" strokeWidth="2" /> : <circle key={i} cx={x} cy={y} r={mode === 'network' ? 13 : 20} fill={i % 2 ? '#c8f582' : '#9bd4f5'} stroke="#e4f5ff" strokeWidth="2" />)}
+  </svg>;
+}
 
 export function ModelExplorer({
   initialMode = "trust",
@@ -176,6 +197,26 @@ export function ModelExplorer({
           label("Loyalty", 2, -1.42, 0.3);
           label("B = .575", -1.35, 0.55, 0.3);
           label("B = .526", 1.35, 0.55, 0.3);
+        } else if (mode === 'decision') {
+          const origin = node(-2.4, 0, 0, .42, 0);
+          const end = node(2.4, 0, 0, .5, 2);
+          for (const y of [-1.3, 0, 1.3]) {
+            const branch = node(0, y, y * .3, .3, 1);
+            link(origin, branch, .025, true);
+            link(branch, end, .025, true);
+          }
+          label('Assumptions', -2.4, -2.1, 0);
+          label('Scenarios', 0, -2.1, 0);
+          label('Decision', 2.4, -2.1, 0);
+        } else if (mode === 'data') {
+          const positions = [[-2, 1, 0], [0, 0, .6], [2, 1, 0], [-1.5, -1.4, -.5], [1.5, -1.4, -.5]];
+          const blocks = positions.map(([x, y, z], i) => {
+            const block = new T.Mesh(keep(new T.BoxGeometry(.7, .7, .7)), materials[i % 3]);
+            block.position.set(x, y, z); model.add(block); return block.position.clone();
+          });
+          for (const index of [0, 2, 3, 4]) link(blocks[1], blocks[index], .035);
+          label('Entities & relationships', 0, 2.1, 0);
+          label('Relational SQL prototype', 0, -2.2, 0);
         } else {
           const counts = [4, 5, 1];
           const layers = counts.map((count, layer) =>
@@ -337,32 +378,18 @@ export function ModelExplorer({
       aria-label="Interactive analytical models"
     >
       <div className="model-heading">
-        <span>Analytical model</span>
+        <span>{modelInfo[mode].title}</span>
         <span>Interactive 3D</span>
       </div>
       {!compact && <div className="model-modes" aria-label="Choose a model">
-        <button
-          type="button"
-          aria-pressed={mode === "trust"}
-          onClick={() => changeMode("trust")}
-        >
-          01 / Trust & loyalty
-        </button>
-        <button
-          type="button"
-          aria-pressed={mode === "network"}
-          onClick={() => changeMode("network")}
-        >
-          02 / Neural network
-        </button>
+        {(Object.keys(modelInfo) as Mode[]).map((key) => <button key={key} type="button" aria-pressed={mode === key} onClick={() => changeMode(key)}>{modelInfo[key].title}</button>)}
       </div>}
       <div className="model-viewport" ref={mount}>
         {status !== "ready" && (
           <div className="model-fallback">
+            <ModelFallback mode={mode} />
             <p>
-              {mode === "trust"
-                ? "Personalisation → Trust → Loyalty"
-                : "Customer attributes → Hidden layer → Churn score"}
+              {modelInfo[mode].caption}
             </p>
             <small>
               {status === "loading"
@@ -373,7 +400,7 @@ export function ModelExplorer({
         )}
       </div>
       <div className="model-controls" aria-label="3D view controls">
-        <span>Drag to explore</span>
+        <span>{status === 'ready' ? 'Drag to explore' : 'Diagram view'}</span>
         <div>
           <button
             disabled={status !== "ready"}
@@ -414,23 +441,10 @@ export function ModelExplorer({
         </div>
       </div>
       <div className="model-note" aria-live="polite">
-        <strong>
-          {mode === "trust"
-            ? "Trust is the connecting variable."
-            : "From customer data to a churn score."}
-        </strong>
-        <p hidden={compact}>
-          {mode === "trust"
-            ? "Personalisation → trust: B = .575. Trust → loyalty: B = .526. This is a statistical model, not proof of causation. Node sizes and positions do not encode effect size."
-            : "Conceptual architecture only. The displayed node count and connections are illustrative; the exact trained network and weights were not retained in the project evidence."}
-        </p>
-        {compact && <p>{mode === 'trust' ? 'Statistical paths, not proof of causation. Geometry does not encode effect size.' : 'Illustrative architecture, not the exact trained network.'}</p>}
+        <strong>{modelInfo[mode].caption}</strong>
+        <p>{modelInfo[mode].detail}</p>
         <NativeLink
-          href={
-            mode === "trust"
-              ? "/work/customer-intelligence#evidence"
-              : "/work/predictive-analytics#evidence"
-          }
+          href={`/work/${modelInfo[mode].path}#evidence`}
         >
           Read the supporting case ↗
         </NativeLink>

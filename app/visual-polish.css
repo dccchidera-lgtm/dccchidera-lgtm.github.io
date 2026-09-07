@@ -1,4 +1,46 @@
 /* Surface and light treatment layered over the original editorial layout. */
+/* Recruiter review: retain the editorial hierarchy with usable opening actions. */
+.hero-title { font-size: clamp(3.8rem, 8.6vw, 8rem); }
+.hero-title .secondary { max-width: 1100px; font-size: .82em; line-height: 1.02; letter-spacing: -.055em; }
+.recruiter-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.8rem; margin: 1.75rem 0; }
+.recruiter-actions a { font-size: .9375rem; min-height: 44px; display: inline-flex; align-items: center; gap: .6rem; }
+.recruiter-actions a:not(.button) { border-bottom: 1px solid var(--separator); }
+.recruiter-actions a:hover { border-color: var(--link); }
+.contact-hero h1 { font-size: clamp(3.2rem, 7.7vw, 7.5rem); max-width: 1080px; line-height: .98; }
+.contact-hero h1 span { line-height: 1.05; }
+.contact-row { position: relative; gap: 1rem; padding-block: 2rem; transition: background .25s ease; }
+a.contact-row:hover { background: color-mix(in srgb, var(--accent) 5%, var(--background)); }
+.contact-row strong { overflow-wrap: anywhere; }
+.case-takeaway { margin-top: 2rem; padding: 1.25rem 0 1.25rem 1.25rem; border-left: 2px solid var(--accent); max-width: 850px; }
+.case-takeaway > span { font-size: .875rem; color: var(--secondary-label); }
+.case-takeaway p { margin: .5rem 0; font-size: clamp(1.15rem, 2vw, 1.6rem); line-height: 1.35; }
+.case-takeaway a { display: inline-block; font-size: .9375rem; padding-block: .5rem; color: var(--link); }
+.research-workflow ol { counter-reset: research; }
+.research-workflow li { border-left: 2px solid color-mix(in srgb, var(--accent) 25%, var(--separator)); padding-left: 1.5rem; }
+.research-workflow li:hover { border-left-color: var(--accent); }
+.spectrum-grid article { border-top: 2px solid color-mix(in srgb, var(--accent) 35%, var(--separator)); padding-top: 1.5rem; }
+.snapshot-about h2, .snapshot-card strong { line-height: 1.08; }
+.case-section h2 { line-height: 1.08; }
+.profile-navigator a, .case-navigator a { white-space: nowrap; font-size: .875rem; }
+.model-modes { flex-wrap: wrap; }
+.model-note p { max-width: 65ch; }
+.model-fallback { padding: .75rem 1rem; justify-content: flex-end; }
+.model-static { width: 100%; flex: 1; min-height: 0; max-height: 220px; }
+.model-fallback p { font-size: .875rem; margin: .4rem 0; line-height: 1.4; }
+.model-fallback small { font-size: .75rem; }
+.recruiter-actions .button { border-radius: 100px; padding: .65rem 1.2rem; background: var(--label); color: var(--background); }
+.chapter-visual--interactive { align-self: center; }
+@media (max-width: 760px) {
+  .hero-title { font-size: clamp(3rem, 12vw, 5.5rem); }
+  .hero-title .secondary { font-size: .82em; }
+  .contact-hero h1 { font-size: clamp(3rem, 11vw, 5rem); }
+  .recruiter-actions { gap: .7rem 1.2rem; }
+  .chapter h2 { line-height: 1.02; }
+  .contact-row { padding-block: 1.5rem; }
+  .shell, .chapter-inner, .footer-inner { width: calc(100% - 2.5rem); }
+  .hero-title .secondary { font-size: .72em; }
+  .snapshot-about h2 { margin-top: 3rem; }
+}
 :root { --polish-blue: #80aaff; --polish-cyan: #87dedc; }
 .hero, .page-hero { isolation: isolate; }
 .hero { background: radial-gradient(ellipse at 88% 12%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 48%), radial-gradient(ellipse at 8% 90%, color-mix(in srgb, var(--polish-cyan) 12%, transparent), transparent 46%), var(--background); }
