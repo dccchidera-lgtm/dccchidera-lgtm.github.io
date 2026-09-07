@@ -86,6 +86,10 @@ export default function ProfilePage() {
         <section className="background-story" id="background">
           <div className="shell background-story-grid">
             <div className="background-intro" data-reveal>
+              <p className="overline">From customer questions to analytical evidence</p>
+              <h2>One thread through 2 degrees: understanding people, then testing the explanation.</h2>
+              <p>My Digital Marketing final project at Birmingham City University explored AI in marketing strategies targeting Generation Z. My MSc dissertation took a more focused question into UK ecommerce: how personalisation, trust and loyalty are statistically related.</p>
+              <p>Together, these projects connect the customer perspective with the discipline of checking what the evidence can support. That connection is central to the analytical and technology roles I am pursuing.</p>
               <p className="overline">Background · adaptability</p>
               <h2>Raised in Germany. Developed personally and academically in the UK.</h2>
               <p>

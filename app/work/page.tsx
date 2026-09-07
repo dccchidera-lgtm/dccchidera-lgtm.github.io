@@ -92,6 +92,21 @@ export default function WorkPage() {
             </article>
           </div>
         </section>
+        <section className="writing-samples" aria-labelledby="personal-projects-title">
+          <div className="shell writing-grid">
+            <div className="writing-heading">
+              <p className="overline">Beyond the curriculum</p>
+              <h2 id="personal-projects-title">Personal projects, with progress made explicit.</h2>
+            </div>
+            <article>
+              <span>Concept specification · implementation not verified</span>
+              <h3>DualMind</h3>
+              <p>A personal project concept exploring how 2 AI models could help compare options, critique a draft and turn goals into clear next actions.</p>
+              <p>The available July 2026 specification describes a proposed command line tool with planning, decision, review and build modes. It records a draft with no code written at that point.</p>
+              <p><strong>Next milestone:</strong> a small working prototype with documented tests and limitations. No deployed product or measured benefit is claimed here.</p>
+            </article>
+          </div>
+        </section>
       </main>
 
       <PageFooter />

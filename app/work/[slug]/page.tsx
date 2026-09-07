@@ -9,6 +9,33 @@ import { SiteHeader } from '@/components/site-header';
 import { cases, getCase } from '@/lib/cases';
 import { projectSummaries } from '@/lib/project-summaries';
 
+const caseStories: Record<string, string[]> = {
+  "decision-intelligence": [
+    "A recommendation is only as useful as the assumptions behind it.",
+    "A dashboard could describe the business, but the assignment also required a choice about location and store configuration. Our team connected data checking, margin scenarios and optimisation so the recommendation could be examined rather than simply accepted.",
+    "The judgement in the work",
+    "Testing margins from 60% to 70% made the assumptions visible. The value of the model was in exposing the decision logic, not in claiming that an assessed recommendation had already delivered a commercial result."
+  ],
+  "customer-intelligence": [
+    "The interesting part was what happened when trust entered the model.",
+    "The question began with personalisation and loyalty. In the joint loyalty model, trust remained material while personalisation’s direct coefficient was small and not statistically significant. That changed the interpretation from a simple association to a more specific question about the role of trust.",
+    "Why the interpretation matters",
+    "I used mediation analysis to examine the relationship, but the survey cannot establish causation. The practical next step is to test changes experimentally and observe behaviour, rather than assume that more personalisation will create loyalty."
+  ],
+  "process-redesign": [
+    "A diagram had to become a database that could answer questions.",
+    "Our team moved from business data flows to entity relationships and then working SQL. Creating tables was only part of the task: populating them and running queries tested whether the structure supported the intended reporting.",
+    "Where the work could be stronger",
+    "Assessor feedback supported the alignment between the ERD and SQL. Clearer DFD notation, explicit test cases and better SQL comments would make the reasoning easier for another analyst to inspect and maintain."
+  ],
+  "predictive-analytics": [
+    "The lowest error rate was the start of a decision, not the end.",
+    "I compared 3 classifiers on the same gym membership dataset. The neural network had the lowest validation misclassification at 4.42%, but choosing a retention action requires more than ranking models by a single metric.",
+    "The judgement beyond the score",
+    "A missed leaver and an unnecessary retention offer have different costs. Test set precision, recall and business cost thresholds would need to be examined before turning a churn score into an operational decision."
+  ]
+};
+
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -96,6 +123,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <p className="section-number">01 · Decision</p>
                 <h2>{actor} defined the decision before selecting a method.</h2>
                 <p className="large-copy">{project.question}</p>
+                <h3>{caseStories[slug][0]}</h3>
+                <p>{caseStories[slug][1]}</p>
+                <h3>{caseStories[slug][2]}</h3>
+                <p>{caseStories[slug][3]}</p>
               </section>
 
               <section className="case-section" id="approach" data-reveal>
