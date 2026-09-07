@@ -1,4 +1,17 @@
 /* Final spacing and portrait treatment; retain the editorial structure. */
+html { scrollbar-gutter: stable; }
+.profile-opening-links a, .contact-row, .work-row, .case-pagination-card {
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.snapshot-card, .snapshot-card:hover { transform: none; box-shadow: none; }
+.profile-opening-links a:focus-visible { outline-offset: 6px; }
+.profile-portrait { overflow: hidden; }
+@media (hover: none), (pointer: coarse) {
+  .cursor-spotlight { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .profile-opening-links a, .contact-row, .work-row, .case-pagination-card { transition: none; }
+}
 .profile-opening { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .8fr); align-items: center; gap: clamp(2rem, 5vw, 5rem); margin-top: 1.5rem; }
 .profile-hero .profile-opening h1 { font-size: clamp(3rem, 5.4vw, 5.2rem); line-height: 1.02; letter-spacing: -.055em; margin: 0; text-wrap: pretty; }
 .profile-opening h1 br { display: none; }
