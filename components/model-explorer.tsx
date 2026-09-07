@@ -12,8 +12,10 @@ type Controls = {
 
 export function ModelExplorer({
   initialMode = "trust",
+  compact = false,
 }: {
   initialMode?: Mode;
+  compact?: boolean;
 }) {
   const [mode, setMode] = useState<Mode>(initialMode);
   const [status, setStatus] = useState<"loading" | "ready" | "fallback">(
@@ -231,7 +233,8 @@ export function ModelExplorer({
           const height = host.clientHeight;
           if (!width || !height) return;
           camera.aspect = width / height;
-          camera.position.z = camera.aspect < 1.15 ? 11.5 : 9.5;
+          // Fit the full model and labels in narrow chapter columns.
+          camera.position.z = Math.max(9.5, 8.8 / Math.max(camera.aspect, 0.4));
           camera.updateProjectionMatrix();
           renderer.setSize(width, height);
           requestRender();
@@ -330,14 +333,14 @@ export function ModelExplorer({
   }
   return (
     <section
-      className="model-explorer"
+      className={`model-explorer${compact ? ' model-explorer--compact' : ''}`}
       aria-label="Interactive analytical models"
     >
       <div className="model-heading">
         <span>Analytical model</span>
         <span>Interactive 3D</span>
       </div>
-      <div className="model-modes" aria-label="Choose a model">
+      {!compact && <div className="model-modes" aria-label="Choose a model">
         <button
           type="button"
           aria-pressed={mode === "trust"}
@@ -352,7 +355,7 @@ export function ModelExplorer({
         >
           02 / Neural network
         </button>
-      </div>
+      </div>}
       <div className="model-viewport" ref={mount}>
         {status !== "ready" && (
           <div className="model-fallback">
@@ -416,11 +419,12 @@ export function ModelExplorer({
             ? "Trust is the connecting variable."
             : "From customer data to a churn score."}
         </strong>
-        <p>
+        <p hidden={compact}>
           {mode === "trust"
             ? "Personalisation → trust: B = .575. Trust → loyalty: B = .526. This is a statistical model, not proof of causation. Node sizes and positions do not encode effect size."
             : "Conceptual architecture only. The displayed node count and connections are illustrative; the exact trained network and weights were not retained in the project evidence."}
         </p>
+        {compact && <p>{mode === 'trust' ? 'Statistical paths, not proof of causation. Geometry does not encode effect size.' : 'Illustrative architecture, not the exact trained network.'}</p>}
         <NativeLink
           href={
             mode === "trust"

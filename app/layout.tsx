@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteEffects } from "@/components/site-effects";
 import { publicPath } from "@/lib/paths";
 import "./globals.css";
+import "./visual-polish.css";
 
 const siteUrl = "https://dccchidera-lgtm.github.io";
 

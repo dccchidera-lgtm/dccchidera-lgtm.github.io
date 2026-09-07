@@ -1,5 +1,9 @@
 # Portfolio audit and redesign
 
+## Visual enhancement within the original layout
+
+Following further owner feedback, the original composition now includes visible interactive trust and neural network models in the existing homepage visual columns. The profile cards and monogram, hero lighting, case surfaces and hover states receive a restrained blue and metallic treatment. Typography, section order and content are preserved. Narrow 3D viewports fit the model dynamically. Pointer spotlight updates are limited to animation frames and skipped for touch and reduced motion. This pass adds no dependencies or fabricated portfolio evidence. Browser visual testing remains unperformed.
+
 ## Restoration following owner feedback
 
 The owner preferred the original design. The restoration returns the homepage, full case chapters, profile, work list, research page, navigation appearance, typography, palette, cursor spotlight and reveal effects to the original baseline. The earlier redesign notes below are a historical record, not a description of the restored design.

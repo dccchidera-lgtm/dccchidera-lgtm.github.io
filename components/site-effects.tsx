@@ -7,6 +7,9 @@ export function SiteEffects() {
     const root = document.documentElement;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let frame = 0;
+    let pointerFrame = 0;
+    let pointerX = 0;
+    let pointerY = 0;
 
     const updateProgress = () => {
       if (frame) return;
@@ -25,8 +28,15 @@ export function SiteEffects() {
     window.addEventListener('resize', updateProgress);
 
     const updatePointer = (event: PointerEvent) => {
-      root.style.setProperty('--pointer-x', `${event.clientX}px`);
-      root.style.setProperty('--pointer-y', `${event.clientY}px`);
+      if (reducedMotion || event.pointerType !== 'mouse') return;
+      pointerX = event.clientX;
+      pointerY = event.clientY;
+      if (pointerFrame) return;
+      pointerFrame = window.requestAnimationFrame(() => {
+        root.style.setProperty('--pointer-x', `${pointerX}px`);
+        root.style.setProperty('--pointer-y', `${pointerY}px`);
+        pointerFrame = 0;
+      });
     };
 
     window.addEventListener('pointermove', updatePointer, { passive: true });
@@ -79,6 +89,7 @@ export function SiteEffects() {
 
     return () => {
       observer.disconnect();
+      if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
       mutationObserver.disconnect();
       window.removeEventListener('scroll', updateProgress);
       window.removeEventListener('resize', updateProgress);

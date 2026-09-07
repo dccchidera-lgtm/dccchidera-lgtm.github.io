@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { ModelExplorer } from '@/components/model-explorer';
 import { CaseQuickIndex } from '@/components/case-quick-index';
 import { CaseFinder } from '@/components/case-finder';
 import { InteractiveEvidenceLab } from '@/components/interactive-evidence-lab';
@@ -215,7 +216,11 @@ export default function Home() {
                   <span>{item.name}</span>
                   <span>{item.type}</span>
                 </div>
-                <ChapterVisual kind={item.visual} label={item.visualLabel} />
+                {item.visual === 'trust' || item.visual === 'model' ? (
+                  <div className="chapter-visual chapter-visual--interactive">
+                    <ModelExplorer compact initialMode={item.visual === 'trust' ? 'trust' : 'network'} />
+                  </div>
+                ) : <ChapterVisual kind={item.visual} label={item.visualLabel} />}
                 <div className="chapter-copy" data-reveal>
                   <h2>
                     {item.title}
