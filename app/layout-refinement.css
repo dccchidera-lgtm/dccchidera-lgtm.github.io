@@ -16,9 +16,9 @@ html { scrollbar-gutter: stable; }
 .profile-hero .profile-opening h1 { font-size: clamp(3rem, 5.4vw, 5.2rem); line-height: 1.02; letter-spacing: -.055em; margin: 0; text-wrap: pretty; }
 .profile-opening h1 br { display: none; }
 .profile-hero .profile-opening h1 span { display: block; line-height: 1.06; margin-top: .25em; }
-.profile-portrait { margin: 0; min-width: 0; }
+.profile-portrait { margin: 0; min-width: 0; padding: clamp(.75rem, 1.3vw, 1.15rem); border: 1px solid var(--separator); background: var(--background); border-radius: 6px; box-shadow: 0 12px 32px rgb(0 0 0 / 5%); }
 .profile-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 33%; border-radius: 3px; }
-.profile-portrait figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .4rem; margin-top: .8rem; color: var(--secondary-label); font-size: .875rem; }
+.profile-portrait figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; padding-top: .85rem; border-top: 1px solid var(--separator); color: var(--secondary-label); font-size: .8125rem; line-height: 1.5; }
 .profile-hero-foot { align-items: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--separator); }
 .profile-opening-links { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9375rem; }
 .profile-opening-links a { display: inline-flex; align-items: center; min-height: 44px; border-bottom: 1px solid var(--separator); }
