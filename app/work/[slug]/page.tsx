@@ -122,12 +122,28 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <div className="case-body">
               <section className="case-section" id="question" data-reveal>
                 <p className="section-number">01 · Decision</p>
-                <h2>{actor} defined the decision before selecting a method.</h2>
+                <h2>{slug === 'customer-intelligence' ? 'The study in one minute.' : `${actor} defined the decision before selecting a method.`}</h2>
                 <p className="large-copy">{project.question}</p>
+                {slug === 'customer-intelligence' ? (
+                  <>
+                    <h3>My contribution</h3>
+                    <p>I designed the survey, checked the data and analysed 139 complete eligible responses. I assessed the measurement scales before examining the relationships between personalisation, trust and loyalty.</p>
+                    <h3>The finding that matters</h3>
+                    <p>When trust and personalisation were considered together, trust remained statistically associated with loyalty. Personalisation’s direct coefficient was small and not statistically significant. The estimated indirect effect through trust was .303, with a 95% bootstrap interval from .199 to .422.</p>
+                    <h3>What I would recommend</h3>
+                    <p>Evaluate personalisation alongside customer trust, transparency and control. Test changes experimentally and measure actual behaviour before claiming an improvement in loyalty.</p>
+                    <h3>What this does not prove</h3>
+                    <p>This survey captures associations at one point in time. It does not show that personalisation causes trust or loyalty, or that the findings represent every UK shopper.</p>
+                    <a className="arrow-link" href="#evidence">Read the results and supporting explanation</a>
+                  </>
+                ) : (
+                  <>
                 <h3>{caseStories[slug][0]}</h3>
                 <p>{caseStories[slug][1]}</p>
                 <h3>{caseStories[slug][2]}</h3>
                 <p>{caseStories[slug][3]}</p>
+                  </>
+                )}
               </section>
 
               <section className="case-section" id="approach" data-reveal>
