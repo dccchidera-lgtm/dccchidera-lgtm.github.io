@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: project.name,
       description: project.lead,
+      url: `/work/${slug}/`,
       images: [],
     },
     twitter: {
@@ -171,7 +172,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <h2>The evidence has defined limits.</h2>
                   <p>{project.limitations}</p>
                 </div>
-                <div>
+                <div id="next-iteration">
                   <p className="section-number">06 · Next iteration</p>
                   <h2>{actor} would strengthen the next iteration.</h2>
                   <p>{project.improvement}</p>

@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 export function SiteEffects() {
   useEffect(() => {
     const root = document.documentElement;
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
     let frame = 0;
     let pointerFrame = 0;
     let pointerX = 0;
@@ -28,7 +28,7 @@ export function SiteEffects() {
     window.addEventListener('resize', updateProgress);
 
     const updatePointer = (event: PointerEvent) => {
-      if (reducedMotion || event.pointerType !== 'mouse') return;
+      if (motionPreference.matches || event.pointerType !== 'mouse') return;
       pointerX = event.clientX;
       pointerY = event.clientY;
       if (pointerFrame) return;
@@ -40,15 +40,6 @@ export function SiteEffects() {
     };
 
     window.addEventListener('pointermove', updatePointer, { passive: true });
-
-    if (reducedMotion) {
-      return () => {
-        window.removeEventListener('scroll', updateProgress);
-        window.removeEventListener('resize', updateProgress);
-        window.removeEventListener('pointermove', updatePointer);
-        if (frame) window.cancelAnimationFrame(frame);
-      };
-    }
 
     const registered = new WeakSet<HTMLElement>();
     const observer = new IntersectionObserver(
@@ -63,6 +54,7 @@ export function SiteEffects() {
     );
 
     const register = (scope: ParentNode) => {
+      if (motionPreference.matches) return;
       const candidates = Array.from(scope.querySelectorAll<HTMLElement>('[data-reveal]'));
       candidates.forEach((element) => {
         if (registered.has(element)) return;
@@ -87,8 +79,20 @@ export function SiteEffects() {
     });
     mutationObserver.observe(document.body, { childList: true, subtree: true });
 
+    const updateMotion = () => {
+      if (!motionPreference.matches) return;
+      if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
+      pointerFrame = 0;
+      observer.disconnect();
+      document.querySelectorAll<HTMLElement>('.reveal-pending').forEach((element) => {
+        element.classList.add('is-revealed');
+      });
+    };
+    motionPreference.addEventListener('change', updateMotion);
+
     return () => {
       observer.disconnect();
+      motionPreference.removeEventListener('change', updateMotion);
       if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
       mutationObserver.disconnect();
       window.removeEventListener('scroll', updateProgress);

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { NativeLink } from '@/components/native-link';
 import { PortfolioCommand } from '@/components/portfolio-command';
 import { ThemeSwitch } from '@/components/theme-switch';
@@ -13,6 +14,7 @@ const navigation = [
 ];
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -60,7 +62,7 @@ export function SiteHeader() {
           <button className="menu-trigger menu-close" type="button" onClick={() => setOpen(false)}>Close</button>
           <nav className="menu-nav" aria-label="Site menu">
             {navigation.map((item) => (
-              <NativeLink href={item.href} key={item.href} onClick={() => setOpen(false)}>
+              <NativeLink href={item.href} key={item.href} aria-current={pathname?.replace(/\/$/, '') === item.href ? 'page' : pathname?.startsWith(`${item.href}/`) ? 'location' : undefined} onClick={() => setOpen(false)}>
                 {item.label}
               </NativeLink>
             ))}

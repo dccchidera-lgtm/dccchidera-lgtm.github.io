@@ -19,7 +19,7 @@ export function WorkBrowser({ projects }: { projects: CaseStudy[] }) {
 
   return (
     <>
-      <div className="work-filters" aria-label="Filter case studies">
+      <div className="work-filters" role="group" aria-label="Filter case studies">
         {(['all', 'individual', 'team'] as const).map((option) => (
           <button
             type="button"

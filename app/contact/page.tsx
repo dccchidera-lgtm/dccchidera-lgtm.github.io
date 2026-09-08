@@ -1,15 +1,14 @@
 import { publicPath } from '@/lib/paths';
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/page-metadata';
 import { CopyEmail } from '@/components/copy-email';
 import { NativeLink } from '@/components/native-link';
 import { SiteHeader } from '@/components/site-header';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/contact/' },
-  title: 'Contact',
-  description:
-    'Contact Daniel Christopher about entry-level analytics, customer insight, marketing technology and digital transformation opportunities.',
-};
+export const metadata = pageMetadata(
+  'Contact',
+  'Contact Daniel Christopher about graduate analytics, customer insight, marketing technology and digital transformation opportunities.',
+  '/contact/',
+);
 
 export default function ContactPage() {
   return (

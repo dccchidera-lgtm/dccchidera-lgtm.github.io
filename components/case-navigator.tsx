@@ -8,6 +8,7 @@ const sections = [
   { id: 'evidence', label: 'Evidence' },
   { id: 'implications', label: 'Implications' },
   { id: 'limits', label: 'Limits' },
+  { id: 'next-iteration', label: 'Next iteration' },
   { id: 'contribution', label: 'Contribution' },
 ];
 
@@ -53,4 +54,3 @@ export function CaseNavigator() {
     </aside>
   );
 }
-

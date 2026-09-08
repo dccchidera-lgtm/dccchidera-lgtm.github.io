@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/page-metadata';
 import Image from 'next/image';
 import { publicPath } from '@/lib/paths';
 import { NativeLink } from '@/components/native-link';
@@ -7,12 +7,11 @@ import { ProfileNavigator } from '@/components/profile-navigator';
 import { RoleFit } from '@/components/role-fit';
 import { SiteHeader } from '@/components/site-header';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/profile/' },
-  title: 'Profile',
-  description:
-    'Daniel Christopher’s bilingual background, digital marketing foundation and verified business analytics capabilities.',
-};
+export const metadata = pageMetadata(
+  'Profile',
+  'Daniel Christopher’s bilingual background, digital marketing foundation and verified business analytics capabilities.',
+  '/profile/',
+);
 
 export default function ProfilePage() {
   return (

@@ -379,9 +379,9 @@ export function ModelExplorer({
     >
       <div className="model-heading">
         <span>{modelInfo[mode].title}</span>
-        <span>Interactive 3D</span>
+        <span>{status === 'fallback' ? 'Conceptual diagram' : 'Interactive 3D'}</span>
       </div>
-      {!compact && <div className="model-modes" aria-label="Choose a model">
+      {!compact && <div className="model-modes" role="group" aria-label="Choose a model">
         {(Object.keys(modelInfo) as Mode[]).map((key) => <button key={key} type="button" aria-pressed={mode === key} onClick={() => changeMode(key)}>{modelInfo[key].title}</button>)}
       </div>}
       <div className="model-viewport" ref={mount}>
@@ -394,12 +394,12 @@ export function ModelExplorer({
             <small>
               {status === "loading"
                 ? "Preparing 3D view. The findings are available below."
-                : "Text view is available on this device."}
+                : "Static diagram shown. The explanation is available below."}
             </small>
           </div>
         )}
       </div>
-      <div className="model-controls" aria-label="3D view controls">
+      <div className="model-controls" role="group" aria-label="3D view controls">
         <span>{status === 'ready' ? 'Drag to explore' : 'Diagram view'}</span>
         <div>
           <button

@@ -1,14 +1,13 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/page-metadata';
 import { NativeLink } from '@/components/native-link';
 import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/research/' },
-  title: 'Research',
-  description:
-    'Method, evidence and limitations from Daniel Christopher’s MSc research into AI personalisation, trust and customer loyalty.',
-};
+export const metadata = pageMetadata(
+  'Research',
+  'Method, evidence and limitations from Daniel Christopher’s MSc research into AI personalisation, trust and customer loyalty.',
+  '/research/',
+);
 
 const workflow = [
   ['01', 'Question', 'Define the relationship and the proposed mediating role of trust.'],

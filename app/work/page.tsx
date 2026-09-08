@@ -1,15 +1,14 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/page-metadata';
 import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
 import { WorkBrowser } from '@/components/work-browser';
 import { cases } from '@/lib/cases';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/work/' },
-  title: 'Work',
-  description:
-    'Four verified MSc business analytics case studies featuring Daniel Christopher’s individual work and clearly attributed team work.',
-};
+export const metadata = pageMetadata(
+  'Work',
+  'Four verified MSc business analytics case studies featuring Daniel Christopher’s individual work and clearly attributed team work.',
+  '/work/',
+);
 
 export default function WorkPage() {
   return (
