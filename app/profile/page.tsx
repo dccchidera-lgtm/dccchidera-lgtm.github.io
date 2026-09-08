@@ -198,9 +198,50 @@ export default function ProfilePage() {
               </article>
             </div>
 
+            <div className="research-foundations" data-reveal>
+              <div className="research-foundations-intro">
+                <p className="overline">Earlier research foundations</p>
+                <h3>Two earlier projects show where the customer intelligence thread began.</h3>
+                <p>
+                  These are presented as foundations rather than complete analytics case
+                  studies. The distinction keeps the portfolio clear about the depth and
+                  maturity of the evidence available.
+                </p>
+              </div>
+
+              <div className="research-foundations-list">
+                <article>
+                  <div className="research-foundation-meta">
+                    <span>Individual final project</span>
+                    <span>Birmingham City University</span>
+                  </div>
+                  <h4>The Impact of AI on Marketing Strategies Targeting Generation Z</h4>
+                  <p>
+                    Examined personalisation, chatbots, predictive analytics, trust,
+                    privacy and responsible AI in marketing. This early study established
+                    the customer question later developed through postgraduate analytics.
+                  </p>
+                </article>
+
+                <article>
+                  <div className="research-foundation-meta">
+                    <span>Flock Together team presentation</span>
+                    <span>Credited research contribution</span>
+                  </div>
+                  <h4>Researching nature, community and mental health</h4>
+                  <p>
+                    Researched how nature, social connection and mental health shaped the
+                    proposition, reviewed comparable organisations and developed questions
+                    for primary research. Recommendations and other presentation sections
+                    remained the work of the named team members.
+                  </p>
+                </article>
+              </div>
+            </div>
+
             <p className="marketing-evidence-note" data-reveal>
-              These entries document degree and certification-backed capability. Commercial
-              campaign deployment falls outside the evidence shown here.
+              Evidence reviewed from the original project document, research notes and
+              presentation. Commercial campaign deployment falls outside the evidence shown here.
             </p>
           </div>
         </section>
