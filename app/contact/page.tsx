@@ -24,14 +24,14 @@ export default function ContactPage() {
           <div className="shell">
             <p className="overline">Contact · Manchester, UK</p>
             <h1>
-              Contact Daniel about
+              Let’s talk
               <br />
-              <span>an analytical or technology-facing opportunity.</span>
+              <span>about working together.</span>
             </h1>
             <p className="contact-intro">
-              I’m open to entry-level roles across business and data analysis, customer
+              I’m open to graduate roles across business and data analysis, customer
               insight, marketing analytics, digital transformation and responsible
-              AI-adjacent work. To discuss a role or a case study, email me or connect
+              applications of AI. To discuss a role or a case study, email me or connect
               with me on LinkedIn.
             </p>
             <CopyEmail />

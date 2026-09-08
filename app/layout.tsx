@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { SiteEffects } from "@/components/site-effects";
 import { publicPath } from "@/lib/paths";
 import "./globals.css";
 import "./visual-polish.css";
 import "./layout-refinement.css";
+import "./editorial-type.css";
+
+const grotesk = localFont({ src: [
+  { path: "../public/fonts/space-grotesk-400.woff2", weight: "400", style: "normal" },
+  { path: "../public/fonts/space-grotesk-700.woff2", weight: "700", style: "normal" },
+], variable: "--font-grotesk", display: "swap" });
+const newsreader = localFont({ src: "../public/fonts/newsreader-italic.woff2", weight: "400", style: "italic", variable: "--font-editorial", display: "swap", preload: false });
 
 const siteUrl = "https://dccchidera-lgtm.github.io";
 
@@ -57,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${grotesk.variable} ${newsreader.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

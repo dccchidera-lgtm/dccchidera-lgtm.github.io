@@ -1,0 +1,37 @@
+:root { --display-serif: var(--font-editorial), Georgia, serif; }
+body { font-family: var(--font-grotesk), system-ui, sans-serif; line-height: 1.6; }
+h1, h2, h3, .wordmark, .menu-nav { font-family: var(--font-grotesk), system-ui, sans-serif; }
+h1, h2 { font-weight: 700; text-wrap: balance; }
+.hero-title, .page-hero h1, .case-hero h1, .contact-hero h1 { letter-spacing: -.055em; line-height: 1.06; }
+.case-hero h1 { font-family: var(--font-grotesk), system-ui, sans-serif; font-style: normal; font-weight: 700; font-size: clamp(3rem, 7.4vw, 6.7rem); max-width: 1050px; }
+.hero-title .secondary, .page-hero h1 span, .contact-hero h1 span, .profile-hero .profile-opening h1 span { font-family: var(--display-serif); font-weight: 400; font-style: italic; letter-spacing: -.035em; line-height: 1.12; }
+.hero-title .secondary { margin-top: .22em; font-size: .66em; max-width: 1050px; }
+.profile-hero .profile-opening h1 { font-size: clamp(2.8rem, 4.9vw, 4.8rem); line-height: 1.08; letter-spacing: -.05em; }
+.case-section h2 { font-size: clamp(2rem, 4.3vw, 4.2rem); letter-spacing: -.045em; line-height: 1.12; }
+.case-section h3 { margin-top: 2rem; margin-bottom: .7rem; font-size: 1.25rem; line-height: 1.4; letter-spacing: -.02em; }
+.case-section > p:not(.section-number):not(.large-copy) { max-width: 68ch; font-size: 1.0625rem; line-height: 1.8; }
+.case-lead, .page-hero > .shell > p { max-width: 65ch; font-size: 1.125rem; line-height: 1.65; }
+.chapter h2 { letter-spacing: -.045em; line-height: 1.08; }
+.overline, .section-number, .page-hero small, .header-actions, .profile-navigator a, .case-navigator a { font-size: .875rem; }
+.wordmark { font-size: 1rem; letter-spacing: -.035em; }
+.hero, .page-hero { background: var(--background); }
+.hero-title > span:first-child { text-shadow: none; }
+.cursor-spotlight { display: none; }
+.hero::after, .page-hero::before { display: none; }
+.hero-method { border-top: 1px solid var(--separator); padding-top: 1.5rem; }
+.case-takeaway { background: color-mix(in srgb, var(--accent) 4%, var(--background)); padding: 1.4rem 1.6rem; }
+.case-takeaway > span { letter-spacing: .06em; text-transform: uppercase; font-size: .8125rem; }
+.case-facts strong, .evidence-table, .fact-grid { font-variant-numeric: tabular-nums; }
+.snapshot-about h2 { letter-spacing: -.04em; }
+.profile-portrait { box-shadow: none; border-radius: 2px; }
+.contact-row strong { letter-spacing: -.035em; }
+.model-note, .model-note p { line-height: 1.65; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
+@media (max-width: 760px) {
+  .hero-title, .page-hero h1, .contact-hero h1 { font-size: clamp(2.65rem, 10vw, 4.2rem); letter-spacing: -.045em; line-height: 1.08; }
+  .profile-hero .profile-opening h1 { font-size: clamp(2.5rem, 9.5vw, 4rem); }
+  .case-hero h1 { font-size: clamp(2.6rem, 9.5vw, 4rem); }
+  .case-section h2 { font-size: clamp(2rem, 7vw, 3rem); }
+  .hero-title .secondary { font-size: clamp(1.8rem, 7.5vw, 2.8rem); line-height: 1.2; }
+  .case-takeaway { padding: 1rem 1.15rem; }
+}

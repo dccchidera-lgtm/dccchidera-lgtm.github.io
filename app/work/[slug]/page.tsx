@@ -97,7 +97,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <span>{project.label}</span>
             </div>
             <p className="overline">{project.name}</p>
-            <h1>{project.title}</h1>
+            <h1>{projectSummaries[slug].headline}</h1>
             <p className="case-lead">{project.lead}</p>
             <div className="case-takeaway"><span>Key finding</span><p>{projectSummaries[slug].result}</p><a href="#evidence">Explore the evidence ↓</a></div>
           </div>

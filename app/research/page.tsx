@@ -32,13 +32,14 @@ export default function ResearchPage() {
           <div className="shell">
             <small>Research practice</small>
             <h1>
-              Research methods, evidence and
+              Personalisation and loyalty.
               <br />
-              <span>limitations stated clearly.</span>
+              <span>Where does trust fit?</span>
             </h1>
             <p>
-              Research is most useful when the question, evidence, analytical choices and
-              limitations remain visible.
+              My individual MSc dissertation examined the relationship using 139 eligible
+              survey responses. Trust remained material in the joint loyalty model.
+              The findings show associations, not proof of causation.
             </p>
           </div>
         </section>
