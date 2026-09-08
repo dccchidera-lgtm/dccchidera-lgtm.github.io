@@ -72,7 +72,6 @@ export default function ProfilePage() {
             <article className="snapshot-card snapshot-language" data-reveal>
               <span className="snapshot-label">Languages</span>
               <strong>English + German</strong>
-              <small>570+ day Duolingo streak</small>
             </article>
             <article className="snapshot-card snapshot-status" data-reveal>
               <span className="snapshot-label">Current stage</span>
