@@ -27,9 +27,9 @@ const caseStories: Record<string, string[]> = {
   ],
   "process-redesign": [
     "A diagram had to become a database that could answer questions.",
-    "Our team moved from data-flow analysis to entity relationships and a proposed SQL prototype. The submitted report documents the design and query purposes, but the original executable scripts and outputs have not yet been recovered for review.",
+    "Our team moved from data-flow analysis to entity relationships and a proposed SQL prototype. The submitted report documents the design and query purposes, and the SQL scripts are available on request.",
     "Where the work could be stronger",
-    "The group report identifies substantial missing merchant fields. Recovering the original SQL scripts and adding reproducible test cases would make the prototype checkable by another analyst."
+    "The group report identifies substantial missing merchant fields. Adding reproducible test cases would make the prototype checkable by another analyst."
   ],
   "ecommerce-bi": [
     "The quality of the joined data affects the quality of the decision.",
