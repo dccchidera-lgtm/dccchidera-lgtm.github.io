@@ -35,3 +35,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Private Olist workbook and temporary reconstructed aggregate output
+Olist Dataset Clean*.xlsx
+**/Olist Dataset Clean*.xlsx
+*Olist Reconstruction Aggregates*.json
+**/__pycache__/
