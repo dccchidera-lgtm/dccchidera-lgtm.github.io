@@ -76,7 +76,7 @@ export default function ProfilePage() {
             <article className="snapshot-card snapshot-status" data-reveal>
               <span className="snapshot-label">Current stage</span>
               <strong>MSc dissertation submitted</strong>
-              <small>Final result pending</small>
+              <small>Predicted Distinction</small>
             </article>
           </div>
         </section>
@@ -331,7 +331,7 @@ export default function ProfilePage() {
               <article>
                 <span>Manchester Metropolitan University</span>
                 <h2>MSc Business Analytics</h2>
-                <p>Dissertation submitted · final award and classification pending</p>
+                <p>Dissertation submitted · Predicted Distinction</p>
               </article>
               <article>
                 <span>Undergraduate degree</span>

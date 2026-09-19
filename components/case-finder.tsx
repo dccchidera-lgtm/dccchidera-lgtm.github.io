@@ -35,7 +35,7 @@ const choices = [
     title: 'Business data flows and a proposed relational SQL prototype',
     type: 'Four-person team project',
     evidence: 'DFD · ERD · documented SQL prototype',
-    note: 'See the data-quality findings and proposed relational design; actual SQL code is pending verification.',
+    note: 'See the data-quality findings and proposed relational design; SQL scripts available on request.',
     metric: 'DFD → SQL',
     metricLabel: 'design path',
     href: '/sql',
