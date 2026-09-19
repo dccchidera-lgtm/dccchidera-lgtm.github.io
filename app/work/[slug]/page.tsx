@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { CaseEvidenceVisual } from '@/components/case-evidence-visual';
 import { RecoveredProjectEvidence } from '@/components/recovered-project-evidence';
+import { OriginalProjectFigures } from '@/components/original-project-figures';
 import { CaseNavigator } from '@/components/case-navigator';
 import { NativeLink } from '@/components/native-link';
 import { PageFooter } from '@/components/page-footer';
@@ -173,6 +174,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <p className="large-copy">{project.evidence}</p>
                 <CaseEvidenceVisual slug={project.slug} />
                 <RecoveredProjectEvidence slug={project.slug} />
+                <OriginalProjectFigures slug={project.slug} />
                 {project.slug !== 'ecommerce-bi' && (
                   <details className="case-model-disclosure">
                     <summary>Explore the model in 3D</summary>
