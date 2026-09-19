@@ -49,7 +49,17 @@ export function OriginalProjectFigures({ slug }: { slug: string }) {
         <a href={publicPath('/evidence/sql-relational-schema.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the original proposed relational schema at full size">
           <Image src={publicPath('/evidence/sql-relational-schema.jpg')} alt="Original proposed database ERD showing six linked tables: Location, Delivery, Status, Promotion, Reviews and Scan with primary and foreign keys." width={1012} height={862} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
         </a>
-        <p className="visual-caveat">Source: recovered ERD from the submitted Data Management team report. SQL scripts available on request.</p>
+        <h3>Before: submitted current-state data flow</h3>
+        <p>The team mapped where merchant and platform records move and annotated the source-data quality issues. This is a coursework process model, not an observed view into a live platform.</p>
+        <a href={publicPath('/evidence/sql-current-data-flow.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the original current-state data-flow diagram at full size">
+          <Image src={publicPath('/evidence/sql-current-data-flow.jpg')} alt="Original level-one current-state data-flow diagram from the group report, showing restaurant partners, platform data, cleaning, the restaurant dataset and an analyst." width={1066} height={1111} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
+        </a>
+        <h3>After: proposed improved data flow</h3>
+        <p>The group’s proposed design routes merchant and platform events through validation and cleaning toward a normalised schema and analytical reporting. Proposed controls are design intentions, not implemented production changes.</p>
+        <a href={publicPath('/evidence/sql-proposed-data-flow.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the original proposed data-flow diagram at full size">
+          <Image src={publicPath('/evidence/sql-proposed-data-flow.jpg')} alt="Original level-one proposed data-flow diagram showing event-driven ingestion, schema validation, six normalised tables and insight reporting." width={1050} height={834} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
+        </a>
+        <p className="visual-caveat">Source: original ERD and current/proposed DFD figures from the submitted Data Management group report. SQL scripts available on request.</p>
       </figure>
     );
   }
