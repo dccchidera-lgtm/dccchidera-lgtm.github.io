@@ -69,7 +69,7 @@ export default function WorkPage() {
           <div className="shell spectrum-grid">
             <article data-reveal><span>01</span><strong>Research</strong><p>Survey design, quality checks and statistical interpretation.</p></article>
             <article data-reveal><span>02</span><strong>Decisions</strong><p>Dashboards, scenarios, optimisation and recommendations.</p></article>
-            <article data-reveal><span>03</span><strong>Data</strong><p>Process models, relational design and working SQL.</p></article>
+            <article data-reveal><span>03</span><strong>Data</strong><p>Process models, relational design and SQL query methods.</p></article>
             <article data-reveal><span>04</span><strong>Prediction</strong><p>Model comparison, validation and action design.</p></article>
           </div>
         </section>
@@ -102,12 +102,6 @@ export default function WorkPage() {
               <p className="overline">Further analytical writing</p>
               <h2>Research, frameworks and exploratory questions.</h2>
             </div>
-            <article id="independent-service-mix" data-reveal>
-              <span>Independent public-data project · reproducible Python</span>
-              <h3>Restaurant service mix</h3>
-              <p>Analysed 244 public example restaurant bills and compared lunch with dinner, separating descriptive evidence from unsupported staffing or profit claims.</p>
-              <NativeLink className="arrow-link" href="/service-mix">Explore the project and runnable code</NativeLink>
-            </article>
             <article id="shopify-transformation" data-reveal>
               <span>Individual analysis</span>
               <h3>Shopify digital transformation</h3>
