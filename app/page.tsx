@@ -191,6 +191,13 @@ export default function Home() {
           ))}
         </div>
 
+        <section className="writing-samples" aria-label="Independent public-data project">
+          <div className="shell writing-grid">
+            <div className="writing-heading"><p className="overline">Beyond assessed coursework</p><h2>An independent project with runnable Python.</h2></div>
+            <article><span>Public restaurant dataset · 244 bills</span><h3>Restaurant service mix</h3><p>I compared lunch and dinner bill value per cover, checked the underlying data and documented the limits before suggesting operational changes.</p><NativeLink className="arrow-link" href="/service-mix">View the independent analysis</NativeLink></article>
+          </div>
+        </section>
+
         <section className="visual-methods" id="visual-methods" aria-labelledby="visual-methods-title">
           <div className="shell visual-methods-heading" data-reveal>
             <div>
