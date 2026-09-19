@@ -29,6 +29,12 @@ const caseStories: Record<string, string[]> = {
     "Where the work could be stronger",
     "Assessor feedback supported the alignment between the ERD and SQL. Clearer DFD notation, explicit test cases and better SQL comments would make the reasoning easier for another analyst to inspect and maintain."
   ],
+  "ecommerce-bi": [
+    "The quality of the joined data affects the quality of the decision.",
+    "Our team prepared nine linked tables from a dataset of more than 100,000 ecommerce orders, cleaning problematic values and relationships before creating Power BI reporting on delivery, sellers and customer satisfaction.",
+    "The business finding we can currently substantiate",
+    "Accurate cross-table KPI reporting required data preparation. The original PBIX, exact DAX measures and a measured operational finding about delayed orders or seller performance have not been independently recovered. We should not turn a dashboard topic into an invented business result."
+  ],
   "predictive-analytics": [
     "The lowest error rate was the start of a decision, not the end.",
     "I compared 3 classifiers on the same gym membership dataset. The neural network had the lowest validation misclassification at 4.42%, but choosing a retention action requires more than ranking models by a single metric.",
