@@ -41,6 +41,18 @@ const choices = [
     href: '/sql',
   },
   {
+    id: 'ecommerce',
+    prompt: 'Check ecommerce performance',
+    project: 'Ecommerce Business Intelligence',
+    title: 'Building reliable delivery, seller and customer reporting',
+    type: 'Shared MSc team project',
+    evidence: 'Power Query · Power BI · 9 linked tables',
+    note: 'Project scope and data quality evidence are documented; original dashboard and measured operational findings remain to be verified.',
+    metric: '100,000+',
+    metricLabel: 'ecommerce orders',
+    href: '/powerbi',
+  },
+  {
     id: 'predict',
     prompt: 'Compare predictive models',
     project: 'Predictive Analytics',
