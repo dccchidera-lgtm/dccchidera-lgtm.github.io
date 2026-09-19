@@ -39,7 +39,7 @@ const cases = [
     title: 'Translating business data flows',
     muted: 'into a documented SQL prototype',
     description:
-      'A four-person team project mapping data flows and designing a relational SQL prototype; original scripts pending verification.',
+      'A four-person team project mapping data flows and designing a relational SQL prototype; SQL scripts available on request.',
     type: 'Team project',
     href: '/sql',
     visual: 'data',
@@ -109,7 +109,7 @@ export default function Home() {
               <small className="hero-reveal">
                 MSc Business Analytics
                 <br />
-                Dissertation submitted · final result pending
+                Dissertation submitted · Predicted Distinction
               </small>
             </div>
           </div>
