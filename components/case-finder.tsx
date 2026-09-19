@@ -14,7 +14,7 @@ const choices = [
     note: 'Best for seeing how assumptions and trade-offs become a transparent recommendation.',
     metric: '60–70%',
     metricLabel: 'scenario range',
-    href: '/work/decision-intelligence',
+    href: '/decisions',
   },
   {
     id: 'customer',
@@ -26,7 +26,7 @@ const choices = [
     note: 'Best for seeing independent research, careful interpretation and non-causal recommendations.',
     metric: '139',
     metricLabel: 'eligible responses',
-    href: '/work/customer-intelligence',
+    href: '/research-case',
   },
   {
     id: 'data',
@@ -38,7 +38,7 @@ const choices = [
     note: 'Best for seeing how a business process becomes a relational design and executable queries.',
     metric: 'DFD → SQL',
     metricLabel: 'design path',
-    href: '/work/process-redesign',
+    href: '/sql',
   },
   {
     id: 'predict',
@@ -50,7 +50,7 @@ const choices = [
     note: 'Best for seeing model comparison, validation and responsible retention actions.',
     metric: '4.42%',
     metricLabel: 'best validation error',
-    href: '/work/predictive-analytics',
+    href: '/churn',
   },
 ];
 
