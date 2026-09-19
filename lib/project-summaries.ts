@@ -25,6 +25,12 @@ export const projectSummaries: Record<
       "Make assumptions visible so decision makers can challenge the recommendation.",
     category: "Decision modelling",
   },
+  "ecommerce-bi": {
+    headline: "What makes ecommerce reporting reliable?",
+    result: "Nine related source tables covering 100,000+ orders required data preparation before cross-table reporting.",
+    takeaway: "Check data quality, joins and KPI definitions before making business recommendations; the original dashboard and numeric operational findings still need verification.",
+    category: "Business intelligence",
+  },
   "process-redesign": {
     headline: "Can better data structure improve reporting?",
     result:
