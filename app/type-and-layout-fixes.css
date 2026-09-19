@@ -1,0 +1,116 @@
+/* A single late-loaded layout pass: consistent reading edges and natural wrapping.
+   New independent-build sections follow the existing editorial design system. */
+main { min-width: 0; }
+main :is(h1, h2, h3) { text-wrap: pretty; overflow-wrap: break-word; }
+main :is(p, li, dd, figcaption) { overflow-wrap: break-word; }
+.shell, .chapter-inner, .footer-inner, .header-inner { min-width: 0; }
+:is(.hero-footer, .chapter-inner, .profile-grid, .background-story-grid,
+    .research-feature-grid, .writing-grid, .writing-heading,
+    .visual-methods-heading, .attribution-grid, .profile-opening,
+    .profile-hero-foot, .work-digital-grid, .digital-feature-grid) > * { min-width: 0; }
+:is(.hero-intro, .chapter-copy, .profile-copy, .background-intro,
+    .research-feature-grid, .visual-methods-heading, .site-build-intro) p {
+  max-width: 67ch;
+  line-height: 1.7;
+  text-align: start;
+}
+:is(.page-hero, .case-hero) > .shell {
+  width: min(calc(100% - 2.5rem), var(--content));
+  margin-inline: auto;
+}
+.hero-title { max-width: 100%; line-height: 1.06; }
+.hero-title > span { display: block; min-width: 0; }
+.hero-title .secondary { max-width: min(100%, 19ch); line-height: 1.14; text-wrap: pretty; }
+.chapter-copy h2 { max-width: 16ch; line-height: 1.07; text-wrap: pretty; }
+.chapter-copy h2 span { line-height: 1.12; }
+.chapter-copy p { max-width: 61ch; }
+.profile-feature h2 { max-width: 17ch; line-height: 1.08; }
+.profile-feature h2 span { line-height: 1.12; }
+.profile-copy { max-width: 64ch; }
+.profile-hero .profile-opening h1 { overflow-wrap: break-word; text-wrap: pretty; line-height: 1.08; }
+.profile-hero .profile-opening h1 span { line-height: 1.14; }
+.page-hero h1 { max-width: 100%; line-height: 1.06; }
+.page-hero h1 span { line-height: 1.14; }
+.case-hero h1 { max-width: 100%; line-height: 1.08; }
+.writing-heading, .visual-methods-heading { align-items: start; }
+.writing-grid > article { min-width: 0; }
+.case-section > p, .case-section h2, .case-section h3 { text-align: start; }
+.case-section > p:not(.section-number):not(.large-copy) { max-width: 67ch; }
+
+/* Independent digital work: real site evidence, not a placeholder client case. */
+.digital-feature { padding: clamp(4.5rem, 8vw, 8rem) 0; border-block: 1px solid var(--separator); }
+.digital-feature-grid { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); align-items: start; gap: clamp(2.5rem,7vw,7rem); }
+.digital-feature-copy h2, .work-digital-heading h2, .work-index-intro h2,
+.site-build-intro h2, .site-build-close h2 {
+  max-width: 16ch; margin: .9rem 0 1.25rem;
+  font-size: clamp(2.15rem,5.1vw,5.1rem); line-height: 1.09;
+  letter-spacing: -.045em; text-wrap: pretty;
+}
+.digital-feature-copy > p:not(.overline) { max-width: 61ch; margin-bottom: 1.7rem; line-height: 1.75; }
+.digital-feature-details { border-top: 1px solid var(--separator); }
+.digital-feature-details > div {
+  display: grid; grid-template-columns: minmax(0,.48fr) minmax(0,1fr);
+  gap: 1.25rem; padding: 1.35rem 0;
+  border-bottom: 1px solid var(--separator);
+}
+.digital-feature-details span, .work-digital-grid article > span, .site-build-grid article > span {
+  color: var(--secondary-label); font-size: .74rem; letter-spacing: .045em;
+}
+.digital-feature-details strong { font-size: clamp(1rem,1.5vw,1.4rem); line-height: 1.35; font-weight: 600; }
+
+.work-digital-feature { padding: clamp(4rem,7vw,7rem) 0; border-bottom: 1px solid var(--separator); }
+.work-digital-heading { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.75fr);
+  align-items: end; gap: clamp(1.5rem,5vw,5rem); margin: 1rem 0 3rem; }
+.work-digital-heading h2 { margin: 0; }
+.work-digital-heading p { max-width: 40ch; line-height: 1.65; color: var(--secondary-label); }
+.work-digital-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(1.3rem,3vw,3rem); }
+.work-digital-grid article { display: flex; flex-direction: column; min-width: 0; padding-top: 1.5rem; border-top: 1px solid var(--separator); }
+.work-digital-grid article h3 { margin: 1.25rem 0 .75rem; font-size: clamp(1.55rem,2.3vw,2.4rem); line-height: 1.16; letter-spacing: -.035em; }
+.work-digital-grid article p { margin: 0 0 1.5rem; max-width: 42ch; line-height: 1.7; color: var(--secondary-label); }
+.work-digital-grid article .arrow-link { margin-top: auto; align-self: start; }
+.work-index-intro { padding: clamp(2.5rem,5vw,4.5rem) 0 2rem; border-top: 1px solid var(--separator); }
+.work-index-intro h2 { max-width: 22ch; font-size: clamp(2rem,4.2vw,4rem); }
+.work-index-intro > p:last-child { max-width: 64ch; color: var(--secondary-label); line-height: 1.65; }
+
+.site-build-hero .site-build-links { display: flex; gap: 1.2rem 2rem; flex-wrap: wrap; margin-top: 2rem; }
+.site-build-intro { display: grid; grid-template-columns: minmax(0,.45fr) minmax(0,1fr);
+  gap: clamp(2rem,6vw,6rem); padding-block: clamp(4rem,8vw,8rem); }
+.site-build-intro h2 { margin-top: 0; }
+.site-build-intro p:not(.overline), .site-build-close p:not(.overline) { max-width: 68ch; line-height: 1.7; }
+.site-build-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 clamp(2rem,5vw,5rem); }
+.site-build-grid article { min-width: 0; padding: clamp(2rem,4vw,4rem) 0; border-top: 1px solid var(--separator); }
+.site-build-grid article h2 { max-width: 20ch; margin: 1rem 0; font-size: clamp(1.8rem,3.3vw,3.1rem); line-height: 1.16; letter-spacing: -.04em; }
+.site-build-grid article p { max-width: 57ch; line-height: 1.7; }
+.site-build-close { padding-block: clamp(4rem,8vw,8rem); border-top: 1px solid var(--separator); }
+.site-build-close h2 { max-width: 20ch; }
+
+/* Natural, consistent readable rhythm when scrolling on narrow screens. */
+@media (max-width: 900px) {
+  .digital-feature-grid, .work-digital-heading, .site-build-intro { grid-template-columns: minmax(0,1fr); }
+  .digital-feature-grid { gap: 2.5rem; }
+  .work-digital-heading { gap: 1rem; }
+  .hero-title .secondary { max-width: 100%; }
+}
+@media (max-width: 760px) {
+  .shell, .chapter-inner, .footer-inner, .header-inner,
+  :is(.page-hero,.case-hero) > .shell { width: calc(100% - 2.5rem); }
+  .hero-kicker { flex-wrap: wrap; gap: .75rem 1.3rem; }
+  .hero-footer { grid-template-columns: minmax(0,1fr); align-items: start; gap: 1.5rem; }
+  .chapter-copy h2 { max-width: 100%; }
+  .chapter-copy h2 br { display: none; }
+  .chapter-copy h2 span { display: block; margin-top: .15em; }
+  .profile-feature h2 { max-width: 100%; }
+  .profile-hero .profile-opening h1, .page-hero h1, .case-hero h1 { text-wrap: pretty; }
+  .work-digital-grid, .site-build-grid { grid-template-columns: minmax(0,1fr); }
+  .work-digital-grid { gap: 2.25rem; }
+  .digital-feature-details > div { grid-template-columns: minmax(0,.35fr) minmax(0,1fr); gap: 1rem; }
+  .writing-heading { align-items: start; }
+}
+@media (max-width: 420px) {
+  .hero-title { font-size: clamp(2.6rem,11.5vw,3.4rem); }
+  .hero-title .secondary { font-size: clamp(1.65rem,7.3vw,2.2rem); letter-spacing: -.025em; line-height: 1.19; }
+  .profile-hero .profile-opening h1, .page-hero h1, .case-hero h1 {
+    font-size: clamp(2.15rem,9vw,3.1rem); letter-spacing: -.035em; line-height: 1.12;
+  }
+  .digital-feature-details > div { grid-template-columns: minmax(0,1fr); gap: .5rem; }
+}
