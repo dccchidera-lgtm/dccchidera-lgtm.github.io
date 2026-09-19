@@ -128,8 +128,8 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
           <strong>Reliable reporting starts with reliable joins.</strong>
         </figcaption>
         <div className="visual-result-strip">
-          <div><span>Orders in the source data</span><strong>100,000+</strong></div>
-          <div><span>Related source tables</span><strong>9</strong></div>
+          <div><span>Recovered order rows</span><strong>98,582</strong></div>
+          <div><span>Source sheets + date table</span><strong>8 + 1</strong></div>
           <div><span>Reporting themes</span><strong>3</strong></div>
         </div>
         <div className="pipeline-map">
@@ -139,7 +139,7 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
           <b aria-hidden="true">→</b>
           <div><span>03</span><strong>Report</strong><small>Power BI / DAX</small></div>
         </div>
-        <p className="visual-caveat">Project scope is documented. This diagram is a process summary of the dashboard build.</p>
+        <p className="visual-caveat">The cleaned eight-sheet workbook has been recovered. The original PBIX is unavailable, so new report visuals will be labelled as a reconstruction rather than original dashboard screenshots.</p>
       </figure>
     );
   }
