@@ -2,6 +2,7 @@ import { ModelExplorer } from '@/components/model-explorer';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { CaseEvidenceVisual } from '@/components/case-evidence-visual';
+import { RecoveredProjectEvidence } from '@/components/recovered-project-evidence';
 import { CaseNavigator } from '@/components/case-navigator';
 import { NativeLink } from '@/components/native-link';
 import { PageFooter } from '@/components/page-footer';
@@ -164,6 +165,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <h2>The results support the following interpretation.</h2>
                 <p className="large-copy">{project.evidence}</p>
                 <CaseEvidenceVisual slug={project.slug} />
+                <RecoveredProjectEvidence slug={project.slug} />
                 {(
                   <details className="case-model-disclosure">
                     <summary>Explore the model in 3D</summary>
