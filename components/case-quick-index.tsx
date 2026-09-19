@@ -25,7 +25,7 @@ const caseRows = [
     href: '/sql',
     question: 'How can clearer data structure support reliable reporting?',
     method: 'Data-flow diagram · ERD · SQL prototype',
-    evidence: 'Working database created, populated and queried',
+    evidence: '99.7% delivery fees missing · SQL scripts pending verification',
     ownership: 'Four-person team',
   },
   {
