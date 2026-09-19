@@ -1,0 +1,23 @@
+name: Import approved master CV
+on:
+  push:
+    branches: [replace-public-cv-with-final-master]
+    paths: ['.github/workflows/import-approved-cv.yml']
+permissions:
+  contents: write
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download approved PDF and verify exact file
+        run: |
+          curl --fail --location --retry 3 --retry-delay 2 --output public/Daniel_Christopher_Public_CV.pdf 'https://at.adobe.com/tyaBofdV0OA1jd9q'
+          echo '2de9451fd65bccd2c1db86b8c6cb4a3ab72b747335aa8827a61c5a8a754f44ee  public/Daniel_Christopher_Public_CV.pdf' | sha256sum --check
+          test "$(head -c 4 public/Daniel_Christopher_Public_CV.pdf)" = '%PDF'
+      - name: Commit public CV
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/Daniel_Christopher_Public_CV.pdf
+          git diff --cached --quiet || (git commit -m 'Replace public CV with approved final master PDF' && git push)
