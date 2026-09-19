@@ -15,7 +15,7 @@ const cases = [
     description:
       'A four-person team project combining a management dashboard, margin scenarios and optimisation to support a location and store-configuration decision.',
     type: 'Team project',
-    href: '/work/decision-intelligence',
+    href: '/decisions',
     visual: 'decision',
     visualLabel: 'Scenario range from 60 to 70 percent leading to an optimisation decision',
     tone: 'paper',
@@ -28,7 +28,7 @@ const cases = [
     description:
       'Individual MSc research into the statistical links among AI-driven personalisation, trust and customer loyalty in UK ecommerce.',
     type: 'Individual dissertation',
-    href: '/work/customer-intelligence',
+    href: '/research-case',
     visual: 'trust',
     visualLabel: '139 responses analysed with a personalisation and trust correlation of point 591',
     tone: 'ink',
@@ -41,7 +41,7 @@ const cases = [
     description:
       'A four-person team project moving from data-flow and entity models to a working relational SQL prototype.',
     type: 'Team project',
-    href: '/work/process-redesign',
+    href: '/sql',
     visual: 'data',
     visualLabel: 'Data flow diagram translated to entity relationship design and SQL',
     tone: 'paper',
@@ -54,7 +54,7 @@ const cases = [
     description:
       'An individual comparison of three churn classifiers in SAS Enterprise Miner, using a 4,000-record gym-membership dataset.',
     type: 'Individual project',
-    href: '/work/predictive-analytics',
+    href: '/churn',
     visual: 'model',
     visualLabel: 'Validation misclassification comparison: tree 10.52 percent, logistic regression 6.18 percent, neural network 4.42 percent',
     tone: 'mist',
