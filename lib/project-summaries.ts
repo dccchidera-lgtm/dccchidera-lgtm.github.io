@@ -34,7 +34,7 @@ export const projectSummaries: Record<
   "process-redesign": {
     headline: "Can better data structure improve reporting?",
     result:
-      "A relational prototype that created tables, populated data and executed queries.",
+      "Documented six-table schema; original SQL and query results awaiting verification.",
     takeaway:
       "Align the business rules, entity relationships and SQL before building reports.",
     category: "Data management",
