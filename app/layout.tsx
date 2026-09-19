@@ -6,6 +6,7 @@ import "./globals.css";
 import "./visual-polish.css";
 import "./layout-refinement.css";
 import "./editorial-type.css";
+import "./type-and-layout-fixes.css";
 
 const grotesk = localFont({ src: [
   { path: "../public/fonts/space-grotesk-400.woff2", weight: "400", style: "normal" },
@@ -18,11 +19,11 @@ const siteUrl = "https://dccchidera-lgtm.github.io";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Daniel Christopher | Analytics & Digital Marketing",
+    default: "Daniel Christopher | Digital Builds, Analytics & Marketing",
     template: "%s | Daniel Christopher",
   },
   description:
-    "Evidence-led portfolio by Daniel Christopher, combining business analytics, digital marketing, customer research and digital transformation.",
+    "Independent digital builds, evidence-led analytics, customer research and digital marketing by Daniel Christopher.",
   alternates: {
     canonical: "/",
   },
@@ -34,9 +35,9 @@ export const metadata: Metadata = {
     icon: publicPath("/favicon.svg"),
   },
   openGraph: {
-    title: "Daniel Christopher | Analytics & Digital Marketing",
+    title: "Daniel Christopher | Digital Builds, Analytics & Marketing",
     description:
-      "Evidence-led work across analytics, customer research, digital marketing and transformation.",
+      "Digital builds, analytics, customer research and marketing work by Daniel Christopher.",
     type: "website",
     url: siteUrl,
     siteName: "Daniel Christopher",
@@ -52,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daniel Christopher | Analytics & Digital Marketing",
+    title: "Daniel Christopher | Digital Builds, Analytics & Marketing",
     description:
-      "Evidence-led work across analytics, customer research, digital marketing and transformation.",
+      "Digital builds, analytics, customer research and marketing work by Daniel Christopher.",
     images: [`${siteUrl}/og-daniel-christopher.png`],
   },
 };
