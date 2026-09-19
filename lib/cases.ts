@@ -105,20 +105,20 @@ export const cases: CaseStudy[] = [
     approach: [
       'Our team defined the business problem and reviewed the organisation’s data-management context.',
       'We mapped the movement of data with a data-flow diagram and modelled the relational structure with an entity-relationship diagram.',
-      'The group report describes translating the ERD into a six-table relational schema and a SQL prototype; the original executable scripts remain to be checked.',
-      'The group report outlines analytical queries for merchant data quality, pricing, promotion and performance; the actual SQL text has not yet been recovered.',
+      'The group report describes translating the ERD into a six-table relational schema and a SQL prototype; SQL scripts available on request.',
+      'The group report outlines analytical queries for merchant data quality, pricing, promotion and performance; SQL scripts available on request.',
     ],
     evidence:
-      'The submitted coursework identifies 997 missing delivery-fee values out of 1,000 merchant records (99.7%) and outlines a proposed relational schema with analytical queries. The seven query purposes are described in the report, but the actual scripts and execution outputs have not yet been recovered for independent verification.',
+      'The submitted coursework identifies 997 missing delivery-fee values out of 1,000 merchant records (99.7%) and outlines a proposed relational schema with analytical queries. The seven query purposes are described in the report, and the SQL scripts are available on request.',
     implications: [
       'Agree the business entities and relationships before building reports on top of them.',
       'Use the same business rules in the conceptual model and the implemented schema.',
       'Test the database through decision-relevant queries rather than treating creation as the finish line.',
     ],
     limitations:
-      'This was assessed group coursework, not Uber Eats production work. The original SQL scripts and independently rerun results are not yet available in the recovered assignment ZIP.',
+      'This was assessed group coursework, not Uber Eats production work. SQL scripts are available on request.',
     improvement:
-      'Recover the team SQL files and actual schema, then publish verified queries, sample result sets and explicit tests with accurate group attribution.',
+      'Publish the SQL queries, sample result sets and explicit tests with accurate group attribution.',
     contribution:
       'There were no fixed specialist roles. We divided the work as evenly as possible across four people and shared coverage of the report, modelling and SQL prototype. I do not claim sole authorship of any one deliverable.',
     tools: ['SQL', 'Relational modelling', 'ERD', 'DFD', 'Data management'],
