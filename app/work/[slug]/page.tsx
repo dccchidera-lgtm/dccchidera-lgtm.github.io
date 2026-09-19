@@ -172,7 +172,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <p className="large-copy">{project.evidence}</p>
                 <CaseEvidenceVisual slug={project.slug} />
                 <RecoveredProjectEvidence slug={project.slug} />
-                {(
+                {project.slug !== 'ecommerce-bi' && (
                   <details className="case-model-disclosure">
                     <summary>Explore the model in 3D</summary>
                     <ModelExplorer initialMode={project.slug === 'customer-intelligence' ? 'trust' : project.slug === 'predictive-analytics' ? 'network' : project.slug === 'process-redesign' ? 'data' : 'decision'} />
