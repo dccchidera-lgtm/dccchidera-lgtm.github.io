@@ -1,0 +1,13 @@
+metric,value
+Orders,98582.0
+Delivered orders,96394.0
+Order items,110929.0
+Unique customers,96096.0
+Sellers,3095.0
+Item revenue,13401483.41
+Freight value,2222194.09
+Median delivery days,10.2236
+Late delivery rate,0.0811669
+Average review score,4.1071
+Average review score - late delivery,2.5663
+Average review score - on-time delivery,4.2967
