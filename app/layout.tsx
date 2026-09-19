@@ -19,11 +19,11 @@ const siteUrl = "https://dccchidera-lgtm.github.io";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Daniel Christopher | Digital Builds, Analytics & Marketing",
+    default: "Daniel Christopher | Business and Data Analyst",
     template: "%s | Daniel Christopher",
   },
   description:
-    "Independent digital builds, evidence-led analytics, customer research and digital marketing by Daniel Christopher.",
+    "Business and data analytics, customer research and digital marketing by Daniel Christopher, an MSc Business Analytics graduate in Manchester.",
   alternates: {
     canonical: "/",
   },
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     icon: publicPath("/favicon.svg"),
   },
   openGraph: {
-    title: "Daniel Christopher | Digital Builds, Analytics & Marketing",
+    title: "Daniel Christopher | Business and Data Analyst",
     description:
-      "Digital builds, analytics, customer research and marketing work by Daniel Christopher.",
+      "Business and data analytics, customer research and digital marketing work by Daniel Christopher.",
     type: "website",
     url: siteUrl,
     siteName: "Daniel Christopher",
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daniel Christopher | Digital Builds, Analytics & Marketing",
+    title: "Daniel Christopher | Business and Data Analyst",
     description:
-      "Digital builds, analytics, customer research and marketing work by Daniel Christopher.",
+      "Business and data analytics, customer research and digital marketing work by Daniel Christopher.",
     images: [`${siteUrl}/og-daniel-christopher.png`],
   },
 };

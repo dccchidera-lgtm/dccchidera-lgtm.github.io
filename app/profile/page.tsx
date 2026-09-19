@@ -301,7 +301,7 @@ export default function ProfilePage() {
               </li>
               <li data-reveal>
                 <span>Now</span>
-                <strong>Seeking an analytical or technology-facing role</strong>
+                <strong>Seeking a business or data analyst role</strong>
                 <p>Open to analytics, customer insight, marketing technology, digital transformation and responsible AI-adjacent opportunities.</p>
               </li>
             </ol>
@@ -364,7 +364,7 @@ export default function ProfilePage() {
             <h2 data-reveal>
               Review the evidence or contact me
               <br />
-              <span>about an analytical or technology-facing opportunity.</span>
+              <span>about a business or data analyst opportunity.</span>
             </h2>
             <div>
               <NativeLink className="arrow-link" href="/work">View work</NativeLink>
