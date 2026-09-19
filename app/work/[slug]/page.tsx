@@ -2,12 +2,14 @@ import { ModelExplorer } from '@/components/model-explorer';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { CaseEvidenceVisual } from '@/components/case-evidence-visual';
+import { RecoveredProjectEvidence } from '@/components/recovered-project-evidence';
 import { CaseNavigator } from '@/components/case-navigator';
 import { NativeLink } from '@/components/native-link';
 import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
 import { cases, getCase } from '@/lib/cases';
 import { projectSummaries } from '@/lib/project-summaries';
+import { casePath } from '@/lib/case-links';
 
 const caseStories: Record<string, string[]> = {
   "decision-intelligence": [
@@ -24,9 +26,15 @@ const caseStories: Record<string, string[]> = {
   ],
   "process-redesign": [
     "A diagram had to become a database that could answer questions.",
-    "Our team moved from business data flows to entity relationships and then working SQL. Creating tables was only part of the task: populating them and running queries tested whether the structure supported the intended reporting.",
+    "Our team moved from data-flow analysis to entity relationships and a proposed SQL prototype. The submitted report documents the design and query purposes, but the original executable scripts and outputs have not yet been recovered for review.",
     "Where the work could be stronger",
-    "Assessor feedback supported the alignment between the ERD and SQL. Clearer DFD notation, explicit test cases and better SQL comments would make the reasoning easier for another analyst to inspect and maintain."
+    "The group report identifies substantial missing merchant fields. Recovering the original SQL scripts and adding reproducible test cases would make the prototype checkable by another analyst."
+  ],
+  "ecommerce-bi": [
+    "The quality of the joined data affects the quality of the decision.",
+    "Our team prepared nine linked tables from a dataset of more than 100,000 ecommerce orders, cleaning problematic values and relationships before creating Power BI reporting on delivery, sellers and customer satisfaction.",
+    "The business finding we can currently substantiate",
+    "Accurate cross-table KPI reporting required data preparation. The original PBIX, exact DAX measures and a measured operational finding about delayed orders or seller performance have not been independently recovered. We should not turn a dashboard topic into an invented business result."
   ],
   "predictive-analytics": [
     "The lowest error rate was the start of a decision, not the end.",
@@ -164,7 +172,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <h2>The results support the following interpretation.</h2>
                 <p className="large-copy">{project.evidence}</p>
                 <CaseEvidenceVisual slug={project.slug} />
-                {(
+                <RecoveredProjectEvidence slug={project.slug} />
+                {project.slug !== 'ecommerce-bi' && (
                   <details className="case-model-disclosure">
                     <summary>Explore the model in 3D</summary>
                     <ModelExplorer initialMode={project.slug === 'customer-intelligence' ? 'trust' : project.slug === 'predictive-analytics' ? 'network' : project.slug === 'process-redesign' ? 'data' : 'decision'} />
@@ -215,12 +224,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
         <section className="case-pagination" aria-label="More case studies">
           <div className="shell case-pagination-grid" data-reveal>
-            <NativeLink className="case-pagination-card" href={`/work/${previousProject.slug}`}>
+            <NativeLink className="case-pagination-card" href={casePath(previousProject.slug)}>
               <span>← Previous case</span>
               <strong>{previousProject.name}</strong>
               <small>{previousProject.title}</small>
             </NativeLink>
-            <NativeLink className="case-pagination-card case-pagination-card--next" href={`/work/${nextProject.slug}`}>
+            <NativeLink className="case-pagination-card case-pagination-card--next" href={casePath(nextProject.slug)}>
               <span>Next case →</span>
               <strong>{nextProject.name}</strong>
               <small>{nextProject.title}</small>

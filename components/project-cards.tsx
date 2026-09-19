@@ -1,6 +1,7 @@
 import { NativeLink } from "@/components/native-link";
 import { projectSummaries } from "@/lib/project-summaries";
 import type { CaseStudy } from "@/lib/cases";
+import { casePath } from "@/lib/case-links";
 
 export function ProjectCards({ projects }: { projects: CaseStudy[] }) {
   return (
@@ -9,7 +10,7 @@ export function ProjectCards({ projects }: { projects: CaseStudy[] }) {
         const summary = projectSummaries[project.slug];
         return (
           <NativeLink
-            href={`/work/${project.slug}`}
+            href={casePath(project.slug)}
             className={`project-card project-${project.slug}`}
             key={project.slug}
           >
@@ -48,6 +49,8 @@ export function ProjectCards({ projects }: { projects: CaseStudy[] }) {
                     Loyalty
                   </div>
                 </>
+              ) : project.slug === "ecommerce-bi" ? (
+                <><strong>100,000+<span>orders</span></strong><div className="signal-caption">9 linked tables<br />Power BI<br />Shared team project</div></>
               ) : project.slug === "process-redesign" ? (
                 <div className="schema-labels">
                   <span>DFD</span>

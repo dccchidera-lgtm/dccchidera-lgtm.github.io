@@ -120,6 +120,30 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
     );
   }
 
+  if (slug === 'ecommerce-bi') {
+    return (
+      <figure className="case-visual case-visual--pipeline" aria-labelledby="bi-caption">
+        <figcaption id="bi-caption">
+          <span>Ecommerce BI · team coursework</span>
+          <strong>Reliable reporting starts with reliable joins.</strong>
+        </figcaption>
+        <div className="visual-result-strip">
+          <div><span>Orders in the source data</span><strong>100,000+</strong></div>
+          <div><span>Related source tables</span><strong>9</strong></div>
+          <div><span>Reporting themes</span><strong>3</strong></div>
+        </div>
+        <div className="pipeline-map">
+          <div><span>01</span><strong>Assess</strong><small>Data quality</small></div>
+          <b aria-hidden="true">→</b>
+          <div><span>02</span><strong>Prepare</strong><small>Power Query</small></div>
+          <b aria-hidden="true">→</b>
+          <div><span>03</span><strong>Report</strong><small>Power BI / DAX</small></div>
+        </div>
+        <p className="visual-caveat">Project scope is documented; the original PBIX, actual report pages and quantified delivery or seller findings remain unverified. This diagram is a process summary, not a recovered dashboard screenshot.</p>
+      </figure>
+    );
+  }
+
   if (slug === 'process-redesign') {
     return (
       <figure className="case-visual case-visual--pipeline" aria-labelledby="pipeline-caption">

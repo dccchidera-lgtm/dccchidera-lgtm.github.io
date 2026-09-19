@@ -4,7 +4,7 @@ const caseRows = [
   {
     number: '01',
     name: 'Decision Intelligence',
-    href: '/work/decision-intelligence',
+    href: '/decisions',
     question: 'Which store configuration best supports the management objective?',
     method: 'Data audit · dashboard · scenarios · optimisation',
     evidence: '60–70% margin range stress-tested before the recommendation',
@@ -13,7 +13,7 @@ const caseRows = [
   {
     number: '02',
     name: 'Customer Intelligence',
-    href: '/work/customer-intelligence',
+    href: '/research-case',
     question: 'Does trust mediate the association between personalisation and loyalty?',
     method: 'Survey · EFA · robust regression · mediation',
     evidence: 'Indirect effect .303 · 95% CI [.199, .422]',
@@ -22,20 +22,29 @@ const caseRows = [
   {
     number: '03',
     name: 'Data Management',
-    href: '/work/process-redesign',
+    href: '/sql',
     question: 'How can clearer data structure support reliable reporting?',
     method: 'Data-flow diagram · ERD · SQL prototype',
-    evidence: 'Working database created, populated and queried',
+    evidence: '99.7% delivery fees missing · SQL scripts pending verification',
     ownership: 'Four-person team',
   },
   {
     number: '04',
     name: 'Predictive Analytics',
-    href: '/work/predictive-analytics',
+    href: '/churn',
     question: 'Which classifier best identifies members at risk of churn?',
     method: 'Three classifiers · 40 / 30 / 30 partition',
     evidence: 'Neural network · 4.42% validation misclassification',
     ownership: 'Individual project',
+  },
+  {
+    number: '05',
+    name: 'Ecommerce Business Intelligence',
+    href: '/powerbi',
+    question: 'How can related ecommerce data support reliable cross-table reporting?',
+    method: 'Power Query · Power BI · DAX · team analysis',
+    evidence: 'Nine tables · 100,000+ orders · original PBIX not yet recovered',
+    ownership: 'MSc team project',
   },
 ];
 
@@ -45,7 +54,7 @@ export function CaseQuickIndex() {
       <div className="shell quick-index-heading" data-reveal>
         <div>
           <p className="overline">Case index · quick comparison</p>
-          <h2 id="quick-index-title">Four case studies compared in one view.</h2>
+          <h2 id="quick-index-title">Five case studies compared in one view.</h2>
         </div>
         <p>
           Each row identifies the business question, method, strongest evidence and
@@ -53,7 +62,7 @@ export function CaseQuickIndex() {
         </p>
       </div>
 
-      <div className="shell quick-index-table" role="table" aria-label="Summary of four verified analytics case studies" data-reveal>
+      <div className="shell quick-index-table" role="table" aria-label="Summary of five documented analytics case studies" data-reveal>
         <div className="quick-index-header" role="row">
           <span role="columnheader">Case</span>
           <span role="columnheader">Business question</span>

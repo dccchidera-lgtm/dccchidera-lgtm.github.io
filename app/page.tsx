@@ -15,7 +15,7 @@ const cases = [
     description:
       'A four-person team project combining a management dashboard, margin scenarios and optimisation to support a location and store-configuration decision.',
     type: 'Team project',
-    href: '/work/decision-intelligence',
+    href: '/decisions',
     visual: 'decision',
     visualLabel: 'Scenario range from 60 to 70 percent leading to an optimisation decision',
     tone: 'paper',
@@ -28,7 +28,7 @@ const cases = [
     description:
       'Individual MSc research into the statistical links among AI-driven personalisation, trust and customer loyalty in UK ecommerce.',
     type: 'Individual dissertation',
-    href: '/work/customer-intelligence',
+    href: '/research-case',
     visual: 'trust',
     visualLabel: '139 responses analysed with a personalisation and trust correlation of point 591',
     tone: 'ink',
@@ -37,11 +37,11 @@ const cases = [
     number: '03',
     name: 'Data Management',
     title: 'Translating business data flows',
-    muted: 'into a relational SQL prototype',
+    muted: 'into a documented SQL prototype',
     description:
-      'A four-person team project moving from data-flow and entity models to a working relational SQL prototype.',
+      'A four-person team project mapping data flows and designing a relational SQL prototype; original scripts pending verification.',
     type: 'Team project',
-    href: '/work/process-redesign',
+    href: '/sql',
     visual: 'data',
     visualLabel: 'Data flow diagram translated to entity relationship design and SQL',
     tone: 'paper',
@@ -54,7 +54,7 @@ const cases = [
     description:
       'An individual comparison of three churn classifiers in SAS Enterprise Miner, using a 4,000-record gym-membership dataset.',
     type: 'Individual project',
-    href: '/work/predictive-analytics',
+    href: '/churn',
     visual: 'model',
     visualLabel: 'Validation misclassification comparison: tree 10.52 percent, logistic regression 6.18 percent, neural network 4.42 percent',
     tone: 'mist',
@@ -128,8 +128,8 @@ export default function Home() {
         <section className="proof-strip" aria-label="Portfolio evidence at a glance">
           <div className="shell proof-grid">
             <article data-reveal>
-              <strong>04</strong>
-              <span>verified case studies</span>
+              <strong>05</strong>
+              <span>documented case studies</span>
             </article>
             <article data-reveal>
               <strong>139</strong>
@@ -140,7 +140,7 @@ export default function Home() {
               <span>records in the churn study</span>
             </article>
             <article data-reveal>
-              <strong>2 / 2</strong>
+              <strong>2 / 3</strong>
               <span>individual / team cases, each clearly attributed</span>
             </article>
           </div>

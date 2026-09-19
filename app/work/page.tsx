@@ -6,7 +6,7 @@ import { cases } from '@/lib/cases';
 
 export const metadata = pageMetadata(
   'Work',
-  'Four verified MSc business analytics case studies featuring Daniel Christopher’s individual work and clearly attributed team work.',
+  'Five MSc business analytics case studies featuring Daniel Christopher’s individual work and clearly attributed team work.',
   '/work/',
 );
 
@@ -23,7 +23,7 @@ export default function WorkPage() {
           <div className="shell">
             <small>Selected work · 2025–2026</small>
             <h1>
-              Four verified business analytics
+              Five business analytics
               <br />
               <span>case studies.</span>
             </h1>
@@ -54,9 +54,7 @@ export default function WorkPage() {
             <p className="overline">Attribution matters</p>
             <div>
               <p>
-                Two cases are individual projects. Two were completed in four-person
-                teams with no fixed specialist roles: the work was divided as evenly as
-                possible and every member covered the full assignment.
+                Two cases are individual projects. Three are team projects. The data management and decision modelling projects were completed in four-person teams with shared responsibilities; the ecommerce BI project also involved shared work.
               </p>
               <p>
                 Group outputs are always described as “our team’s work.” No realised
