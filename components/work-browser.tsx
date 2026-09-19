@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { NativeLink } from '@/components/native-link';
 import type { CaseStudy } from '@/lib/cases';
+import { casePath } from '@/lib/case-links';
 
 type Filter = 'all' | 'individual' | 'team';
 
@@ -35,7 +36,7 @@ export function WorkBrowser({ projects }: { projects: CaseStudy[] }) {
       </div>
       <div className="work-filtered-list">
         {visible.map(({ project: item, index }) => (
-            <NativeLink className="work-row" href={`/work/${item.slug}`} key={item.slug}>
+            <NativeLink className="work-row" href={casePath(item.slug)} key={item.slug}>
               <span>{String(index + 1).padStart(2, '0')}</span>
               <div>
                 <h2>{item.name}</h2>
