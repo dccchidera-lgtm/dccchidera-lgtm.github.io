@@ -4,11 +4,12 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { NativeLink } from '@/components/native-link';
 
 const destinations = [
-  { label: 'Selected work', detail: 'All four verified case studies', href: '/work', type: 'Page' },
+  { label: 'Selected work', detail: 'Digital builds, independent projects and MSc case studies', href: '/work', type: 'Page' },
   { label: 'Decision Intelligence', detail: 'Dashboard, scenarios and optimisation', href: '/work/decision-intelligence', type: 'Team case' },
   { label: 'Customer Intelligence', detail: 'AI personalisation, trust and loyalty', href: '/work/customer-intelligence', type: 'Individual case' },
   { label: 'Data Management', detail: 'DFD, ERD and SQL prototype', href: '/work/process-redesign', type: 'Team case' },
   { label: 'Predictive Analytics', detail: 'Churn model comparison and validation', href: '/work/predictive-analytics', type: 'Individual case' },
+  { label: 'This portfolio website', detail: 'Independent Next.js and TypeScript digital build', href: '/site-build', type: 'Digital project' },
   { label: 'Restaurant service mix', detail: 'Independent public-data Python analysis and reproducible code', href: '/service-mix', type: 'Independent project' },
   { label: 'Olist reconstruction', detail: 'Interactive order, delivery and category reporting from the recovered workbook', href: '/olist-reconstruction', type: 'Rebuilt analysis' },
   { label: 'Research', detail: 'Dissertation method and results', href: '/research', type: 'Page' },
