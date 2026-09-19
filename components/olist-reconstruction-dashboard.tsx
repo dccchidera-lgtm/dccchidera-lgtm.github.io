@@ -53,15 +53,15 @@ export function OlistReconstructionDashboard() {
     .sort((a,b) => b.value - a.value);
   const categoryMax = Math.max(...categories.map((item) => item.value));
   const otherCategory = categoryItemValues.find(([label]) => label === 'Other categories');
-  const otherCategoryValue = otherCategory ? otherCategory[categoryIndex] : 0;
+  const otherCategoryValue = otherCategory ? Number(otherCategory[categoryIndex]) : 0;
 
   const stateIndex = period === 'all' ? 1 : period === '2017' ? 4 : 7;
   const states = customerStateBreakdown
     .filter(([label]) => label !== 'Other states')
     .map((row) => {
-      const orders = row[stateIndex];
-      const late = row[stateIndex + 1];
-      const eligible = row[stateIndex + 2];
+      const orders = Number(row[stateIndex]);
+      const late = Number(row[stateIndex + 1]);
+      const eligible = Number(row[stateIndex + 2]);
       const rate = percent(late,eligible);
       return { label: row[0], orders, late, eligible, rate,
         value: stateMetric === 'orders' ? orders : (rate ?? 0) };
