@@ -129,31 +129,31 @@ export const cases: CaseStudy[] = [
     label: 'MSc team project',
     title: 'Preparing ecommerce data for delivery and customer reporting',
     lead:
-      'Our MSc team prepared nine linked Olist data tables spanning more than 100,000 ecommerce orders and developed Power BI reporting to examine delivery performance, seller activity and customer satisfaction.',
+      'Our MSc team prepared the Olist ecommerce data and developed a nine-table Power BI model to examine delivery performance, seller activity and customer satisfaction. Eight cleaned source worksheets have now been recovered; earlier project documentation identifies the additional model table as a DAX date table.',
     facts: [
-      { value: '100,000+', label: 'Ecommerce orders' },
-      { value: '9', label: 'Linked source tables' },
+      { value: '98,582', label: 'Recovered order rows' },
+      { value: '8 + date', label: 'Source sheets + DAX date table' },
       { value: '3', label: 'Reporting themes' },
     ],
     question:
       'How can linked ecommerce data support reliable reporting on deliveries, sellers and customer experience?',
     approach: [
-      'Our team reviewed nine related source tables and assessed missing values, duplicates, inconsistent names, dates and relationships.',
+      'Our team reviewed the related ecommerce tables and assessed missing values, duplicates, inconsistent names, dates and relationships.',
       'We used Power Query to prepare the data for a connected reporting model.',
       'We developed reporting with Power BI and DAX around delivery performance, seller activity and customer satisfaction.',
       'We organised the pages around operational questions rather than presenting metrics without a decision context.',
     ],
     evidence:
-      'The documented project scope covers more than 100,000 orders across nine linked source tables. The confirmed business finding is a data-quality and reporting one: source inconsistencies had to be resolved before linked delivery, seller and customer measures could be interpreted reliably. The available material does not establish a verified numerical result about late deliveries, an individual seller or satisfaction by segment.',
+      'The recovered cleaned workbook contains eight source worksheets, including 98,582 order rows and 110,929 order-item rows. Earlier project documentation identifies a DAX date table as the ninth Power BI model table. The confirmed business finding remains a data-quality and reporting one: source inconsistencies had to be resolved before linked delivery, seller and customer measures could be interpreted reliably.',
     implications: [
       'Validate join keys and date logic before comparing ecommerce metrics across related tables.',
       'Separate reliable measures from unavailable or incomplete ones when reporting to decision-makers.',
-      'Use delivery, seller and customer views to investigate operational questions once the original dashboards can be verified.',
+      'Use delivery, seller and customer views to investigate operational questions in the reconstructed reporting.',
     ],
     limitations:
-      'The original PBIX, exported dashboard screenshots, exact DAX measures and a measured business outcome have not been recovered. This was team coursework, not a deployed reporting system or a documented business improvement.',
+      'The original PBIX and exported dashboard screenshots have not been recovered. The cleaned project workbook has been recovered and can support a clearly labelled reconstruction. This was team coursework, not a deployed reporting system or a documented business improvement.',
     improvement:
-      'Recover the original PBIX or report export, document the tested measures and add specific, verifiable segment-level findings before presenting a quantified business recommendation.',
+      'Reconstruct the report from the recovered cleaned workbook, document each tested measure and add only findings that can be reproduced from the recovered data.',
     contribution:
       'This was a shared-responsibility MSc team project. I contributed to the group work and do not claim sole ownership of the data model, DAX measures or dashboard pages.',
     tools: ['Power BI', 'Power Query', 'DAX', 'Data preparation', 'Ecommerce reporting'],
