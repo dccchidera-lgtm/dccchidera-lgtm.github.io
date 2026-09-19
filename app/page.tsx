@@ -37,9 +37,9 @@ const cases = [
     number: '03',
     name: 'Data Management',
     title: 'Translating business data flows',
-    muted: 'into a relational SQL prototype',
+    muted: 'into a documented SQL prototype',
     description:
-      'A four-person team project moving from data-flow and entity models to a working relational SQL prototype.',
+      'A four-person team project mapping data flows and designing a relational SQL prototype; original scripts pending verification.',
     type: 'Team project',
     href: '/sql',
     visual: 'data',
