@@ -128,8 +128,8 @@ export default function Home() {
         <section className="proof-strip" aria-label="Portfolio evidence at a glance">
           <div className="shell proof-grid">
             <article data-reveal>
-              <strong>04</strong>
-              <span>verified case studies</span>
+              <strong>05</strong>
+              <span>documented case studies</span>
             </article>
             <article data-reveal>
               <strong>139</strong>
@@ -140,7 +140,7 @@ export default function Home() {
               <span>records in the churn study</span>
             </article>
             <article data-reveal>
-              <strong>2 / 2</strong>
+              <strong>2 / 3</strong>
               <span>individual / team cases, each clearly attributed</span>
             </article>
           </div>
