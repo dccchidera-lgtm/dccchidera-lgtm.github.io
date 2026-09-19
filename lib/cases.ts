@@ -148,12 +148,12 @@ export const cases: CaseStudy[] = [
     implications: [
       'Validate join keys and date logic before comparing ecommerce metrics across related tables.',
       'Separate reliable measures from unavailable or incomplete ones when reporting to decision-makers.',
-      'Use delivery, seller and customer views to investigate operational questions once the original dashboards can be verified.',
+      'Use the reconstructed delivery and review measures to prioritise questions for deeper seller and customer analysis.',
     ],
     limitations:
-      'The original PBIX, exported dashboard screenshots, exact DAX measures and a measured business outcome have not been recovered. This was team coursework, not a deployed reporting system or a documented business improvement.',
+      'The original PBIX and exact DAX measures were not recovered. The new figures shown here are a transparent reconstruction from the recovered cleaned workbook, not screenshots of the original team dashboard or evidence of a deployed business improvement.',
     improvement:
-      'Recover the original PBIX or report export, document the tested measures and add specific, verifiable segment-level findings before presenting a quantified business recommendation.',
+      'Extend the reconstruction with seller-level and geographic drill-downs, document each measure and test whether the delivery-review pattern holds after accounting for order and category differences.',
     contribution:
       'This was a shared-responsibility MSc team project. I contributed to the group work and do not claim sole ownership of the data model, DAX measures or dashboard pages.',
     tools: ['Power BI', 'Power Query', 'DAX', 'Data preparation', 'Ecommerce reporting'],
