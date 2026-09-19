@@ -9,6 +9,7 @@ import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
 import { cases, getCase } from '@/lib/cases';
 import { projectSummaries } from '@/lib/project-summaries';
+import { casePath } from '@/lib/case-links';
 
 const caseStories: Record<string, string[]> = {
   "decision-intelligence": [
@@ -223,12 +224,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
         <section className="case-pagination" aria-label="More case studies">
           <div className="shell case-pagination-grid" data-reveal>
-            <NativeLink className="case-pagination-card" href={`/work/${previousProject.slug}`}>
+            <NativeLink className="case-pagination-card" href={casePath(previousProject.slug)}>
               <span>← Previous case</span>
               <strong>{previousProject.name}</strong>
               <small>{previousProject.title}</small>
             </NativeLink>
-            <NativeLink className="case-pagination-card case-pagination-card--next" href={`/work/${nextProject.slug}`}>
+            <NativeLink className="case-pagination-card case-pagination-card--next" href={casePath(nextProject.slug)}>
               <span>Next case →</span>
               <strong>{nextProject.name}</strong>
               <small>{nextProject.title}</small>
