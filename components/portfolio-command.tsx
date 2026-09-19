@@ -10,6 +10,7 @@ const destinations = [
   { label: 'Data Management', detail: 'DFD, ERD and SQL prototype', href: '/work/process-redesign', type: 'Team case' },
   { label: 'Predictive Analytics', detail: 'Churn model comparison and validation', href: '/work/predictive-analytics', type: 'Individual case' },
   { label: 'Restaurant service mix', detail: 'Independent public-data Python analysis and reproducible code', href: '/service-mix', type: 'Independent project' },
+  { label: 'Olist reconstruction', detail: 'Interactive order, delivery and category reporting from the recovered workbook', href: '/olist-reconstruction', type: 'Rebuilt analysis' },
   { label: 'Research', detail: 'Dissertation method and results', href: '/research', type: 'Page' },
   { label: 'Profile', detail: 'Bilingual background, skills and credentials', href: '/profile', type: 'Page' },
   { label: 'Digital Marketing', detail: 'Customer context, measurement and strategy', href: '/profile#marketing-foundation', type: 'Profile section' },
