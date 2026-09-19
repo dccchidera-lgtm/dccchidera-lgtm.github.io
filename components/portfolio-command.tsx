@@ -9,6 +9,7 @@ const destinations = [
   { label: 'Customer Intelligence', detail: 'AI personalisation, trust and loyalty', href: '/work/customer-intelligence', type: 'Individual case' },
   { label: 'Data Management', detail: 'DFD, ERD and SQL prototype', href: '/work/process-redesign', type: 'Team case' },
   { label: 'Predictive Analytics', detail: 'Churn model comparison and validation', href: '/work/predictive-analytics', type: 'Individual case' },
+  { label: 'Restaurant service mix', detail: 'Independent public-data Python analysis and reproducible code', href: '/service-mix', type: 'Independent project' },
   { label: 'Research', detail: 'Dissertation method and results', href: '/research', type: 'Page' },
   { label: 'Profile', detail: 'Bilingual background, skills and credentials', href: '/profile', type: 'Page' },
   { label: 'Digital Marketing', detail: 'Customer context, measurement and strategy', href: '/profile#marketing-foundation', type: 'Profile section' },
