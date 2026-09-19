@@ -175,6 +175,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <CaseEvidenceVisual slug={project.slug} />
                 <RecoveredProjectEvidence slug={project.slug} />
                 <OriginalProjectFigures slug={project.slug} />
+                {project.slug === 'customer-intelligence' && (
+                  <a className="arrow-link" href="https://github.com/dccchidera-lgtm/dccchidera-lgtm.github.io/blob/main/docs/Dissertation%20Research%20Brief.md">Read the one-page dissertation research brief ↗</a>
+                )}
+                {project.slug === 'process-redesign' && (
+                  <a className="arrow-link" href="https://github.com/dccchidera-lgtm/dccchidera-lgtm.github.io/blob/main/docs/SQL%20Proposed%20Data%20Dictionary.md">Read the proposed database data dictionary ↗</a>
+                )}
                 {project.slug !== 'ecommerce-bi' && (
                   <details className="case-model-disclosure">
                     <summary>Explore the model in 3D</summary>
