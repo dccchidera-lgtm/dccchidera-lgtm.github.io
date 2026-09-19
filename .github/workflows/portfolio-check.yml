@@ -17,6 +17,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: python3 -m unittest discover -s projects/olist-reconstruction/tests -v
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run build

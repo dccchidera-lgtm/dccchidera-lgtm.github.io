@@ -31,6 +31,7 @@ export default function OlistReconstructionPage() {
           <p className="overline">What I would test next</p>
           <h2>A dashboard points to a question; it does not answer why.</h2>
           <p>Recheck order, payment and delivery keys against the complete original source; validate whether the missing ninth table was a payments table or a model-created date table; inspect the March 2018 delivery pattern by seller, carrier and location. Do not interpret the descriptive rates here as causal effects or proven cost savings.</p>
+          <p><a className="arrow-link" href="https://github.com/dccchidera-lgtm/dccchidera-lgtm.github.io/tree/main/projects/olist-reconstruction" target="_blank" rel="noopener noreferrer">Inspect the reproducible Python analysis and tests ↗</a></p>
           <NativeLink className="arrow-link" href="/work">Back to selected work ↗</NativeLink>
         </section>
       </main>
