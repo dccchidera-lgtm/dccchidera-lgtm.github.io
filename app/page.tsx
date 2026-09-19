@@ -78,12 +78,12 @@ export default function Home() {
         <section className="hero">
           <div className="shell hero-inner">
             <div className="hero-kicker hero-reveal">
-              <p className="overline">Analytics × digital builds × customer insight · Manchester, UK</p>
-              <span><i /> Available for analytical and technology-facing roles</span>
+              <p className="overline">Business and data analyst · Manchester, UK</p>
+              <span><i /> Available now for analyst roles</span>
             </div>
             <h1 className="hero-title">
               <span className="hero-reveal">Daniel Christopher.</span>
-              <span className="secondary display-serif hero-reveal">I build digital experiences, examine customer behaviour and turn evidence into clearer decisions.</span>
+              <span className="secondary display-serif hero-reveal">I analyse customer and commercial data and turn the evidence into clearer decisions.</span>
             </h1>
             <div className="recruiter-actions">
               <NativeLink href="/work" className="button">Explore selected work</NativeLink>
@@ -306,7 +306,7 @@ export default function Home() {
         <footer className="footer">
           <div className="footer-inner">
             <h2>
-              I am open to analytical and technology-facing work where <span>clear evidence informs the decision.</span>
+              I am open to business and data analyst roles where <span>clear evidence informs the decision.</span>
             </h2>
             <div className="footer-bottom">
               <span>Daniel Christopher · 2026</span>
