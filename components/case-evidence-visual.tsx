@@ -139,7 +139,7 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
           <b aria-hidden="true">→</b>
           <div><span>03</span><strong>Report</strong><small>Power BI / DAX</small></div>
         </div>
-        <p className="visual-caveat">Project scope is documented; the original PBIX, actual report pages and quantified delivery or seller findings remain unverified. This diagram is a process summary, not a recovered dashboard screenshot.</p>
+        <p className="visual-caveat">Project scope is documented. This diagram is a process summary of the dashboard build.</p>
       </figure>
     );
   }

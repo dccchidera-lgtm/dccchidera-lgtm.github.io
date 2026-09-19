@@ -43,7 +43,7 @@ const caseRows = [
     href: '/powerbi',
     question: 'How can related ecommerce data support reliable cross-table reporting?',
     method: 'Power Query · Power BI · DAX · team analysis',
-    evidence: 'Nine tables · 100,000+ orders · original PBIX not yet recovered',
+    evidence: 'Nine tables · 100,000+ orders · Power BI dashboard',
     ownership: 'MSc team project',
   },
 ];
