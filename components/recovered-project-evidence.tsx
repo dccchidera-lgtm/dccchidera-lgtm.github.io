@@ -52,6 +52,47 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
     );
   }
 
+  if (slug === 'ecommerce-bi') {
+    return (
+      <figure className="case-visual" aria-label="Reconstructed Olist analysis from the recovered cleaned MSc dataset">
+        <figcaption>
+          <span>Reconstructed from the recovered cleaned workbook</span>
+          <strong>Delivery reliability has a clear relationship with review scores.</strong>
+        </figcaption>
+        <p>
+          The recovered Olist workbook contains eight analysis sheets and 98,582
+          order records, including 96,394 delivered orders and 110,929 order
+          items. I reran a transparent descriptive analysis from those tables
+          rather than recreating screenshots of the missing original Power BI file.
+        </p>
+        <div className="visual-result-strip">
+          <div><span>Delivered late</span><strong>8.1%</strong></div>
+          <div><span>Mean review · on time</span><strong>4.30</strong></div>
+          <div><span>Mean review · late</span><strong>2.57</strong></div>
+        </div>
+        <p>
+          Median purchase-to-delivery time among delivered orders was 10.2 days.
+          Item-price revenue in the recovered workbook totals R$13.40m, excluding
+          freight; health &amp; beauty, watches &amp; gifts and bed/bath/table were
+          the three largest categories by item revenue in this reconstruction.
+        </p>
+        <p>
+          These figures are descriptive. They do not prove that late delivery
+          causes lower reviews, and item-price revenue is not profit.
+        </p>
+        <p className="visual-caveat">
+          Reconstruction source: Olist Dataset Clean v3.xlsx recovered in September
+          2026. The original MMU Power BI report file was not recovered, so this
+          evidence is explicitly presented as a fresh analysis of the project data.
+          <br />
+          <a href="/evidence/olist-reconstructed-summary.csv">Download KPI output CSV</a>
+          {' · '}
+          <a href="/evidence/olist-top-categories.csv">Download category output CSV</a>
+        </p>
+      </figure>
+    );
+  }
+
   if (slug === 'predictive-analytics') {
     return (
       <figure className="case-visual" aria-label="Verified evidence from the submitted gym churn presentation">
