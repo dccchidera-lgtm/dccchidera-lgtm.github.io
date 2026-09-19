@@ -55,7 +55,7 @@ export function OriginalProjectFigures({ slug }: { slug: string }) {
           <Image src={publicPath('/evidence/sql-current-data-flow.jpg')} alt="Original level-one current-state data-flow diagram from the group report, showing restaurant partners, platform data, cleaning, the restaurant dataset and an analyst." width={1066} height={1111} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
         </a>
         <h3>After: proposed improved data flow</h3>
-        <p>The group's proposed design routes merchant and platform events through validation and cleaning toward a normalised schema and analytical reporting. Proposed controls are design intentions, not implemented production changes.</p>
+        <p>The group’s proposed design routes merchant and platform events through validation and cleaning toward a normalised schema and analytical reporting. Proposed controls are design intentions, not implemented production changes.</p>
         <a href={publicPath('/evidence/sql-proposed-data-flow.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the original proposed data-flow diagram at full size">
           <Image src={publicPath('/evidence/sql-proposed-data-flow.jpg')} alt="Original level-one proposed data-flow diagram showing event-driven ingestion, schema validation, six normalised tables and insight reporting." width={1050} height={834} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
         </a>
