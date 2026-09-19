@@ -47,7 +47,7 @@ const choices = [
     title: 'Building reliable delivery, seller and customer reporting',
     type: 'Shared MSc team project',
     evidence: 'Power Query · Power BI · 9 linked tables',
-    note: 'Project scope and data quality evidence are documented; original dashboard and measured operational findings remain to be verified.',
+    note: 'Project scope and data quality evidence are documented.',
     metric: '100,000+',
     metricLabel: 'ecommerce orders',
     href: '/powerbi',
