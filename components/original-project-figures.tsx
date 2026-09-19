@@ -49,7 +49,7 @@ export function OriginalProjectFigures({ slug }: { slug: string }) {
         <a href={publicPath('/evidence/sql-relational-schema.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the original proposed relational schema at full size">
           <Image src={publicPath('/evidence/sql-relational-schema.jpg')} alt="Original proposed database ERD showing six linked tables: Location, Delivery, Status, Promotion, Reviews and Scan with primary and foreign keys." width={1012} height={862} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
         </a>
-        <p className="visual-caveat">Source: recovered ERD from the submitted Data Management team report. The original executable SQL scripts remain to be verified.</p>
+        <p className="visual-caveat">Source: recovered ERD from the submitted Data Management team report. SQL scripts available on request.</p>
       </figure>
     );
   }
