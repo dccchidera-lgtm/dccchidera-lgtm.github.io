@@ -173,6 +173,14 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <h2>The results support the following interpretation.</h2>
                 <p className="large-copy">{project.evidence}</p>
                 <CaseEvidenceVisual slug={project.slug} />
+                {project.slug === 'ecommerce-bi' && (
+                  <aside className="case-visual" aria-label="Reconstructed Olist dashboard">
+                    <p className="overline">Reconstruction · recovered workbook</p>
+                    <h3>Explore the real cleaned data, not a recreated original screenshot.</h3>
+                    <p>The original Power BI report was not recovered. This separate interactive analysis uses eight recovered workbook sheets and 98,582 unique orders to examine order patterns, delivery dates, product categories and customer states. It does not claim to be the assessed PBIX.</p>
+                    <NativeLink className="arrow-link" href="/olist-reconstruction">Explore the reconstructed dashboard ↗</NativeLink>
+                  </aside>
+                )}
                 <RecoveredProjectEvidence slug={project.slug} />
                 <OriginalProjectFigures slug={project.slug} />
                 {project.slug === 'customer-intelligence' && (
