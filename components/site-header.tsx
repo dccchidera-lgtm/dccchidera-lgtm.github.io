@@ -68,7 +68,7 @@ export function SiteHeader() {
             ))}
           </nav>
           <div className="menu-meta">
-            <span>Business analytics work with methods, evidence and ownership stated clearly.</span>
+            <span>Digital builds, analytics and research with methods and ownership stated clearly.</span>
             <span>Manchester, UK · 2026</span>
           </div>
         </div>

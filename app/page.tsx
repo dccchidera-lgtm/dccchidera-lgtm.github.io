@@ -78,12 +78,12 @@ export default function Home() {
         <section className="hero">
           <div className="shell hero-inner">
             <div className="hero-kicker hero-reveal">
-              <p className="overline">Analytics × digital marketing · Manchester, UK</p>
+              <p className="overline">Analytics × digital builds × customer insight · Manchester, UK</p>
               <span><i /> Available for analytical and technology-facing roles</span>
             </div>
             <h1 className="hero-title">
               <span className="hero-reveal">Daniel Christopher.</span>
-              <span className="secondary display-serif hero-reveal">I study customer behaviour, test the evidence and explain the decision it supports.</span>
+              <span className="secondary display-serif hero-reveal">I build digital experiences, examine customer behaviour and turn evidence into clearer decisions.</span>
             </h1>
             <div className="recruiter-actions">
               <NativeLink href="/work" className="button">Explore selected work</NativeLink>
@@ -93,8 +93,8 @@ export default function Home() {
             <div className="hero-footer">
               <div className="hero-intro hero-reveal">
                 <p>
-                  I combine business analytics, digital marketing and customer understanding
-                  to make evidence easier to act on.
+                  I work across digital products, business analytics and customer understanding
+                  to make useful things and explain the evidence behind decisions.
                 </p>
                 <a className="arrow-link" href="#find-a-case">
                   Find a relevant case
@@ -129,7 +129,7 @@ export default function Home() {
           <div className="shell proof-grid">
             <article data-reveal>
               <strong>05</strong>
-              <span>documented case studies</span>
+              <span>documented MSc case studies</span>
             </article>
             <article data-reveal>
               <strong>139</strong>
@@ -143,6 +143,23 @@ export default function Home() {
               <strong>2 / 3</strong>
               <span>individual / team cases, each clearly attributed</span>
             </article>
+          </div>
+        </section>
+
+        <section className="digital-feature" aria-labelledby="digital-feature-title">
+          <div className="shell digital-feature-grid">
+            <div className="digital-feature-copy" data-reveal>
+              <p className="overline">Digital work · independently built</p>
+              <h2 id="digital-feature-title">I make things, not just analyses.</h2>
+              <p>This website is a live digital build, designed to make research, code and different kinds of work easier to explore. It is an independent project, not a client commission; future business work will join the portfolio when there is a real deliverable to show.</p>
+              <NativeLink className="arrow-link" href="/site-build">Explore how this site was built ↗</NativeLink>
+            </div>
+            <div className="digital-feature-details" data-reveal aria-label="Portfolio website build features">
+              <div><span>01 / Product</span><strong>Next.js · React · TypeScript</strong></div>
+              <div><span>02 / Experience</span><strong>Responsive layout · theme · navigation</strong></div>
+              <div><span>03 / Evidence</span><strong>Original work and reconstructions distinguished</strong></div>
+              <div><span>04 / Delivery</span><strong>Live on GitHub Pages</strong></div>
+            </div>
           </div>
         </section>
 
@@ -193,7 +210,7 @@ export default function Home() {
 
         <section className="writing-samples" aria-label="Independent public-data project">
           <div className="shell writing-grid">
-            <div className="writing-heading"><p className="overline">Beyond assessed coursework</p><h2>An independent project with runnable Python.</h2></div>
+            <div className="writing-heading"><p className="overline">Independent analysis</p><h2>Another question, explored outside the classroom.</h2></div>
             <article><span>Public restaurant dataset · 244 bills</span><h3>Restaurant service mix</h3><p>I compared lunch and dinner bill value per cover, checked the underlying data and documented the limits before suggesting operational changes.</p><NativeLink className="arrow-link" href="/service-mix">View the independent analysis</NativeLink></article>
           </div>
         </section>
@@ -258,9 +275,8 @@ export default function Home() {
         <section className="profile-feature">
           <div className="shell profile-grid" data-reveal>
             <h2 data-reveal>
-              Raised in Germany, developed in the UK, bringing digital marketing into
-              <br />
-              <span>business analytics.</span>
+              Raised in Germany, developing work across
+              <span>digital products, marketing and analytics.</span>
             </h2>
             <div className="profile-copy">
               <span className="profile-eyebrow">About Daniel</span>
@@ -272,7 +288,7 @@ export default function Home() {
               <div className="profile-facts" aria-label="Profile highlights">
                 <span>Raised in Germany</span>
                 <span>English + German</span>
-                <span>570+ day practice streak</span>
+                <span>600+ days on Duolingo</span>
                 <span>Analytics + digital marketing</span>
               </div>
               <div className="profile-links">

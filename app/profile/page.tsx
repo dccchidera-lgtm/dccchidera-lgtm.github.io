@@ -27,9 +27,9 @@ export default function ProfilePage() {
             <small>Profile</small>
             <div className="profile-opening">
             <h1>
-              I approach business and technology questions
+              I work across business, digital and customer questions
               <br />
-              <span>through customer context and analytical evidence.</span>
+              <span>with evidence and practical delivery.</span>
             </h1>
             <figure className="profile-portrait">
               <Image src={publicPath('/daniel-portrait.webp')} alt="Daniel Christopher wearing a black suit on a staircase" width={1000} height={1500} sizes="(max-width: 760px) 100vw, 400px" priority />
@@ -61,8 +61,8 @@ export default function ProfilePage() {
                 modelling and data.
               </p>
               <p>
-                I now bring both perspectives to a problem: the commercial question that
-                matters and the analytical discipline needed to answer it responsibly.
+                I now bring both perspectives to practical work: understanding the commercial
+                problem, building a useful digital response and checking what the evidence supports.
               </p>
             </article>
             <article className="snapshot-card snapshot-role" data-reveal>
@@ -100,7 +100,7 @@ export default function ProfilePage() {
                 Adjusting meant learning a new school environment, building relationships
                 and becoming confident in English while retaining German. I still maintain
                 my German through daily Duolingo practice, with a streak of more than
-                570 consecutive days confirmed in September 2026.
+                600 consecutive days as of September 2026.
               </p>
             </div>
 
@@ -133,11 +133,11 @@ export default function ProfilePage() {
           <div className="shell">
             <div className="milestones-heading" data-reveal>
               <p className="overline">Selected milestones</p>
-              <h2 id="milestones-title">My progress includes a 2:1, certified marketing training and more than 570 consecutive days of German practice.</h2>
+              <h2 id="milestones-title">My progress includes a 2:1, certified marketing training and 600+ days of language practice.</h2>
             </div>
             <div className="milestones-grid">
               <article data-reveal>
-                <strong>570+</strong>
+                <strong>600+</strong>
                 <span>days of continuous Duolingo practice</span>
                 <small>Confirmed September 2026</small>
               </article>

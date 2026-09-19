@@ -6,7 +6,7 @@ export function PageFooter() {
     <footer className="page-footer">
       <div className="shell page-footer-inner">
         <p>
-          Analytical and digital work
+          Digital and analytical work
           <br />
           grounded in verifiable evidence.
         </p>
