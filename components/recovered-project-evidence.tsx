@@ -6,7 +6,7 @@
 export function RecoveredProjectEvidence({ slug }: { slug: string }) {
   if (slug === 'process-redesign') {
     return (
-      <aside className="case-visual" aria-label="Evidence from the submitted Data Management report">
+      <figure className="case-visual" aria-label="Evidence from the submitted Data Management report">
         <figcaption>
           <span>From the submitted group report</span>
           <strong>Data quality before database design.</strong>
@@ -49,13 +49,13 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
           Source: Data Management – Group Assignment, submitted MSc coursework.
           Group work is attributed to the team, not solely to Daniel.
         </p>
-      </aside>
+      </figure>
     );
   }
 
   if (slug === 'predictive-analytics') {
     return (
-      <aside className="case-visual" aria-label="Verified evidence from the submitted gym churn presentation">
+      <figure className="case-visual" aria-label="Verified evidence from the submitted gym churn presentation">
         <figcaption>
           <span>From the original SAS presentation</span>
           <strong>Validation results, not a deployed churn system.</strong>
@@ -82,13 +82,13 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
           slides 6–10. The proposed retention and cost reductions in later slides
           were forecasts, not achieved outcomes.
         </p>
-      </aside>
+      </figure>
     );
   }
 
   if (slug === 'customer-intelligence') {
     return (
-      <aside className="case-visual" aria-label="Verified dissertation statistics and interpretation">
+      <figure className="case-visual" aria-label="Verified dissertation statistics and interpretation">
         <figcaption>
           <span>From the submitted dissertation</span>
           <strong>Statistical mediation is not proof of causation.</strong>
@@ -114,7 +114,7 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
           Source: final individual MSc dissertation, Chapter 4. Raw Qualtrics
           responses and participant-level information are not published.
         </p>
-      </aside>
+      </figure>
     );
   }
 
