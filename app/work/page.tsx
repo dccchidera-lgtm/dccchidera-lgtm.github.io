@@ -1,6 +1,7 @@
 import { pageMetadata } from '@/lib/page-metadata';
 import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
+import { NativeLink } from '@/components/native-link';
 import { WorkBrowser } from '@/components/work-browser';
 import { cases } from '@/lib/cases';
 
@@ -70,6 +71,12 @@ export default function WorkPage() {
               <p className="overline">Selected analytical writing</p>
               <h2>Additional analytical writing from individual assignments.</h2>
             </div>
+            <article id="independent-service-mix" data-reveal>
+              <span>Independent public-data project · reproducible Python</span>
+              <h3>Restaurant service mix</h3>
+              <p>Analysed 244 public example restaurant bills and compared lunch with dinner, separating descriptive evidence from unsupported staffing or profit claims.</p>
+              <NativeLink className="arrow-link" href="/service-mix">Explore the project and runnable code</NativeLink>
+            </article>
             <article id="shopify-transformation" data-reveal>
               <span>Individual analysis</span>
               <h3>Shopify digital transformation</h3>
