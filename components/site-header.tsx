@@ -68,7 +68,7 @@ export function SiteHeader() {
             ))}
           </nav>
           <div className="menu-meta">
-            <span>Digital builds, analytics and research with methods and ownership stated clearly.</span>
+            <span>Analytics, customer research and digital builds, with methods and ownership stated clearly.</span>
             <span>Manchester, UK · 2026</span>
           </div>
         </div>
