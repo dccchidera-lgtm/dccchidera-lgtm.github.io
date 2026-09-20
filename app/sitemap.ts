@@ -7,6 +7,7 @@ const siteUrl = "https://dccchidera-lgtm.github.io";
 const routes = [
   "",
   "/work",
+  "/bcu",
   "/work/decision-intelligence",
   "/work/customer-intelligence",
   "/work/process-redesign",

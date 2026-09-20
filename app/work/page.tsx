@@ -3,11 +3,12 @@ import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
 import { NativeLink } from '@/components/native-link';
 import { WorkBrowser } from '@/components/work-browser';
+import { bcuProjects } from '@/lib/bcu-projects';
 import { cases } from '@/lib/cases';
 
 export const metadata = pageMetadata(
   'Work',
-  'Digital builds, independent analytical projects and clearly attributed MSc case studies by Daniel Christopher.',
+  'Digital builds, BCU digital marketing projects, independent analysis and MSc case studies by Daniel Christopher.',
   '/work/',
 );
 
@@ -22,14 +23,14 @@ export default function WorkPage() {
       <main id="main-content">
         <section className="page-hero">
           <div className="shell">
-            <small>Selected work · 2025–2026</small>
+            <small>Selected work · Undergraduate, postgraduate & independent</small>
             <h1>
               Selected work
               <br />
               <span>across data and digital.</span>
             </h1>
             <p>
-              Practical digital builds, independent analysis and MSc research in one place.
+              Digital builds, BCU marketing projects, independent analysis and MSc research in one place.
               Each project makes its methods, ownership and limits clear.
             </p>
           </div>
@@ -93,6 +94,20 @@ export default function WorkPage() {
                 commercial impact, deployment or sole ownership is implied.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="work-digital-feature" aria-labelledby="bcu-work-title">
+          <div className="shell">
+            <p className="overline">Birmingham City University · BA (Hons) Digital Marketing</p>
+            <div className="work-digital-heading"><h2 id="bcu-work-title">Audience insight and campaign strategy.</h2><p>Undergraduate research and creative planning, with each contribution and project’s scope explained.</p></div>
+            <div className="work-digital-grid bcu-work-grid">
+              {bcuProjects.map(project => <article key={project.id}>
+                <span>{project.ownership}</span><h3>{project.title}</h3><p>{project.summary}</p>
+                <NativeLink className="arrow-link" href={`/bcu#${project.id}`}>Explore the project ↗</NativeLink>
+              </article>)}
+            </div>
+            <NativeLink className="arrow-link bcu-modules-link" href="/bcu#modules">View all 10 BCU modules ↗</NativeLink>
           </div>
         </section>
 

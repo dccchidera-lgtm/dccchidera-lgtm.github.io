@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { SiteEffects } from "@/components/site-effects";
 import { publicPath } from "@/lib/paths";
 import "./globals.css";
+import "./bcu.css";
 import "./visual-polish.css";
 import "./layout-refinement.css";
 import "./editorial-type.css";

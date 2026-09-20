@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { NativeLink } from '@/components/native-link';
 
 const destinations = [
+  { label: 'BCU Digital Marketing Projects', detail: 'Flock Together, Nando’s, Mailchimp, Peaky Blinders and degree modules', href: '/bcu', type: 'Academic projects' },
   { label: 'Selected work', detail: 'Digital builds, independent projects and MSc case studies', href: '/work', type: 'Page' },
   { label: 'Decision Intelligence', detail: 'Dashboard, scenarios and optimisation', href: '/work/decision-intelligence', type: 'Team case' },
   { label: 'Customer Intelligence', detail: 'AI personalisation, trust and loyalty', href: '/work/customer-intelligence', type: 'Individual case' },

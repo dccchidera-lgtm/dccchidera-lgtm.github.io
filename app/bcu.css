@@ -1,0 +1,14 @@
+.bcu-jump-links { display:flex; flex-wrap:wrap; gap:1rem 1.6rem; margin-top:2.5rem; font-size:.9rem; }
+.bcu-jump-links a { text-underline-offset: .3em; }
+.bcu-project { display:grid; grid-template-columns:minmax(0, .9fr) minmax(0, 1.1fr); gap:clamp(2rem,6vw,6rem); padding:clamp(3rem,6vw,6rem) 0; border-bottom:1px solid var(--separator); scroll-margin-top:7rem; }
+.bcu-project h2 { font-size:clamp(2rem,4vw,3.5rem); line-height:1.12; letter-spacing:-.04em; margin:1rem 0 1.4rem; }
+.bcu-question { font-size:1.15rem; line-height:1.65; max-width:36ch; color:var(--secondary-label); }
+.bcu-project-copy h3 { font-size:1.1rem; margin:0 0 .8rem; }
+.bcu-project-copy p { line-height:1.8; margin:0 0 1.8rem; max-width:65ch; }
+.bcu-project-copy p + h3 { margin-top:2rem; }
+.bcu-skills { font-size:.9rem; }
+.bcu-limit { color:var(--secondary-label); font-size:.92rem; line-height:1.8; max-width:80ch; }
+.bcu-modules { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem 3rem; padding-left:1.2rem; margin:2rem 0 3rem; line-height:1.6; }
+.bcu-modules-link { display:inline-block; margin-top:2.5rem; }
+.bcu-work-grid { row-gap:3rem; }
+@media (max-width:760px) { .bcu-project { grid-template-columns:minmax(0,1fr); } .bcu-modules { grid-template-columns:minmax(0,1fr); } }

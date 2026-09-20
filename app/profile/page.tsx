@@ -1,3 +1,4 @@
+import { bcuModules } from '@/lib/bcu-projects';
 import { pageMetadata } from '@/lib/page-metadata';
 import Image from 'next/image';
 import { publicPath } from '@/lib/paths';
@@ -173,6 +174,7 @@ export default function ProfilePage() {
               </p>
             </div>
 
+            <p><NativeLink className="arrow-link" href="/bcu">Explore Flock Together, Nando’s, Mailchimp and Peaky Blinders coursework ↗</NativeLink></p>
             <div className="marketing-capability-grid">
               <article data-reveal>
                 <span>01</span>
@@ -334,9 +336,11 @@ export default function ProfilePage() {
                 <p>Dissertation submitted · Predicted Distinction</p>
               </article>
               <article>
-                <span>Undergraduate degree</span>
+                <span>Birmingham City University</span>
                 <h2>BA (Hons) Digital Marketing</h2>
                 <p>Upper Second-Class Honours (2:1)</p>
+                <p>Relevant modules: {bcuModules.join(', ')}.</p>
+                <NativeLink className="arrow-link" href="/bcu">Explore BCU projects and modules ↗</NativeLink>
               </article>
             </div>
           </div>
