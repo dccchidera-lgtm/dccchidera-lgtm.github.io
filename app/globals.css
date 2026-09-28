@@ -4308,11 +4308,11 @@ html[data-scrolled] .site-header {
   min-height: 82px;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.55rem;
   border: 0;
   border-right: 1px solid var(--separator);
   border-bottom: 1px solid var(--separator);
-  padding: 1rem 1.25rem;
+  padding: 1rem 0.9rem;
   background: transparent;
   color: var(--secondary-label);
   cursor: pointer;
