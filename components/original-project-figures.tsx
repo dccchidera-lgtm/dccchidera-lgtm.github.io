@@ -82,7 +82,7 @@ export function OriginalProjectFigures({ slug }: { slug: string }) {
         <a href={publicPath('/evidence/sql-proposed-data-flow.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the original proposed data-flow diagram at full size">
           <Image src={publicPath('/evidence/sql-proposed-data-flow.jpg')} alt="Original level-one proposed data-flow diagram showing event-driven ingestion, schema validation, six normalised tables and insight reporting." width={1050} height={834} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
         </a>
-        <p className="visual-caveat">Source: original ERD and current/proposed DFD figures from the submitted Data Management group report. SQL scripts available on request.</p>
+        <p className="visual-caveat">Source: original ERD and current/proposed DFD figures from the submitted Data Management group report.</p>
       </figure>
     );
   }

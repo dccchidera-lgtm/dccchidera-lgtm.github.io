@@ -40,8 +40,8 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
             <li>Profile open merchants using available operational fields.</li>
           </ol>
           <p className="visual-caveat">
-            These are the report’s descriptions of query purposes.
-            SQL scripts available on request.
+            These are the report’s descriptions of the seven query purposes; the
+            scripts themselves are not published.
           </p>
         </details>
         <p className="visual-caveat">

@@ -33,7 +33,7 @@ const caseStories: Record<string, string[]> = {
   ],
   "process-redesign": [
     "A diagram had to become a database that could answer questions.",
-    "Our team moved from data-flow analysis to entity relationships and a proposed SQL prototype. The submitted report documents the design and query purposes, and the SQL scripts are available on request.",
+    "Our team moved from data-flow analysis to entity relationships and a proposed SQL prototype. The flat file had one table, no enforced keys and a single scan date, so the new schema separates location, delivery, status, reviews, promotions and scans, each with its own history.",
     "Where the work could be stronger",
     "The group report identifies substantial missing merchant fields. Adding reproducible test cases would make the prototype checkable by another analyst."
   ],

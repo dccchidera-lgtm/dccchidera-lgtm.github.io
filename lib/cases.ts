@@ -141,18 +141,18 @@ export const cases: CaseStudy[] = [
     approach: [
       'Our team defined the business problem and reviewed the organisation’s data-management context.',
       'We mapped the movement of data with a data-flow diagram and modelled the relational structure with an entity-relationship diagram.',
-      'The group report describes translating the ERD into a six-table relational schema and a SQL prototype; SQL scripts available on request.',
-      'The group report outlines analytical queries for merchant data quality, pricing, promotion and performance; SQL scripts available on request.',
+      'We translated the ERD into a normalised six-table schema with primary and foreign keys and a recorded_at timestamp on each dependent table, so fees, availability and ratings could be tracked over time.',
+      'We wrote seven analytical queries, including window functions to rank merchants by rating within each city and aggregations to segment performance by price tier.',
     ],
     evidence:
-      'The submitted coursework identifies 997 missing delivery-fee values out of 1,000 merchant records (99.7%) and outlines a proposed relational schema with analytical queries. The seven query purposes are described in the report, and the SQL scripts are available on request.',
+      'The submitted coursework identifies 997 missing delivery-fee values out of 1,000 merchant records (99.7%) Review ratings were missing for 58.2%, and 98.6% of merchants were recorded as closed; with a single scan date for every record, genuine closures could not be told apart from merchants that were simply closed at scan time. The proposed six-table schema and seven analytical queries were designed to make pricing, performance benchmarking and promotion analysis reliable.',
     implications: [
       'Agree the business entities and relationships before building reports on top of them.',
       'Use the same business rules in the conceptual model and the implemented schema.',
       'Test the database through decision-relevant queries rather than treating creation as the finish line.',
     ],
     limitations:
-      'This was assessed group coursework, not Uber Eats production work. SQL scripts are available on request.',
+      'This was assessed group coursework on a public merchant dataset, not Uber Eats production work, and the SQL scripts are not published.',
     improvement:
       'Publish the SQL queries, sample result sets and explicit tests with accurate group attribution.',
     contribution:

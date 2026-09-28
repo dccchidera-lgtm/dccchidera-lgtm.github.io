@@ -41,7 +41,7 @@ export const projectSummaries: Record<
   "process-redesign": {
     headline: "Can better data structure improve reporting?",
     result:
-      "Documented six-table schema; SQL scripts available on request.",
+      "A normalised six-table schema with keys and history, plus seven analytical queries.",
     takeaway:
       "Align the business rules, entity relationships and SQL before building reports.",
     category: "Data management",
