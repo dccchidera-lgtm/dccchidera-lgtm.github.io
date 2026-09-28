@@ -17,6 +17,42 @@ export type CaseStudy = {
 
 export const cases: CaseStudy[] = [
   {
+    slug: 'loan-affordability',
+    name: 'Credit Risk Analytics',
+    label: 'Four-person MSc team project',
+    title: 'Testing which factors drive loan affordability risk',
+    lead:
+      'Our team built a credit-risk business case around Nationwide and analysed 44,986 public loan records in SPSS, auditing the data before using correlation and multiple regression to test which factors were associated with affordability.',
+    facts: [
+      { value: '44,986', label: 'Loan records analysed' },
+      { value: '.617', label: 'Model R²' },
+      { value: '2', label: 'Assumed risk signals not significant' },
+    ],
+    question:
+      'Which borrower and loan characteristics were associated with affordability risk, and did commonly assumed signals such as credit score and interest rate still matter once the other factors were considered?',
+    approach: [
+      'Our team framed a credit-risk problem statement and objectives for a Nationwide case study, using a public loan dataset.',
+      'We profiled the 44,986 records with descriptive statistics and flagged implausible values before any modelling.',
+      'We used correlation analysis to screen the relationships between affordability and the candidate predictors.',
+      'We fitted a multiple linear regression in SPSS and checked the model assumptions, identifying heteroscedasticity in the residuals.',
+      'We translated the results into recommendations for how affordability risk should be assessed and reported.',
+    ],
+    evidence:
+      'The multiple regression model explained 61.7% of the variance in the affordability measure (R² = .617). Credit score and interest rate were not statistically significant predictors once the other variables were in the model. The diagnostics showed heteroscedasticity, so individual coefficients need careful reading. The assessor noted a clear problem statement and a good use of descriptive statistics, correlation and regression in SPSS.',
+    implications: [
+      'Test headline risk signals such as credit score against the full set of affordability factors rather than relying on them in isolation.',
+      'Remove or correct implausible records before modelling; a small number of bad rows can shift a regression.',
+      'Report model diagnostics next to the coefficients so that decision-makers know how much weight each result can carry.',
+    ],
+    limitations:
+      'This was an assessed case study on a public dataset, not Nationwide’s own data or a production credit model. Regression shows association rather than causation, and the heteroscedasticity means robust standard errors are needed before relying on individual coefficients.',
+    improvement:
+      'Interpret the categorical predictors explicitly, add t-tests and ANOVA across borrower groups, use heteroscedasticity-robust (HC3) standard errors, as I later did in my dissertation, and structure the business case with a framework such as PESTLE.',
+    contribution:
+      'This was a four-person team project with shared responsibilities, so the data audit, modelling and recommendations are described as our team’s work.',
+    tools: ['SPSS', 'Multiple regression', 'Correlation', 'Descriptive statistics', 'Data quality', 'Credit risk'],
+  },
+  {
     slug: 'decision-intelligence',
     name: 'Decision Intelligence',
     label: 'Four-person MSc team project',
@@ -37,18 +73,18 @@ export const cases: CaseStudy[] = [
       'We used optimisation to compare location and store-configuration choices before making a recommendation.',
     ],
     evidence:
-      'Assessor feedback confirmed systematic data checking, appropriate cleaning, a useful interactive dashboard, a correct optimisation model and a justified recommendation. The submission received a provisional group mark of 75; no final degree classification is claimed here.',
+      'Assessor feedback confirmed systematic data checking, appropriate cleaning, a useful interactive dashboard, a correct optimisation model and a justified recommendation. The submission received a provisional group mark of 75.',
     implications: [
       'Put the management decision at the centre of the dashboard rather than treating every metric as equally important.',
       'Use scenarios to make the effect of changing assumptions visible before committing to a recommendation.',
       'Keep the model logic transparent enough for a decision-maker to challenge and understand.',
     ],
     limitations:
-      'The work was an assessed decision model, not a production deployment. It does not evidence realised revenue, margin or operational impact.',
+      'The work was an assessed decision model rather than a production deployment, so it demonstrates method, not realised revenue or margin.',
     improvement:
       'Add external evidence and decision-relevant KPIs such as sales per square metre, then publish a clearer formula and sensitivity audit.',
     contribution:
-      'There were no fixed specialist roles. We divided the work as evenly as possible across four people, and every member covered the complete assignment. The dashboard, cleaning, scenarios and optimisation are therefore described as our team’s work, not my sole output.',
+      'There were no fixed specialist roles. We divided the work as evenly as possible across four people, and every member covered the complete assignment. The dashboard, cleaning, scenarios and optimisation are therefore described as our team’s work.',
     tools: ['Excel', 'Dashboarding', 'Scenario modelling', 'Optimisation', 'Data quality'],
   },
   {
@@ -120,7 +156,7 @@ export const cases: CaseStudy[] = [
     improvement:
       'Publish the SQL queries, sample result sets and explicit tests with accurate group attribution.',
     contribution:
-      'There were no fixed specialist roles. We divided the work as evenly as possible across four people and shared coverage of the report, modelling and SQL prototype. I do not claim sole authorship of any one deliverable.',
+      'There were no fixed specialist roles. We divided the work as evenly as possible across four people and shared coverage of the report, modelling and SQL prototype.',
     tools: ['SQL', 'Relational modelling', 'ERD', 'DFD', 'Data management'],
   },
   {
@@ -155,7 +191,7 @@ export const cases: CaseStudy[] = [
     improvement:
       'Reconstruct the report from the recovered cleaned workbook, document each tested measure and add only findings that can be reproduced from the recovered data.',
     contribution:
-      'This was a shared-responsibility MSc team project. I contributed to the group work and do not claim sole ownership of the data model, DAX measures or dashboard pages.',
+      'This was a shared-responsibility MSc team project. The data model, DAX measures and dashboard pages are described as our team’s work.',
     tools: ['Power BI', 'Power Query', 'DAX', 'Data preparation', 'Ecommerce reporting'],
   },
   {

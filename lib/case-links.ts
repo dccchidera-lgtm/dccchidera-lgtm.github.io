@@ -1,5 +1,6 @@
 /** Public-facing direct links; original /work/[slug] pages remain available. */
 const routes: Record<string, string> = {
+  'loan-affordability': '/credit-risk',
   'decision-intelligence': '/decisions',
   'customer-intelligence': '/research-case',
   'process-redesign': '/sql',

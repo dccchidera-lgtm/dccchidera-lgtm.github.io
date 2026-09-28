@@ -50,7 +50,8 @@ export function SiteEffects() {
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+      // Start revealing before an element enters the viewport so fast scrolling never shows blank space.
+      { threshold: 0, rootMargin: '0px 0px 25% 0px' },
     );
 
     const register = (scope: ParentNode) => {
@@ -90,9 +91,17 @@ export function SiteEffects() {
     };
     motionPreference.addEventListener('change', updateMotion);
 
+    const revealAll = () => {
+      document.querySelectorAll<HTMLElement>('.reveal-pending').forEach((element) => {
+        element.classList.add('is-revealed');
+      });
+    };
+    window.addEventListener('beforeprint', revealAll);
+
     return () => {
       observer.disconnect();
       motionPreference.removeEventListener('change', updateMotion);
+      window.removeEventListener('beforeprint', revealAll);
       if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
       mutationObserver.disconnect();
       window.removeEventListener('scroll', updateProgress);

@@ -1,8 +1,12 @@
+import { LoanRiskVisual } from '@/components/loan-risk-visual';
+
 type CaseEvidenceVisualProps = {
   slug: string;
 };
 
 export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
+  if (slug === 'loan-affordability') return <LoanRiskVisual />;
+
   if (slug === 'customer-intelligence') {
     return (
       <figure className="case-visual case-visual--mediation" aria-labelledby="mediation-caption">

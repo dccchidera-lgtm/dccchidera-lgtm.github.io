@@ -2,6 +2,13 @@ export const projectSummaries: Record<
   string,
   { headline: string; result: string; takeaway: string; category: string }
 > = {
+  "loan-affordability": {
+    headline: "What really drives loan affordability risk?",
+    result: "44,986 loan records. The model explained 61.7% of the variance, and credit score was not a significant predictor.",
+    takeaway:
+      "Test assumed risk signals against the full model and report diagnostics alongside coefficients.",
+    category: "Credit risk",
+  },
   "customer-intelligence": {
     headline: "What connects personalisation to loyalty?",
     result:

@@ -13,6 +13,12 @@ import { projectSummaries } from '@/lib/project-summaries';
 import { casePath } from '@/lib/case-links';
 
 const caseStories: Record<string, string[]> = {
+  "loan-affordability": [
+    "The most useful result was what did not predict affordability.",
+    "You might expect credit score and interest rate to lead any affordability model. Once the other factors were included, neither was a statistically significant predictor. A credit team would want to challenge and investigate a result like that, not ignore it.",
+    "The judgement in the work",
+    "We flagged implausible records before modelling and checked the diagnostics afterwards. Heteroscedasticity in the residuals meant individual coefficients needed careful reading, which is why I would use robust standard errors in the next iteration."
+  ],
   "decision-intelligence": [
     "A recommendation is only as useful as the assumptions behind it.",
     "A dashboard could describe the business, but the assignment also required a choice about location and store configuration. Our team connected data checking, margin scenarios and optimisation so the recommendation could be examined rather than simply accepted.",
@@ -189,7 +195,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 {project.slug === 'process-redesign' && (
                   <a className="arrow-link" href="https://github.com/dccchidera-lgtm/dccchidera-lgtm.github.io/blob/main/docs/SQL%20Proposed%20Data%20Dictionary.md">Read the proposed database data dictionary ↗</a>
                 )}
-                {project.slug !== 'ecommerce-bi' && (
+                {project.slug !== 'ecommerce-bi' && project.slug !== 'loan-affordability' && (
                   <details className="case-model-disclosure">
                     <summary>Explore the model in 3D</summary>
                     <ModelExplorer initialMode={project.slug === 'customer-intelligence' ? 'trust' : project.slug === 'predictive-analytics' ? 'network' : project.slug === 'process-redesign' ? 'data' : 'decision'} />

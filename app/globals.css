@@ -144,13 +144,17 @@ button {
 
 .reveal-pending {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(16px);
 }
 
 .reveal-pending.is-revealed {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .site-header {
@@ -3169,6 +3173,39 @@ html[data-scrolled] .site-header {
   font-size: clamp(1.45rem, 3vw, 2.6rem);
   font-weight: 400;
   letter-spacing: -0.035em;
+}
+
+.case-visual--compact {
+  margin: 0;
+}
+
+.case-visual--compact figcaption {
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.case-visual--compact figcaption strong {
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+}
+
+.case-visual--compact .visual-result-strip {
+  grid-template-columns: 1fr;
+  border-bottom: 0;
+}
+
+.case-visual--compact .visual-result-strip > div {
+  min-height: 0;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--separator);
+}
+
+.case-visual--compact .visual-result-strip strong {
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  letter-spacing: -0.02em;
+  text-align: right;
 }
 
 .mediation-map {

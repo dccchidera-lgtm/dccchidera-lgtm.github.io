@@ -3,6 +3,15 @@ import { NativeLink } from '@/components/native-link';
 const caseRows = [
   {
     number: '01',
+    name: 'Credit Risk Analytics',
+    href: '/credit-risk',
+    question: 'Which factors are associated with loan affordability risk?',
+    method: 'Data audit · correlation · multiple regression',
+    evidence: '44,986 records · R² .617 · credit score not significant',
+    ownership: 'Four-person team',
+  },
+  {
+    number: '02',
     name: 'Decision Intelligence',
     href: '/decisions',
     question: 'Which store configuration best supports the management objective?',
@@ -11,7 +20,7 @@ const caseRows = [
     ownership: 'Four-person team',
   },
   {
-    number: '02',
+    number: '03',
     name: 'Customer Intelligence',
     href: '/research-case',
     question: 'Does trust mediate the association between personalisation and loyalty?',
@@ -20,16 +29,16 @@ const caseRows = [
     ownership: 'Individual dissertation',
   },
   {
-    number: '03',
+    number: '04',
     name: 'Data Management',
     href: '/sql',
     question: 'How can clearer data structure support reliable reporting?',
     method: 'Data-flow diagram · ERD · SQL prototype',
-    evidence: '99.7% delivery fees missing · SQL scripts available on request',
+    evidence: '99.7% of delivery fees missing · six-table schema',
     ownership: 'Four-person team',
   },
   {
-    number: '04',
+    number: '05',
     name: 'Predictive Analytics',
     href: '/churn',
     question: 'Which classifier best identifies members at risk of churn?',
@@ -38,7 +47,7 @@ const caseRows = [
     ownership: 'Individual project',
   },
   {
-    number: '05',
+    number: '06',
     name: 'Ecommerce Business Intelligence',
     href: '/powerbi',
     question: 'How can related ecommerce data support reliable cross-table reporting?',
@@ -54,7 +63,7 @@ export function CaseQuickIndex() {
       <div className="shell quick-index-heading" data-reveal>
         <div>
           <p className="overline">Case index · quick comparison</p>
-          <h2 id="quick-index-title">Five case studies compared in one view.</h2>
+          <h2 id="quick-index-title">Six case studies compared in one view.</h2>
         </div>
         <p>
           Each row identifies the business question, method, strongest evidence and
@@ -62,7 +71,7 @@ export function CaseQuickIndex() {
         </p>
       </div>
 
-      <div className="shell quick-index-table" role="table" aria-label="Summary of five documented analytics case studies" data-reveal>
+      <div className="shell quick-index-table" role="table" aria-label="Summary of six documented analytics case studies" data-reveal>
         <div className="quick-index-header" role="row">
           <span role="columnheader">Case</span>
           <span role="columnheader">Business question</span>
@@ -86,8 +95,8 @@ export function CaseQuickIndex() {
 
       <div className="shell quick-index-note" data-reveal>
         <p>
-          Team cases had no fixed specialist roles. Work was divided as evenly as
-          possible and is described as the team’s output throughout.
+          Two cases are individual and four are team projects. Team work had no fixed
+          specialist roles and is described as the team’s output throughout.
         </p>
         <NativeLink href="/work">Open the full case index</NativeLink>
       </div>

@@ -8,25 +8,24 @@ const routes = [
   "",
   "/work",
   "/bcu",
+  "/work/loan-affordability",
   "/work/decision-intelligence",
   "/work/customer-intelligence",
   "/work/process-redesign",
   "/work/predictive-analytics",
   "/work/ecommerce-bi",
-  "/churn",
-  "/sql",
-  "/powerbi",
-  "/research-case",
-  "/decisions",
   "/research",
   "/profile",
   "/contact",
+  "/site-build",
+  "/service-mix",
+  "/olist-reconstruction",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${siteUrl}${route}/`,
-    lastModified: new Date("2026-09-07"),
+    lastModified: new Date("2026-09-28"),
     changeFrequency: route === "" ? "monthly" : "yearly",
     priority: route === "" ? 1 : route === "/work" ? 0.9 : 0.7,
   }));

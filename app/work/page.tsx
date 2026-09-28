@@ -3,12 +3,13 @@ import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
 import { NativeLink } from '@/components/native-link';
 import { WorkBrowser } from '@/components/work-browser';
+import { InteractiveEvidenceLab } from '@/components/interactive-evidence-lab';
 import { bcuProjects } from '@/lib/bcu-projects';
 import { cases } from '@/lib/cases';
 
 export const metadata = pageMetadata(
   'Work',
-  'Digital builds, BCU digital marketing projects, independent analysis and MSc case studies by Daniel Christopher.',
+  'Credit risk, customer research, churn modelling, SQL and Power BI case studies, plus digital builds and marketing projects by Daniel Christopher.',
   '/work/',
 );
 
@@ -41,7 +42,7 @@ export default function WorkPage() {
             <p className="overline">Digital builds & independent work</p>
             <div className="work-digital-heading">
               <h2 id="work-digital-title">Building and analysing beyond the classroom.</h2>
-              <p>A live website build and reproducible public-data work. No client projects are claimed before they exist.</p>
+              <p>A website I designed and deployed, a rebuilt ecommerce dashboard and reproducible public-data work.</p>
             </div>
             <div className="work-digital-grid">
               <article>
@@ -68,17 +69,35 @@ export default function WorkPage() {
 
         <section className="work-spectrum" aria-label="Portfolio capability coverage">
           <div className="shell spectrum-grid">
-            <article data-reveal><span>01</span><strong>Research</strong><p>Survey design, quality checks and statistical interpretation.</p></article>
-            <article data-reveal><span>02</span><strong>Decisions</strong><p>Dashboards, scenarios, optimisation and recommendations.</p></article>
-            <article data-reveal><span>03</span><strong>Data</strong><p>Process models, relational design and SQL query methods.</p></article>
-            <article data-reveal><span>04</span><strong>Prediction</strong><p>Model comparison, validation and action design.</p></article>
+            <article data-reveal><span>01</span><strong>Risk</strong><p>Data audits, regression and diagnostics on loan records.</p></article>
+            <article data-reveal><span>02</span><strong>Research</strong><p>Survey design, quality checks and statistical interpretation.</p></article>
+            <article data-reveal><span>03</span><strong>Decisions</strong><p>Dashboards, scenarios, optimisation and recommendations.</p></article>
+            <article data-reveal><span>04</span><strong>Data</strong><p>Process models, relational design and SQL query methods.</p></article>
+            <article data-reveal><span>05</span><strong>Prediction</strong><p>Model comparison, validation and action design.</p></article>
           </div>
         </section>
 
         <section className="work-index" aria-label="MSc analytics case studies">
           <div className="shell">
-            <div className="work-index-intro"><p className="overline">Academic evidence</p><h2>Five MSc analytics case studies.</h2><p>Individual and team work, with original submission evidence and limitations identified.</p></div>
+            <div className="work-index-intro"><p className="overline">Academic evidence</p><h2>Six MSc analytics case studies.</h2><p>Individual and team work, with original submission evidence and limitations identified.</p></div>
             <WorkBrowser projects={cases} />
+          </div>
+        </section>
+
+        <section className="visual-methods" id="visual-methods" aria-labelledby="visual-methods-title">
+          <div className="shell visual-methods-heading" data-reveal>
+            <div>
+              <p className="overline">Visual methods</p>
+              <h2 id="visual-methods-title">Three views of the analytical evidence behind the case studies.</h2>
+            </div>
+            <p>
+              The diagrams make model structure, validation results and statistical relationships
+              easier to inspect. Every number comes from the submitted project evidence; conceptual
+              elements are labelled as such.
+            </p>
+          </div>
+          <div className="shell">
+            <InteractiveEvidenceLab />
           </div>
         </section>
 
@@ -87,11 +106,10 @@ export default function WorkPage() {
             <p className="overline">Attribution matters</p>
             <div>
               <p>
-                Two cases are individual projects. Three are team projects. The data management and decision modelling projects were completed in four-person teams with shared responsibilities; the ecommerce BI project also involved shared work.
+                Two cases are individual projects and four are team projects. The credit risk, data management and decision modelling projects were completed in four-person teams with shared responsibilities; the ecommerce BI project was also shared work.
               </p>
               <p>
-                Group outputs are always described as “our team’s work.” No realised
-                commercial impact, deployment or sole ownership is implied.
+                Group outputs are always described as “our team’s work.”
               </p>
             </div>
           </div>

@@ -353,11 +353,24 @@ export default function ProfilePage() {
               <h2>Training completed across analytics and digital practice.</h2>
             </div>
             <ul data-reveal>
-              <li><span>01</span>DMI Certified Digital Marketing Associate</li>
-              <li><span>02</span>Google Analytics (GA4)</li>
-              <li><span>03</span>HubSpot Content Marketing</li>
+              <li><span>01</span>Google Data Analytics Professional Certificate</li>
+              <li><span>02</span>HackerRank SQL (Basic)</li>
+              <li><span>03</span>Google Analytics (GA4)</li>
               <li><span>04</span>Microsoft Power BI</li>
-              <li><span>05</span>HackerRank SQL (Basic)</li>
+              <li><span>05</span>DMI Certified Digital Marketing Associate</li>
+              <li><span>06</span>HubSpot Content Marketing</li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="profile-extras" id="experience">
+          <div className="shell extras-grid">
+            <div data-reveal>
+              <p className="overline">Professional experience</p>
+              <h2>Work held alongside full-time study.</h2>
+            </div>
+            <ul data-reveal>
+              <li><span>Oct 2025 to present</span>Security Officer, Constant Security Services, Manchester. SIA-licensed front-of-house cover at university sites, with accurate incident and handover records.</li>
             </ul>
           </div>
         </section>

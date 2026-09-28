@@ -6,6 +6,8 @@ import { NativeLink } from '@/components/native-link';
 const destinations = [
   { label: 'BCU Digital Marketing Projects', detail: 'Flock Together, Nando’s, Mailchimp, Peaky Blinders and degree modules', href: '/bcu', type: 'Academic projects' },
   { label: 'Selected work', detail: 'Digital builds, independent projects and MSc case studies', href: '/work', type: 'Page' },
+  { label: 'Credit Risk Analytics', detail: 'Loan affordability regression on 44,986 records', href: '/work/loan-affordability', type: 'Team case' },
+  { label: 'Ecommerce Business Intelligence', detail: 'Power BI, Power Query and DAX on Olist data', href: '/work/ecommerce-bi', type: 'Team case' },
   { label: 'Decision Intelligence', detail: 'Dashboard, scenarios and optimisation', href: '/work/decision-intelligence', type: 'Team case' },
   { label: 'Customer Intelligence', detail: 'AI personalisation, trust and loyalty', href: '/work/customer-intelligence', type: 'Individual case' },
   { label: 'Data Management', detail: 'DFD, ERD and SQL prototype', href: '/work/process-redesign', type: 'Team case' },
@@ -16,7 +18,7 @@ const destinations = [
   { label: 'Research', detail: 'Dissertation method and results', href: '/research', type: 'Page' },
   { label: 'Profile', detail: 'Bilingual background, skills and credentials', href: '/profile', type: 'Page' },
   { label: 'Digital Marketing', detail: 'Customer context, measurement and strategy', href: '/profile#marketing-foundation', type: 'Profile section' },
-  { label: 'Role fit', detail: 'Five evidence-linked career directions', href: '/profile#role-fit', type: 'Profile section' },
+  { label: 'Role fit', detail: 'Evidence-linked career directions', href: '/profile#role-fit', type: 'Profile section' },
   { label: 'Contact', detail: 'Email, LinkedIn and location', href: '/contact', type: 'Page' },
 ];
 
