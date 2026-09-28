@@ -5,6 +5,28 @@ import { NativeLink } from '@/components/native-link';
 
 const roles = [
   {
+    id: 'performance',
+    label: 'Performance & risk',
+    headline: 'I audit the data, test which factors really matter and report the result with its diagnostics.',
+    summary:
+      'A strong fit for performance, risk and financial services analysis that depends on reliable data, regression and clear KPI reporting.',
+    strengths: ['Data auditing', 'Regression and diagnostics', 'KPI reporting'],
+    evidence: [
+      {
+        name: 'Credit Risk Analytics',
+        detail: '44,986 loan records, multiple regression (R² .617)',
+        ownership: 'Four-person team',
+        href: '/credit-risk',
+      },
+      {
+        name: 'Ecommerce Business Intelligence',
+        detail: 'Nine-table Power BI model with DAX measures',
+        ownership: 'MSc team project',
+        href: '/powerbi',
+      },
+    ],
+  },
+  {
     id: 'business',
     label: 'Business analysis',
     headline: 'I structure business questions, test key trade-offs and explain how the evidence supports a recommendation.',
@@ -124,7 +146,7 @@ export function RoleFit() {
     <section className="role-fit" id="role-fit" aria-labelledby="role-fit-title">
       <div className="shell role-fit-heading" data-reveal>
         <p className="overline">Role fit · evidence linked</p>
-        <h2 id="role-fit-title">I can apply this evidence across five entry-level role directions.</h2>
+        <h2 id="role-fit-title">I can apply this evidence across six entry-level role directions.</h2>
       </div>
 
       <div className="shell role-fit-shell" data-reveal>

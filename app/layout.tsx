@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Daniel Christopher",
   },
   description:
-    "Business and data analytics, customer research and digital marketing by Daniel Christopher, an MSc Business Analytics graduate in Manchester.",
+    "Business and data analyst in Manchester: credit risk, customer research, churn modelling, SQL and Power BI case studies by Daniel Christopher, MSc Business Analytics (predicted Distinction).",
   alternates: {
     canonical: "/",
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Daniel Christopher | Business and Data Analyst",
     description:
-      "Business and data analytics, customer research and digital marketing work by Daniel Christopher.",
+      "Business and data analyst in Manchester: credit risk, customer research, churn modelling, SQL and Power BI case studies by Daniel Christopher, MSc Business Analytics (predicted Distinction).",
     type: "website",
     url: siteUrl,
     siteName: "Daniel Christopher",
@@ -56,9 +56,25 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Daniel Christopher | Business and Data Analyst",
     description:
-      "Business and data analytics, customer research and digital marketing work by Daniel Christopher.",
+      "Business and data analyst in Manchester: credit risk, customer research, churn modelling, SQL and Power BI case studies by Daniel Christopher, MSc Business Analytics (predicted Distinction).",
     images: [`${siteUrl}/og-daniel-christopher.png`],
   },
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Daniel Christopher",
+  jobTitle: "Business and Data Analyst",
+  url: siteUrl,
+  sameAs: ["https://www.linkedin.com/in/daniel-christopher-3a42a0254"],
+  address: { "@type": "PostalAddress", addressLocality: "Manchester", addressCountry: "GB" },
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "Manchester Metropolitan University" },
+    { "@type": "CollegeOrUniversity", name: "Birmingham City University" },
+  ],
+  knowsLanguage: ["en", "de"],
+  knowsAbout: ["SQL", "Power BI", "DAX", "Excel", "SPSS", "SAS Enterprise Miner", "Regression analysis", "Credit risk", "Customer analytics"],
 };
 
 export default function RootLayout({
@@ -76,6 +92,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
         <SiteEffects />
         {children}
       </body>

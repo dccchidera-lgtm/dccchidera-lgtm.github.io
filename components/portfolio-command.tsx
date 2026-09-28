@@ -18,7 +18,7 @@ const destinations = [
   { label: 'Research', detail: 'Dissertation method and results', href: '/research', type: 'Page' },
   { label: 'Profile', detail: 'Bilingual background, skills and credentials', href: '/profile', type: 'Page' },
   { label: 'Digital Marketing', detail: 'Customer context, measurement and strategy', href: '/profile#marketing-foundation', type: 'Profile section' },
-  { label: 'Role fit', detail: 'Evidence-linked career directions', href: '/profile#role-fit', type: 'Profile section' },
+  { label: 'Role fit', detail: 'Six evidence-linked career directions', href: '/profile#role-fit', type: 'Profile section' },
   { label: 'Contact', detail: 'Email, LinkedIn and location', href: '/contact', type: 'Page' },
 ];
 
