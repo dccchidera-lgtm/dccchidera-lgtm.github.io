@@ -15,9 +15,9 @@ import { casePath } from '@/lib/case-links';
 const caseStories: Record<string, string[]> = {
   "loan-affordability": [
     "The most useful result was what did not predict affordability.",
-    "You might expect credit score and interest rate to lead any affordability model. Once the other factors were included, neither was a statistically significant predictor. A credit team would want to challenge and investigate a result like that, not ignore it.",
+    "You might expect credit score and interest rate to lead any affordability model. Once loan size and income were included, neither was statistically significant: loan amount (β = .767) and income (β = −.488) carried the model. A credit team would want to challenge and investigate a result like that, not ignore it.",
     "The judgement in the work",
-    "We flagged implausible records before modelling and checked the diagnostics afterwards. Heteroscedasticity in the residuals meant individual coefficients needed careful reading, which is why I would use robust standard errors in the next iteration."
+    "We flagged implausible records before modelling, such as 100 years of work experience recorded for a 35-year-old, and checked the diagnostics afterwards. Heteroscedasticity in the residuals meant individual coefficients needed careful reading, which is why I would use robust standard errors in the next iteration."
   ],
   "decision-intelligence": [
     "A recommendation is only as useful as the assumptions behind it.",

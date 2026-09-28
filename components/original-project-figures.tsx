@@ -9,6 +9,29 @@ const imageStyle = { width: '100%', height: 'auto', display: 'block' } as const;
  * within its established case-visual presentation.
  */
 export function OriginalProjectFigures({ slug }: { slug: string }) {
+  if (slug === 'loan-affordability') {
+    return (
+      <figure className="case-visual" aria-label="Original SPSS output from the submitted credit risk project">
+        <figcaption>
+          <span>Original coursework output · IBM SPSS Statistics</span>
+          <strong>Inspect the model outputs.</strong>
+        </figcaption>
+        <h3>ANOVA and coefficients</h3>
+        <p>The full regression output for the loan-to-income ratio, including standardised coefficients, confidence intervals and the collinearity statistics behind the VIF warning.</p>
+        <a href={publicPath('/evidence/spss-loan-coefficients.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the original SPSS coefficients table at full size">
+          <Image src={publicPath('/evidence/spss-loan-coefficients.jpg')} alt="Original SPSS ANOVA table with F of 6040.226 and a coefficients table for loan_percent_income, showing loan amount beta .767, income beta -.488, and non-significant interest rate and credit score." width={1290} height={765} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
+        </a>
+        <p className="visual-caveat">Source: SPSS output screenshot from the submitted team report.</p>
+        <h3>Residuals against predicted values</h3>
+        <p>The funnel shape and long diagonal tail are why the report flags heteroscedasticity and extreme outliers, and why robust standard errors are the next step.</p>
+        <a href={publicPath('/evidence/spss-loan-residuals.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the original SPSS residual scatterplot at full size">
+          <Image src={publicPath('/evidence/spss-loan-residuals.jpg')} alt="Original SPSS scatterplot of regression standardised residuals against standardised predicted values for loan_percent_income, showing a dense cluster near zero and a diagonal tail of residuals up to about 27." width={835} height={565} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
+        </a>
+        <p className="visual-caveat">Source: SPSS diagnostic plot from the submitted team report.</p>
+      </figure>
+    );
+  }
+
   if (slug === 'predictive-analytics') {
     return (
       <figure className="case-visual" aria-label="Original figures from the submitted gym churn project">

@@ -4,7 +4,7 @@ export const projectSummaries: Record<
 > = {
   "loan-affordability": {
     headline: "What really drives loan affordability risk?",
-    result: "44,986 loan records. The model explained 61.7% of the variance, and credit score was not a significant predictor.",
+    result: "Loan amount drove affordability pressure (β = .767). Credit score and interest rate were not significant.",
     takeaway:
       "Test assumed risk signals against the full model and report diagnostics alongside coefficients.",
     category: "Credit risk",

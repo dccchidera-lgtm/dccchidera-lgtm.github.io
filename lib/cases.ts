@@ -22,35 +22,35 @@ export const cases: CaseStudy[] = [
     label: 'Four-person MSc team project',
     title: 'Testing which factors drive loan affordability risk',
     lead:
-      'Our team built a credit-risk business case around Nationwide and analysed 44,986 public loan records in SPSS, auditing the data before using correlation and multiple regression to test which factors were associated with affordability.',
+      'Our team built a credit-risk business case around Nationwide and analysed 44,986 public loan records in SPSS, auditing the data before using correlation and multiple regression to test which factors drove the loan-to-income ratio.',
     facts: [
       { value: '44,986', label: 'Loan records analysed' },
       { value: '.617', label: 'Model R²' },
-      { value: '2', label: 'Assumed risk signals not significant' },
+      { value: 'β .767', label: 'Loan amount, the strongest predictor' },
     ],
     question:
-      'Which borrower and loan characteristics were associated with affordability risk, and did commonly assumed signals such as credit score and interest rate still matter once the other factors were considered?',
+      'Which borrower and loan characteristics drive affordability pressure, measured as the loan-to-income ratio, and do commonly assumed signals such as credit score and interest rate still matter once the other factors are considered?',
     approach: [
-      'Our team framed a credit-risk problem statement and objectives for a Nationwide case study, using a public loan dataset.',
-      'We profiled the 44,986 records with descriptive statistics and flagged implausible values before any modelling.',
-      'We used correlation analysis to screen the relationships between affordability and the candidate predictors.',
-      'We fitted a multiple linear regression in SPSS and checked the model assumptions, identifying heteroscedasticity in the residuals.',
-      'We translated the results into recommendations for how affordability risk should be assessed and reported.',
+      'Our team framed a credit-risk problem statement and objectives for a Nationwide case study, using a public Kaggle loan dataset.',
+      'We profiled the 44,986 records with descriptive statistics and flagged implausible values, such as employment experience of up to 100 years for borrowers aged 35, before modelling.',
+      'We used Pearson correlation to screen the relationships between the loan-to-income ratio and the candidate predictors.',
+      'We dummy-coded the categorical variables and fitted a 12-predictor multiple linear regression in SPSS.',
+      'We checked the assumptions with P-P and residual plots, residual statistics and variance inflation factors, then translated the results into lending recommendations.',
     ],
     evidence:
-      'The multiple regression model explained 61.7% of the variance in the affordability measure (R² = .617). Credit score and interest rate were not statistically significant predictors once the other variables were in the model. The diagnostics showed heteroscedasticity, so individual coefficients need careful reading. The assessor noted a clear problem statement and a good use of descriptive statistics, correlation and regression in SPSS.',
+      'The model explained 61.7% of the variance in the loan-to-income ratio (R² = .617; F(12, 44973) = 6040.23, p < .001). Loan amount was the strongest predictor (β = .767) and income the strongest protective factor (β = −.488). Interest rate (p = .151) and credit score (p = .272) were not significant once the other factors were included. The diagnostics showed non-normal, heteroscedastic residuals, standardised residuals of up to 27 and high VIFs for age (13.8) and employment experience (10.7), so individual coefficients need careful reading.',
     implications: [
-      'Test headline risk signals such as credit score against the full set of affordability factors rather than relying on them in isolation.',
-      'Remove or correct implausible records before modelling; a small number of bad rows can shift a regression.',
-      'Report model diagnostics next to the coefficients so that decision-makers know how much weight each result can carry.',
+      'Size loans relative to income first: exposure and repayment capacity explained affordability pressure far better than credit profile alone.',
+      'Look beyond income thresholds, because some higher-income borrowers still carried high loan-to-income ratios.',
+      'Clean implausible records before modelling, and report diagnostics next to coefficients so decision-makers know how much weight each result can carry.',
     ],
     limitations:
-      'This was an assessed case study on a public dataset, not Nationwide’s own data or a production credit model. Regression shows association rather than causation, and the heteroscedasticity means robust standard errors are needed before relying on individual coefficients.',
+      'This was an assessed case study on a public dataset, not Nationwide’s own data or a production credit model. The data is cross-sectional, so the results show association rather than causation, and they lack expenditure and housing-cost data. The heteroscedasticity and outliers mean robust standard errors are needed before relying on individual coefficients.',
     improvement:
-      'Interpret the categorical predictors explicitly, add t-tests and ANOVA across borrower groups, use heteroscedasticity-robust (HC3) standard errors, as I later did in my dissertation, and structure the business case with a framework such as PESTLE.',
+      'Use heteroscedasticity-robust (HC3) standard errors, as I later did in my dissertation, remove one of the collinear age or experience variables, add t-tests and ANOVA across borrower groups, and compare against a non-linear model such as gradient boosting.',
     contribution:
       'This was a four-person team project with shared responsibilities, so the data audit, modelling and recommendations are described as our team’s work.',
-    tools: ['SPSS', 'Multiple regression', 'Correlation', 'Descriptive statistics', 'Data quality', 'Credit risk'],
+    tools: ['SPSS', 'Multiple regression', 'Correlation', 'Regression diagnostics', 'Data quality', 'Credit risk'],
   },
   {
     slug: 'decision-intelligence',

@@ -1,24 +1,40 @@
-/** Reported regression fit and predictor significance from the team's SPSS credit-risk case. */
+/** Standardised coefficients reported in the team's SPSS regression of the loan-to-income ratio. */
+const predictors = [
+  { name: 'Loan amount', beta: '.767', width: 100, significant: true },
+  { name: 'Income', beta: '−.488', width: 63.6, significant: true },
+  { name: 'Mortgage holder', beta: '−.169', width: 22, significant: true },
+  { name: 'Interest rate', beta: '−.004', width: 0.5, significant: false },
+  { name: 'Credit score', beta: '−.003', width: 0.4, significant: false },
+];
+
 export function LoanRiskVisual({ compact = false }: { compact?: boolean }) {
+  const captionId = compact ? 'loan-chapter-caption' : 'loan-caption';
   return (
-    <figure className={`case-visual case-visual--models${compact ? ' case-visual--compact' : ''}`} aria-labelledby={compact ? 'loan-chapter-caption' : 'loan-caption'}>
-      <figcaption id={compact ? 'loan-chapter-caption' : 'loan-caption'}>
-        <span>Multiple regression · 44,986 records</span>
-        <strong>How much of affordability the model explained.</strong>
+    <figure className={`case-visual case-visual--models${compact ? ' case-visual--compact' : ''}`} aria-labelledby={captionId}>
+      <figcaption id={captionId}>
+        <span>Standardised coefficients (|β|) · 44,986 records</span>
+        <strong>What drove the loan-to-income ratio.</strong>
       </figcaption>
       <div className="model-bars">
-        <div className="model-bar">
-          <div><span>Variance explained (R²)</span><strong>61.7%</strong></div>
-          <i style={{ width: '61.7%', background: 'var(--signal)' }} />
-        </div>
-        <div className="model-bar">
-          <div><span>Unexplained</span><strong>38.3%</strong></div>
-          <i style={{ width: '38.3%', opacity: 0.26 }} />
-        </div>
+        {predictors.map((item) => (
+          <div className="model-bar" key={item.name}>
+            <div>
+              <span>{item.name}{item.significant ? '' : ' · not significant'}</span>
+              <strong>{item.beta}</strong>
+            </div>
+            <i
+              style={{
+                width: `max(${item.width}%, 4px)`,
+                background: item.significant ? 'var(--signal)' : undefined,
+                opacity: item.significant ? 1 : 0.26,
+              }}
+            />
+          </div>
+        ))}
       </div>
       <div className="visual-result-strip">
-        <div><span>Credit score</span><strong>Not significant</strong></div>
-        <div><span>Interest rate</span><strong>Not significant</strong></div>
+        <div><span>Model fit</span><strong>R² .617</strong></div>
+        <div><span>Records</span><strong>44,986</strong></div>
         <div><span>Diagnostics</span><strong>Heteroscedasticity flagged</strong></div>
       </div>
     </figure>
