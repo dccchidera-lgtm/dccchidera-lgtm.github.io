@@ -9,6 +9,7 @@ const sections = [
   { id: 'marketing-foundation', label: 'Marketing' },
   { id: 'role-fit', label: 'Role fit' },
   { id: 'journey', label: 'Journey' },
+  { id: 'skills-match', label: 'Skills match' },
   { id: 'profile-contact', label: 'Contact' },
 ];
 

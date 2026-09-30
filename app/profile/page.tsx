@@ -1,3 +1,4 @@
+import { SkillMatch } from '@/components/skill-match';
 import { bcuModules } from '@/lib/bcu-projects';
 import { pageMetadata } from '@/lib/page-metadata';
 import Image from 'next/image';
@@ -323,6 +324,14 @@ export default function ProfilePage() {
               <p><span>Visualisation</span> Power BI / DAX foundations · Python figures</p>
               <p><span>Digital measurement</span> GA4 · segmentation · A/B testing principles</p>
             </div>
+          </div>
+        </section>
+
+        <section className="skill-match-section" id="skills-match">
+          <div className="shell">
+            <p className="overline">Match a role to the evidence</p>
+            <h2>Hiring for a specific role? Paste the job description and see where each skill is proven.</h2>
+            <SkillMatch />
           </div>
         </section>
 
