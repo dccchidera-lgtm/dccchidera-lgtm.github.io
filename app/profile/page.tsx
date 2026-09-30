@@ -68,7 +68,7 @@ export default function ProfilePage() {
             </article>
             <article className="snapshot-card snapshot-role" data-reveal>
               <span className="snapshot-label">Looking for</span>
-              <strong>Analytics · Marketing technology · Digital transformation</strong>
+              <strong>Performance · Risk · BI reporting · Customer insight</strong>
             </article>
             <article className="snapshot-card snapshot-language" data-reveal>
               <span className="snapshot-label">Languages</span>
@@ -304,7 +304,7 @@ export default function ProfilePage() {
               <li data-reveal>
                 <span>Now</span>
                 <strong>Seeking a business or data analyst role</strong>
-                <p>Open to analytics, customer insight, marketing technology, digital transformation and responsible AI-adjacent opportunities.</p>
+                <p>Open to graduate analyst roles in performance, risk, BI reporting and customer insight, particularly in financial services. Available immediately.</p>
               </li>
             </ol>
           </div>

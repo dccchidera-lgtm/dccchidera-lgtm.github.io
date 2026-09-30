@@ -11,6 +11,7 @@ import { SiteHeader } from '@/components/site-header';
 import { cases, getCase } from '@/lib/cases';
 import { projectSummaries } from '@/lib/project-summaries';
 import { casePath } from '@/lib/case-links';
+import { pageMetadata } from '@/lib/page-metadata';
 
 const caseStories: Record<string, string[]> = {
   "loan-affordability": [
@@ -67,22 +68,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!project) return {};
 
-  return {
-    alternates: { canonical: `/work/${slug}/` },
-    title: project.name,
-    description: project.lead,
-    openGraph: {
-      title: project.name,
-      description: project.lead,
-      url: `/work/${slug}/`,
-      images: [],
-    },
-    twitter: {
-      title: project.name,
-      description: project.lead,
-      images: [],
-    },
-  };
+  return pageMetadata(project.name, project.lead, `/work/${slug}/`);
 }
 
 export default async function CaseStudyPage({ params }: PageProps) {

@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/page-metadata';
 import { SiteHeader } from '@/components/site-header';
 import { PageFooter } from '@/components/page-footer';
 import { NativeLink } from '@/components/native-link';
 import { OlistReconstructionDashboard } from '@/components/olist-reconstruction-dashboard';
 
 export const metadata: Metadata = {
-  title: 'Olist data reconstruction | Daniel Christopher',
-  description: 'Interactive, aggregate-only Olist ecommerce dashboard reconstructed from eight recovered MSc project workbook sheets. Original PBIX not recovered.',
-  alternates: { canonical: '/olist-reconstruction/' },
+  ...pageMetadata(
+    'Olist data reconstruction',
+    'Interactive, aggregate-only Olist ecommerce dashboard reconstructed from eight recovered MSc project workbook sheets. Original PBIX not recovered.',
+    '/olist-reconstruction/',
+  ),
 };
 
 export default function OlistReconstructionPage() {
