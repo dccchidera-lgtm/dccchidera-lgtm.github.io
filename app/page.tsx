@@ -15,6 +15,7 @@ const cases = [
       'A four-person team analysis of 44,986 loan records in SPSS: a data audit, correlation and multiple regression (R² .617) showing that credit score and interest rate were not significant once other factors were included.',
     type: 'Team project',
     href: '/credit-risk',
+    linkLabel: 'View case study and try the what-if model',
     visual: 'loan',
     tone: 'paper',
   },
@@ -190,7 +191,7 @@ export default function Home() {
                   </h2>
                   <p>{item.description}</p>
                   <NativeLink className="chapter-link" href={item.href}>
-                    View case study
+                    {'linkLabel' in item ? item.linkLabel : 'View case study'}
                   </NativeLink>
                 </div>
               </div>

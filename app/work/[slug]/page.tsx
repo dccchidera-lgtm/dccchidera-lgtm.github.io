@@ -2,6 +2,7 @@ import { ModelExplorer } from '@/components/model-explorer';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { CaseEvidenceVisual } from '@/components/case-evidence-visual';
+import { AffordabilitySimulator } from '@/components/affordability-simulator';
 import { RecoveredProjectEvidence } from '@/components/recovered-project-evidence';
 import { OriginalProjectFigures } from '@/components/original-project-figures';
 import { CaseNavigator } from '@/components/case-navigator';
@@ -173,6 +174,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                     <NativeLink className="arrow-link" href="/olist-reconstruction">Explore the reconstructed dashboard ↗</NativeLink>
                   </aside>
                 )}
+                {project.slug === 'loan-affordability' && <AffordabilitySimulator />}
                 <RecoveredProjectEvidence slug={project.slug} />
                 <OriginalProjectFigures slug={project.slug} />
                 {project.slug === 'customer-intelligence' && (

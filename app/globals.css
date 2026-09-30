@@ -6685,3 +6685,33 @@ dialog.command-overlay { background: transparent; }
  .olist-dash__panel { break-inside: avoid; margin-top: 2rem; }
  .olist-dash__trend { overflow: visible; }
 }
+
+/* Loan affordability what-if simulator (credit risk case) */
+.afford-sim h3 { margin: .35rem 0 .75rem; font: 600 clamp(1.35rem, 2.6vw, 2rem)/1.18 var(--display-serif); letter-spacing: -.02em; }
+.afford-sim > p { max-width: 62ch; line-height: 1.55; color: var(--secondary-label); }
+.afford-sim__grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); margin-top: 1.75rem; }
+.afford-sim__inputs { display: grid; gap: 1.1rem; }
+.afford-sim__slider { display: grid; gap: .45rem; font-size: .86rem; color: var(--secondary-label); }
+.afford-sim__slider > span { display: flex; justify-content: space-between; gap: 1rem; }
+.afford-sim__slider strong { color: var(--label); font-weight: 600; font-variant-numeric: tabular-nums; }
+.afford-sim__slider input { width: 100%; min-height: 32px; accent-color: var(--accent); cursor: pointer; }
+.afford-sim__choices { display: flex; flex-wrap: wrap; gap: .35rem; }
+.afford-sim__choices button { min-height: 44px; padding: .55rem .9rem; border: 1px solid var(--separator); border-radius: 0; background: transparent; color: inherit; font: inherit; font-size: .84rem; cursor: pointer; }
+.afford-sim__choices button[aria-pressed="true"] { background: var(--label); color: var(--background); border-color: var(--label); }
+.afford-sim__output { display: grid; align-self: start; align-content: start; gap: 1px; border: 1px solid var(--separator); background: var(--separator); }
+.afford-sim__output > div { display: flex; flex-direction: column; gap: .3rem; padding: clamp(1rem, 2.2vw, 1.6rem); background: var(--background); }
+.afford-sim__output span, .afford-sim__eyebrow { font-size: .73rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--secondary-label); }
+.afford-sim__output strong { font: 600 clamp(2.2rem, 4.5vw, 3.3rem)/1.05 var(--display-serif); letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+.afford-sim__output small { font-size: .8rem; line-height: 1.45; color: var(--secondary-label); }
+.afford-sim__swings { display: grid; gap: .7rem; margin-top: 2.25rem; padding-top: 1.25rem; border-top: 1px solid var(--separator); }
+.afford-sim__swing { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr) 5rem; align-items: center; gap: .9rem; font-size: .86rem; }
+.afford-sim__swing strong { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.afford-sim__track { display: block; height: 8px; background: var(--separator); }
+.afford-sim__track > span { display: block; height: 100%; background: var(--label); }
+.afford-sim__track > span.is-negative { background: var(--accent); }
+.afford-sim__note { margin-top: 1.5rem; max-width: none !important; font-size: .77rem !important; }
+@media (max-width: 760px) {
+ .afford-sim__grid { grid-template-columns: minmax(0, 1fr); }
+ .afford-sim__swing { grid-template-columns: 6.5rem minmax(0, 1fr) 4.2rem; gap: .6rem; font-size: .8rem; }
+}
+@media print { .afford-sim__inputs { display: none; } }
