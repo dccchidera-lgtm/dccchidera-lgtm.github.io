@@ -38,7 +38,7 @@ const mediationNotes: Record<MediationStep, { label: string; value: string; titl
     label: 'Association',
     value: 'r = .591',
     title: 'Personalisation and trust move together.',
-    body: 'The dissertation found a positive association between perceived AI-driven personalisation and customer trust across 139 complete eligible responses.',
+    body: 'The dissertation found a positive association between perceived AI driven personalisation and customer trust across 139 complete eligible responses.',
   },
   indirect: {
     label: 'Indirect path',
@@ -50,7 +50,7 @@ const mediationNotes: Record<MediationStep, { label: string; value: string; titl
     label: 'Interpretation',
     value: 'Non-causal',
     title: 'The study supports association, not causation.',
-    body: 'The cross-sectional design measures relationships at one point in time. It cannot prove that personalisation caused later changes in trust or loyalty.',
+    body: 'The cross sectional design measures relationships at one point in time. It cannot prove that personalisation caused later changes in trust or loyalty.',
   },
 };
 
@@ -142,7 +142,7 @@ export function InteractiveEvidenceLab() {
             <NativeLink className="method-link" href="/work/predictive-analytics#evidence">Inspect the modelling evidence</NativeLink>
           </div>
 
-          <div className="lab-network" role="group" aria-label="Conceptual feed-forward neural network from customer attributes through a hidden representation to a churn score">
+          <div className="lab-network" role="group" aria-label="Conceptual feedforward neural network from customer attributes through a hidden representation to a churn score">
             <button type="button" className={`lab-network-layer ${networkLayer === 'input' ? 'is-active' : ''}`} onClick={() => setNetworkLayer('input')} aria-label="Inspect input layer">
               <small>Input</small><span /><span /><span /><span /><strong>Customer attributes</strong>
             </button>
@@ -163,7 +163,7 @@ export function InteractiveEvidenceLab() {
         <section className="evidence-lab-panel" role="region" aria-labelledby="mediation-visual-title">
           <div className="evidence-lab-copy">
             <p className="lab-kicker">Customer intelligence · n = 139</p>
-            <h3 id="mediation-visual-title">Trust in the personalisation–loyalty relationship</h3>
+            <h3 id="mediation-visual-title">Trust in the personalisation and loyalty relationship</h3>
             <p>
               Explore the association, the estimated indirect path and the boundary on interpretation from the individual MSc dissertation.
             </p>
@@ -180,9 +180,9 @@ export function InteractiveEvidenceLab() {
             <NativeLink className="method-link" href="/work/customer-intelligence#evidence">Open the dissertation evidence</NativeLink>
           </div>
 
-          <div className="lab-mediation" role="group" aria-label="Mediation diagram linking AI-driven personalisation to trust and customer loyalty">
+          <div className="lab-mediation" role="group" aria-label="Mediation diagram linking AI driven personalisation to trust and customer loyalty">
             <button type="button" className={mediationStep === 'association' ? 'is-active' : ''} onClick={() => setMediationStep('association')}>
-              <small>Predictor</small><strong>AI-driven personalisation</strong>
+              <small>Predictor</small><strong>AI driven personalisation</strong>
             </button>
             <div className={`lab-mediation-path ${mediationStep === 'association' ? 'is-active' : ''}`}><span>r = .591</span><i aria-hidden="true" /></div>
             <button type="button" className={mediationStep === 'indirect' ? 'is-active' : ''} onClick={() => setMediationStep('indirect')}>
@@ -195,7 +195,7 @@ export function InteractiveEvidenceLab() {
             <dl>
               <div><dt>95% interval</dt><dd>[.199, .422]</dd></div>
               <div><dt>Bootstrap samples</dt><dd>10,000</dd></div>
-              <div><dt>Study design</dt><dd>Cross-sectional</dd></div>
+              <div><dt>Study design</dt><dd>Cross sectional</dd></div>
             </dl>
           </div>
         </section>

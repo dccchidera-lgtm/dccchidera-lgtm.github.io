@@ -15,12 +15,12 @@ const roles = [
       {
         name: 'Credit Risk Analytics',
         detail: '44,986 loan records, multiple regression (R² .617)',
-        ownership: 'Four-person team',
+        ownership: 'Four person team',
         href: '/credit-risk',
       },
       {
         name: 'Ecommerce Business Intelligence',
-        detail: 'Nine-table Power BI model with DAX measures',
+        detail: 'Nine table Power BI model with DAX measures',
         ownership: 'MSc team project',
         href: '/powerbi',
       },
@@ -29,21 +29,21 @@ const roles = [
   {
     id: 'business',
     label: 'Business analysis',
-    headline: 'I structure business questions, test key trade-offs and explain how the evidence supports a recommendation.',
+    headline: 'I structure business questions, test key tradeoffs and explain how the evidence supports a recommendation.',
     summary:
       'A strong fit for work that needs requirements thinking, data quality, scenario analysis and clear communication between evidence and action.',
-    strengths: ['Problem framing', 'Scenario modelling', 'Stakeholder-ready recommendations'],
+    strengths: ['Problem framing', 'Scenario modelling', 'Stakeholder ready recommendations'],
     evidence: [
       {
         name: 'Decision Intelligence',
-        detail: 'Dashboard, 60–70% margin scenarios and optimisation',
-        ownership: 'Four-person team',
+        detail: 'Dashboard, 60 to 70% margin scenarios and optimisation',
+        ownership: 'Four person team',
         href: '/decisions',
       },
       {
         name: 'Data Management',
         detail: 'Business process, DFD, ERD and SQL prototype',
-        ownership: 'Four-person team',
+        ownership: 'Four person team',
         href: '/sql',
       },
     ],
@@ -53,7 +53,7 @@ const roles = [
     label: 'Data analytics',
     headline: 'I assess data quality, select an appropriate method and communicate the limits as clearly as the result.',
     summary:
-      'A strong fit for analytical work spanning data preparation, statistical investigation, model comparison and decision-focused reporting.',
+      'A strong fit for analytical work spanning data preparation, statistical investigation, model comparison and decision focused reporting.',
     strengths: ['Data quality', 'Statistical analysis', 'Model validation'],
     evidence: [
       {
@@ -95,7 +95,7 @@ const roles = [
   {
     id: 'marketing',
     label: 'Marketing analytics',
-    headline: 'I connect audience understanding and digital measurement with evidence-led optimisation.',
+    headline: 'I connect audience understanding and digital measurement with evidence led optimisation.',
     summary:
       'Relevant to junior marketing analytics, digital performance and campaign insight roles that value commercial context alongside data skills.',
     strengths: ['Audience segmentation', 'Digital measurement', 'Campaign evaluation'],
@@ -119,7 +119,7 @@ const roles = [
     label: 'Digital & AI',
     headline: 'I evaluate how data, automation and digital change can support a business decision responsibly.',
     summary:
-      'Relevant to entry-level digital transformation, technology consulting and AI-adjacent roles where model literacy, governance and business translation matter.',
+      'Relevant to entry level digital transformation, technology consulting and AI adjacent roles where model literacy, governance and business translation matter.',
     strengths: ['Technology evaluation', 'Model literacy', 'Responsible adoption'],
     evidence: [
       {
@@ -130,7 +130,7 @@ const roles = [
       },
       {
         name: 'Predictive Analytics',
-        detail: 'Three classifiers compared with validation-led interpretation',
+        detail: 'Three classifiers compared with validation led interpretation',
         ownership: 'Individual project',
         href: '/churn',
       },
@@ -146,7 +146,7 @@ export function RoleFit() {
     <section className="role-fit" id="role-fit" aria-labelledby="role-fit-title">
       <div className="shell role-fit-heading" data-reveal>
         <p className="overline">Role fit · evidence linked</p>
-        <h2 id="role-fit-title">I can apply this evidence across six entry-level role directions.</h2>
+        <h2 id="role-fit-title">I can apply this evidence across six entry level role directions.</h2>
       </div>
 
       <div className="shell role-fit-shell" data-reveal>

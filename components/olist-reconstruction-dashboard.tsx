@@ -92,7 +92,7 @@ export function OlistReconstructionDashboard() {
         <div><span>Delivered orders</span><strong>{fmtInt.format(totals[1])}</strong><small>Status = delivered</small></div>
         <div><span>Delivered after estimate</span><strong>{lateRate === null ? '—' : `${fmtDec.format(lateRate)}%`}</strong><small>{fmtInt.format(totals[2])} / {fmtInt.format(totals[3])} eligible</small></div>
         <div><span>Listed item value</span><strong>{readableAmount(totals[7])}</strong><small>Sum of item prices, not profit</small></div>
-        <div><span>Average item-priced order</span><strong>{fmtAmount.format(meanPricedOrder)}</strong><small>Excludes orders without items</small></div>
+        <div><span>Average item priced order</span><strong>{fmtAmount.format(meanPricedOrder)}</strong><small>Excludes orders without items</small></div>
         <div><span>Mean review score</span><strong>{score.toFixed(2)} / 5</strong><small>{fmtInt.format(totals[4])} reviewed orders</small></div>
       </div>
 
@@ -135,7 +135,7 @@ export function OlistReconstructionDashboard() {
         <section className="olist-dash__panel" aria-labelledby="olist-category-title">
           <span className="olist-dash__eyebrow">02 · Product category</span>
           <h2 id="olist-category-title">Which categories carry item value?</h2>
-          <p>Sum of listed item prices by the translated product category. Multi-item orders contribute to each applicable category.</p>
+          <p>Sum of listed item prices by the translated product category. Multi item orders contribute to each applicable category.</p>
           <div className="olist-dash__bars">
             {categories.map(({label,value}) => (
               <div className="olist-dash__bar" key={label}>
@@ -155,7 +155,7 @@ export function OlistReconstructionDashboard() {
             </div>
             <label>Measure
               <select value={stateMetric} onChange={(e) => setStateMetric(e.target.value as StateMetric)}>
-                <option value="late">After-estimate rate</option>
+                <option value="late">After estimate rate</option>
                 <option value="orders">Order count</option>
               </select>
             </label>
@@ -174,9 +174,9 @@ export function OlistReconstructionDashboard() {
       </div>
       <div className="olist-dash__method">
         <span>Provenance / limitations</span>
-        <p><strong>This is a reconstruction, not the original MMU Power BI dashboard.</strong> It was independently calculated from the recovered <em>Olist Dataset Clean v3.xlsx</em> workbook: eight worksheets containing 98,582 unique order records and 110,929 order-item rows. The original MSc case describes nine linked tables and 100,000+ orders; that scope has not been reconciled to this recovered workbook. No original PBIX, original DAX or original report pages are presented here.</p>
-        <p>Item value is the sum of listed item prices, not payment, realised revenue or margin. A late order means delivered strictly after its estimated date; cancelled or undelivered orders do not enter the rate. Scores are averaged over available order reviews; no causal effects or achieved business savings are claimed. Only aggregate counts and values are published—no raw customer, order, address or seller records.</p>
-        <p><strong>Data-quality decisions:</strong> 1,389 orders have no item rows and are excluded from the mean item-priced order. The 50,000-row geolocation sheet has 1,919 unique postal prefixes and is deliberately excluded from joins to prevent multiplying orders. The missing payments worksheet means the page does not claim actual sales or profitability.</p>
+        <p><strong>This is a reconstruction, not the original MMU Power BI dashboard.</strong> It was independently calculated from the recovered <em>Olist Dataset Clean v3.xlsx</em> workbook: eight worksheets containing 98,582 unique order records and 110,929 order item rows. The original MSc case describes nine linked tables and 100,000+ orders; that scope has not been reconciled to this recovered workbook. No original PBIX, original DAX or original report pages are presented here.</p>
+        <p>Item value is the sum of listed item prices, not payment, realised revenue or margin. A late order means delivered strictly after its estimated date; cancelled or undelivered orders do not enter the rate. Scores are averaged over available order reviews; no causal effects or achieved business savings are claimed. Only aggregate counts and values are published; no raw customer, order, address or seller records.</p>
+        <p><strong>Data quality decisions:</strong> 1,389 orders have no item rows and are excluded from the mean item priced order. The 50,000 row geolocation sheet has 1,919 unique postal prefixes and is deliberately excluded from joins to prevent multiplying orders. The missing payments worksheet means the page does not claim actual sales or profitability.</p>
       </div>
     </div>
   );

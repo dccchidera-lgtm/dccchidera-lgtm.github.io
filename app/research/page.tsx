@@ -14,8 +14,8 @@ const workflow = [
   ['02', 'Collect', 'Qualtrics survey of eligible UK online shoppers with consent and ethics controls.'],
   ['03', 'Prepare', 'Eligibility, completeness, duplicate, range and labelling checks across 45 variables.'],
   ['04', 'Validate', 'Reliability, KMO, Bartlett’s test and exploratory factor analysis.'],
-  ['05', 'Model', 'Correlation, HC3 robust regression and 10,000-sample bootstrap mediation.'],
-  ['06', 'Interpret', 'Translate associations into trust-centred recommendations and visible limits.'],
+  ['05', 'Model', 'Correlation, HC3 robust regression and 10,000 sample bootstrap mediation.'],
+  ['06', 'Interpret', 'Translate associations into trust centred recommendations and visible limits.'],
 ];
 
 export default function ResearchPage() {
@@ -49,11 +49,11 @@ export default function ResearchPage() {
             <div>
               <h2>
                 Does trust statistically mediate the association between perceived
-                AI-driven personalisation and customer loyalty?
+                AI driven personalisation and customer loyalty?
               </h2>
               <p>
                 Confirmed individual research using 139 complete, eligible UK
-                online-shopper responses collected through Qualtrics on 7–8 August 2026.
+                online shopper responses collected through Qualtrics on 7 and 8 August 2026.
               </p>
             </div>
           </div>
@@ -83,8 +83,8 @@ export default function ResearchPage() {
               <p className="overline">Selected results</p>
               <h2>Trust remained material in the joint loyalty model.</h2>
               <p>
-                The pattern was consistent with an indirect, trust-mediated association,
-                although the cross-sectional design does not establish causation.
+                The pattern was consistent with an indirect, trust mediated association,
+                although the cross sectional design does not establish causation.
               </p>
             </div>
             <div className="results-table" role="table" aria-label="Selected dissertation results">
@@ -93,7 +93,7 @@ export default function ResearchPage() {
                 <span role="columnheader">Result</span>
               </div>
               <div className="result-row" role="row">
-                <span role="cell">Personalisation–trust correlation</span>
+                <span role="cell">Personalisation and trust correlation</span>
                 <strong role="cell">r = .591 · p &lt; .001</strong>
               </div>
               <div className="result-row" role="row">
@@ -123,7 +123,7 @@ export default function ResearchPage() {
               <h3>Data quality</h3>
               <p>
                 Consent, eligibility, completeness, range and duplicate checks; raw export
-                preserved; locked SPSS dataset and cleaned CSV cross-checked.
+                preserved; locked SPSS dataset and cleaned CSV cross checked.
               </p>
             </article>
             <article data-reveal>
@@ -146,8 +146,8 @@ export default function ResearchPage() {
               <span>04</span>
               <h3>Claim discipline</h3>
               <p>
-                Cross-sectional convenience and snowball sampling supports association,
-                not causation or population-wide representation.
+                Cross sectional convenience and snowball sampling supports association,
+                not causation or population wide representation.
               </p>
             </article>
           </div>

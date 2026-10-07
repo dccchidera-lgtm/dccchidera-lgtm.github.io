@@ -19,70 +19,70 @@ export const cases: CaseStudy[] = [
   {
     slug: 'loan-affordability',
     name: 'Credit Risk Analytics',
-    label: 'Four-person MSc team project',
+    label: 'Four person MSc team project',
     title: 'Testing which factors drive loan affordability risk',
     lead:
-      'Our team built a credit-risk business case around Nationwide and analysed 44,986 public loan records in SPSS, auditing the data before using correlation and multiple regression to test which factors drove the loan-to-income ratio.',
+      'Our team built a credit risk business case around Nationwide and analysed 44,986 public loan records in SPSS, auditing the data before using correlation and multiple regression to test which factors drove the loan to income ratio.',
     facts: [
       { value: '44,986', label: 'Loan records analysed' },
       { value: '.617', label: 'Model R²' },
       { value: 'β .767', label: 'Loan amount, the strongest predictor' },
     ],
     question:
-      'Which borrower and loan characteristics drive affordability pressure, measured as the loan-to-income ratio, and do commonly assumed signals such as credit score and interest rate still matter once the other factors are considered?',
+      'Which borrower and loan characteristics drive affordability pressure, measured as the loan to income ratio, and do commonly assumed signals such as credit score and interest rate still matter once the other factors are considered?',
     approach: [
-      'Our team framed a credit-risk problem statement and objectives for a Nationwide case study, using a public Kaggle loan dataset.',
+      'Our team framed a credit risk problem statement and objectives for a Nationwide case study, using a public Kaggle loan dataset.',
       'We profiled the 44,986 records with descriptive statistics and flagged implausible values, such as employment experience of up to 100 years for borrowers aged 35, before modelling.',
-      'We used Pearson correlation to screen the relationships between the loan-to-income ratio and the candidate predictors.',
-      'We dummy-coded the categorical variables and fitted a 12-predictor multiple linear regression in SPSS.',
-      'We checked the assumptions with P-P and residual plots, residual statistics and variance inflation factors, then translated the results into lending recommendations.',
+      'We used Pearson correlation to screen the relationships between the loan to income ratio and the candidate predictors.',
+      'We dummy coded the categorical variables and fitted a 12 predictor multiple linear regression in SPSS.',
+      'We checked the assumptions with PP and residual plots, residual statistics and variance inflation factors, then translated the results into lending recommendations.',
     ],
     evidence:
-      'The model explained 61.7% of the variance in the loan-to-income ratio (R² = .617; F(12, 44973) = 6040.23, p < .001). Loan amount was the strongest predictor (β = .767) and income the strongest protective factor (β = −.488). Interest rate (p = .151) and credit score (p = .272) were not significant once the other factors were included. The diagnostics showed non-normal, heteroscedastic residuals, standardised residuals of up to 27 and high VIFs for age (13.8) and employment experience (10.7), so individual coefficients need careful reading.',
+      'The model explained 61.7% of the variance in the loan to income ratio (R² = .617; F(12, 44973) = 6040.23, p < .001). Loan amount was the strongest predictor (β = .767) and income the strongest protective factor (β = −.488). Interest rate (p = .151) and credit score (p = .272) were not significant once the other factors were included. The diagnostics showed nonnormal, heteroscedastic residuals, standardised residuals of up to 27 and high VIFs for age (13.8) and employment experience (10.7), so individual coefficients need careful reading.',
     implications: [
       'Size loans relative to income first: exposure and repayment capacity explained affordability pressure far better than credit profile alone.',
-      'Look beyond income thresholds, because some higher-income borrowers still carried high loan-to-income ratios.',
-      'Clean implausible records before modelling, and report diagnostics next to coefficients so decision-makers know how much weight each result can carry.',
+      'Look beyond income thresholds, because some higher income borrowers still carried high loan to income ratios.',
+      'Clean implausible records before modelling, and report diagnostics next to coefficients so decision makers know how much weight each result can carry.',
     ],
     limitations:
-      'This was an assessed case study on a public dataset, not Nationwide’s own data or a production credit model. The data is cross-sectional, so the results show association rather than causation, and they lack expenditure and housing-cost data. The heteroscedasticity and outliers mean robust standard errors are needed before relying on individual coefficients.',
+      'This was an assessed case study on a public dataset, not Nationwide’s own data or a production credit model. The data is cross sectional, so the results show association rather than causation, and they lack expenditure and housing cost data. The heteroscedasticity and outliers mean robust standard errors are needed before relying on individual coefficients.',
     improvement:
-      'Use heteroscedasticity-robust (HC3) standard errors, as I later did in my dissertation, remove one of the collinear age or experience variables, add t-tests and ANOVA across borrower groups, and compare against a non-linear model such as gradient boosting.',
+      'Use heteroscedasticity robust (HC3) standard errors, as I later did in my dissertation, remove one of the collinear age or experience variables, add t tests and ANOVA across borrower groups, and compare against a nonlinear model such as gradient boosting.',
     contribution:
-      'This was a four-person team project with shared responsibilities, so the data audit, modelling and recommendations are described as our team’s work.',
+      'This was a four person team project with shared responsibilities, so the data audit, modelling and recommendations are described as our team’s work.',
     tools: ['SPSS', 'Multiple regression', 'Correlation', 'Regression diagnostics', 'Data quality', 'Credit risk'],
   },
   {
     slug: 'decision-intelligence',
     name: 'Decision Intelligence',
-    label: 'Four-person MSc team project',
+    label: 'Four person MSc team project',
     title: 'Comparing scenarios and optimisation for a management decision',
     lead:
-      'Our team audited and cleaned a business dataset, built an interactive management dashboard, tested margin scenarios and used optimisation to support a location and store-configuration recommendation.',
+      'Our team audited and cleaned a business dataset, built an interactive management dashboard, tested margin scenarios and used optimisation to support a location and store configuration recommendation.',
     facts: [
-      { value: '60–70%', label: 'Margin scenarios tested' },
+      { value: '60 to 70%', label: 'Margin scenarios tested' },
       { value: '4', label: 'Team members' },
-      { value: '1', label: 'Optimisation-led recommendation' },
+      { value: '1', label: 'Optimisation led recommendation' },
     ],
     question:
-      'Which scenario and store configuration best supported the management objective, and how could the trade-offs be made clear to regional directors?',
+      'Which scenario and store configuration best supported the management objective, and how could the tradeoffs be made clear to regional directors?',
     approach: [
       'Our team systematically audited missing values, outliers and inconsistencies, then applied appropriate cleaning.',
-      'We built a management dashboard with KPIs, charts, slicers, dynamic formulas and drill-down.',
+      'We built a management dashboard with KPIs, charts, slicers, dynamic formulas and drill down.',
       'We modelled margin scenarios from 60% to 70% using simulation and sensitivity analysis.',
-      'We used optimisation to compare location and store-configuration choices before making a recommendation.',
+      'We used optimisation to compare location and store configuration choices before making a recommendation.',
     ],
     evidence:
       'Assessor feedback confirmed systematic data checking, appropriate cleaning, a useful interactive dashboard, a correct optimisation model and a justified recommendation. The submission received a provisional group mark of 75.',
     implications: [
       'Put the management decision at the centre of the dashboard rather than treating every metric as equally important.',
       'Use scenarios to make the effect of changing assumptions visible before committing to a recommendation.',
-      'Keep the model logic transparent enough for a decision-maker to challenge and understand.',
+      'Keep the model logic transparent enough for a decision maker to challenge and understand.',
     ],
     limitations:
       'The work was an assessed decision model rather than a production deployment, so it demonstrates method, not realised revenue or margin.',
     improvement:
-      'Add external evidence and decision-relevant KPIs such as sales per square metre, then publish a clearer formula and sensitivity audit.',
+      'Add external evidence and decision relevant KPIs such as sales per square metre, then publish a clearer formula and sensitivity audit.',
     contribution:
       'There were no fixed specialist roles. We divided the work as evenly as possible across four people, and every member covered the complete assignment. The dashboard, cleaning, scenarios and optimisation are therefore described as our team’s work.',
     tools: ['Excel', 'Dashboarding', 'Scenario modelling', 'Optimisation', 'Data quality'],
@@ -93,23 +93,23 @@ export const cases: CaseStudy[] = [
     label: 'Individual MSc dissertation',
     title: 'Examining trust in the relationship between personalisation and loyalty',
     lead:
-      'I investigated whether perceived AI-driven personalisation was associated with customer loyalty and whether customer trust statistically mediated that relationship.',
+      'I investigated whether perceived AI driven personalisation was associated with customer loyalty and whether customer trust statistically mediated that relationship.',
     facts: [
       { value: '139', label: 'Complete eligible responses' },
       { value: '45', label: 'Structured variables' },
       { value: '10,000', label: 'Bootstrap samples' },
     ],
     question:
-      'Is perceived AI-driven personalisation associated with loyalty among UK online shoppers, and is that association statistically mediated by trust?',
+      'Is perceived AI driven personalisation associated with loyalty among UK online shoppers, and is that association statistically mediated by trust?',
     approach: [
-      'Designed and distributed a cross-sectional Qualtrics survey using convenience and snowball sampling.',
+      'Designed and distributed a cross sectional Qualtrics survey using convenience and snowball sampling.',
       'Checked consent, eligibility, completeness, value ranges and duplicate responses; preserved the raw export and created a locked SPSS dataset.',
       'Assessed scale reliability and factor structure using Cronbach’s alpha, KMO, Bartlett’s test and exploratory factor analysis.',
       'Ran Pearson correlations, HC3 robust regression, diagnostics and PROCESS Model 4 mediation with 10,000 bootstrap samples.',
       'Used Python for two figures and retained reproducible SPSS syntax.',
     ],
     evidence:
-      'Personalisation and trust were positively correlated (r = .591, p < .001). In the trust regression model, personalisation was statistically associated with trust (R² = .349, B = .575). In the joint loyalty model, trust remained material (B = .526, p < .001), while personalisation’s direct coefficient was small and non-significant (B = .048, p = .552). The indirect effect through trust was .303 with a 95% bootstrap interval of [.199, .422].',
+      'Personalisation and trust were positively correlated (r = .591, p < .001). In the trust regression model, personalisation was statistically associated with trust (R² = .349, B = .575). In the joint loyalty model, trust remained material (B = .526, p < .001), while personalisation’s direct coefficient was small and nonsignificant (B = .048, p = .552). The indirect effect through trust was .303 with a 95% bootstrap interval of [.199, .422].',
     implications: [
       'Treat trust as both a design criterion and a performance measure for personalisation.',
       'Explain why personalisation is happening and give customers meaningful control.',
@@ -117,39 +117,39 @@ export const cases: CaseStudy[] = [
       'Monitor trust alongside verified customer behaviour rather than relying on engagement alone.',
     ],
     limitations:
-      'This was a cross-sectional, non-probability survey. The findings show statistical associations, not causal effects, and should not be treated as representative of every UK shopper.',
+      'This was a cross sectional, nonprobability survey. The findings show statistical associations, not causal effects, and should not be treated as representative of every UK shopper.',
     improvement:
-      'A longitudinal or experimental follow-up could test temporal order and causal mechanisms using a broader probability-based sample and verified behavioural outcomes.',
+      'A longitudinal or experimental follow up could test temporal order and causal mechanisms using a broader probability based sample and verified behavioural outcomes.',
     contribution:
-      'This was confirmed individual work. I designed the study, prepared and quality-checked the data, ran the analysis and translated the findings into recommendations. Raw participant data is not published.',
+      'This was confirmed individual work. I designed the study, prepared and quality checked the data, ran the analysis and translated the findings into recommendations. Raw participant data is not published.',
     tools: ['Qualtrics', 'SPSS', 'PROCESS Model 4', 'Python figures', 'Research ethics'],
   },
   {
     slug: 'process-redesign',
     name: 'Data Management',
-    label: 'Four-person MSc team project',
+    label: 'Four person MSc team project',
     title: 'Translating business data flows into a relational SQL prototype',
     lead:
-      'Our team analysed a merchant data-management problem, mapped flows and relationships, and documented a proposed relational SQL prototype.',
+      'Our team analysed a merchant data management problem, mapped flows and relationships, and documented a proposed relational SQL prototype.',
     facts: [
       { value: 'DFD', label: 'Data movement mapped' },
       { value: 'ERD', label: 'Relationships modelled' },
       { value: 'SQL', label: 'Prototype executed' },
     ],
     question:
-      'How could clearer data flows and relational structure support more reliable reporting for an Uber Eats-style operating model?',
+      'How could clearer data flows and relational structure support more reliable reporting for an Uber Eats style operating model?',
     approach: [
-      'Our team defined the business problem and reviewed the organisation’s data-management context.',
-      'We mapped the movement of data with a data-flow diagram and modelled the relational structure with an entity-relationship diagram.',
-      'We translated the ERD into a normalised six-table schema with primary and foreign keys and a recorded_at timestamp on each dependent table, so fees, availability and ratings could be tracked over time.',
+      'Our team defined the business problem and reviewed the organisation’s data management context.',
+      'We mapped the movement of data with a data flow diagram and modelled the relational structure with an entity relationship diagram.',
+      'We translated the ERD into a normalised six table schema with primary and foreign keys and a recorded_at timestamp on each dependent table, so fees, availability and ratings could be tracked over time.',
       'We wrote seven analytical queries, including window functions to rank merchants by rating within each city and aggregations to segment performance by price tier.',
     ],
     evidence:
-      'The submitted coursework identifies 997 missing delivery-fee values out of 1,000 merchant records (99.7%) Review ratings were missing for 58.2%, and 98.6% of merchants were recorded as closed; with a single scan date for every record, genuine closures could not be told apart from merchants that were simply closed at scan time. The proposed six-table schema and seven analytical queries were designed to make pricing, performance benchmarking and promotion analysis reliable.',
+      'The submitted coursework identifies 997 missing delivery fee values out of 1,000 merchant records (99.7%) Review ratings were missing for 58.2%, and 98.6% of merchants were recorded as closed; with a single scan date for every record, genuine closures could not be told apart from merchants that were simply closed at scan time. The proposed six table schema and seven analytical queries were designed to make pricing, performance benchmarking and promotion analysis reliable.',
     implications: [
       'Agree the business entities and relationships before building reports on top of them.',
       'Use the same business rules in the conceptual model and the implemented schema.',
-      'Test the database through decision-relevant queries rather than treating creation as the finish line.',
+      'Test the database through decision relevant queries rather than treating creation as the finish line.',
     ],
     limitations:
       'This was assessed group coursework on a public merchant dataset, not Uber Eats production work, and the SQL scripts are not published.',
@@ -165,7 +165,7 @@ export const cases: CaseStudy[] = [
     label: 'MSc team project',
     title: 'Preparing ecommerce data for delivery and customer reporting',
     lead:
-      'Our MSc team prepared the Olist ecommerce data and developed a nine-table Power BI model to examine delivery performance, seller activity and customer satisfaction. Eight cleaned source worksheets have now been recovered; earlier project documentation identifies the additional model table as a DAX date table.',
+      'Our MSc team prepared the Olist ecommerce data and developed a nine table Power BI model to examine delivery performance, seller activity and customer satisfaction. Eight cleaned source worksheets have now been recovered; earlier project documentation identifies the additional model table as a DAX date table.',
     facts: [
       { value: '98,582', label: 'Recovered order rows' },
       { value: '8 + date', label: 'Source sheets + DAX date table' },
@@ -180,10 +180,10 @@ export const cases: CaseStudy[] = [
       'We organised the pages around operational questions rather than presenting metrics without a decision context.',
     ],
     evidence:
-      'The recovered cleaned workbook contains eight source worksheets, including 98,582 order rows and 110,929 order-item rows. Earlier project documentation identifies a DAX date table as the ninth Power BI model table. The confirmed business finding remains a data-quality and reporting one: source inconsistencies had to be resolved before linked delivery, seller and customer measures could be interpreted reliably.',
+      'The recovered cleaned workbook contains eight source worksheets, including 98,582 order rows and 110,929 order item rows. Earlier project documentation identifies a DAX date table as the ninth Power BI model table. The confirmed business finding remains a data quality and reporting one: source inconsistencies had to be resolved before linked delivery, seller and customer measures could be interpreted reliably.',
     implications: [
       'Validate join keys and date logic before comparing ecommerce metrics across related tables.',
-      'Separate reliable measures from unavailable or incomplete ones when reporting to decision-makers.',
+      'Separate reliable measures from unavailable or incomplete ones when reporting to decision makers.',
       'Use delivery, seller and customer views to investigate operational questions in the reconstructed reporting.',
     ],
     limitations:
@@ -191,7 +191,7 @@ export const cases: CaseStudy[] = [
     improvement:
       'Reconstruct the report from the recovered cleaned workbook, document each tested measure and add only findings that can be reproduced from the recovered data.',
     contribution:
-      'This was a shared-responsibility MSc team project. The data model, DAX measures and dashboard pages are described as our team’s work.',
+      'This was a shared responsibility MSc team project. The data model, DAX measures and dashboard pages are described as our team’s work.',
     tools: ['Power BI', 'Power Query', 'DAX', 'Data preparation', 'Ecommerce reporting'],
   },
   {
@@ -200,7 +200,7 @@ export const cases: CaseStudy[] = [
     label: 'Individual MSc project',
     title: 'Comparing churn models to support targeted retention decisions',
     lead:
-      'I compared three classification approaches on a 4,000-record gym-membership dataset to identify a model that could support targeted retention decisions.',
+      'I compared three classification approaches on a 4,000 record gym membership dataset to identify a model that could support targeted retention decisions.',
     facts: [
       { value: '4,000', label: 'Membership records' },
       { value: '3', label: 'Classifiers compared' },
@@ -209,25 +209,25 @@ export const cases: CaseStudy[] = [
     question:
       'Which classification approach best identified members at risk of churn, and how could its output support proportionate retention action?',
     approach: [
-      'Imported a gym-customer dataset with 4,000 records and 14 attributes into SAS Enterprise Miner.',
+      'Imported a gym customer dataset with 4,000 records and 14 attributes into SAS Enterprise Miner.',
       'Used a 40% training, 30% validation and 30% test partition; no oversampling was reported.',
-      'Built decision-tree, logistic-regression and neural-network classifiers.',
-      'Compared models using validation misclassification and interpreted the strongest displayed decision-tree drivers.',
-      'Translated the model output into risk tiers, monitoring and responsible-use recommendations.',
+      'Built decision tree, logistic regression and neural network classifiers.',
+      'Compared models using validation misclassification and interpreted the strongest displayed decision tree drivers.',
+      'Translated the model output into risk tiers, monitoring and responsible use recommendations.',
     ],
     evidence:
       'The neural network produced the lowest validation misclassification at 4.42%, equivalent to 95.6% validation accuracy. Logistic regression recorded 6.18% and the decision tree 10.52% validation misclassification. The displayed tree highlighted membership length, contract length and visit behaviour among its strongest drivers.',
     implications: [
       'Use risk tiers to guide interventions rather than treating every flagged member in the same way.',
-      'Watch early-tenure and declining-visit signals and connect scores to appropriately timed CRM workflows.',
+      'Watch early tenure and declining visit signals and connect scores to appropriately timed CRM workflows.',
       'Retain human review and monitor model fairness, drift and business performance.',
     ],
     limitations:
       'Model selection was based on validation performance. This was not a production deployment, and no achieved churn, revenue or cost improvement is claimed.',
     improvement:
-      'Document preprocessing fully, compare test-set precision, recall and F1, assess business-cost thresholds and add explainability before any operational use.',
+      'Document preprocessing fully, compare test set precision, recall and F1, assess business cost thresholds and add explainability before any operational use.',
     contribution:
-      'This was confirmed individual work. I built and compared the three models, interpreted their validation results and developed the business and responsible-use recommendations.',
+      'This was confirmed individual work. I built and compared the three models, interpreted their validation results and developed the business and responsible use recommendations.',
     tools: ['SAS Enterprise Miner', 'Decision tree', 'Logistic regression', 'Neural network', 'Model comparison'],
   },
 ];

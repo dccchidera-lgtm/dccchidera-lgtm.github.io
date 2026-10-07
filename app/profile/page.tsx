@@ -40,9 +40,9 @@ export default function ProfilePage() {
             </div>
             <div className="profile-hero-foot">
               <p>
-                Manchester-based Business Analytics postgraduate with a 2:1 in Digital
+                Manchester based Business Analytics postgraduate with a 2:1 in Digital
                 Marketing, bringing customer understanding, structured analysis and an
-                adaptable international perspective to early-career roles.
+                adaptable international perspective to early career roles.
               </p>
               <div className="profile-opening-links"><a href={publicPath('/Daniel_Christopher_Public_CV.pdf')} download>Download CV ↗</a><NativeLink href="/contact">Get in touch ↗</NativeLink></div>
             </div>
@@ -108,22 +108,22 @@ export default function ProfilePage() {
 
             <div className="background-route" aria-label="Personal and education route" data-reveal>
               <article>
-                <span>2004–2017</span>
+                <span>2004 to 2017</span>
                 <strong>Germany</strong>
                 <p>Born and raised; the foundation of my German fluency.</p>
               </article>
               <article>
-                <span>2017–2020</span>
+                <span>2017 to 2020</span>
                 <strong>St Peter’s RC High School</strong>
                 <p>Joined during Year 8 and adapted to a new country and school system.</p>
               </article>
               <article>
-                <span>2020–2022</span>
+                <span>2020 to 2022</span>
                 <strong>Xaverian College</strong>
-                <p>Completed two years of sixth-form education in Manchester.</p>
+                <p>Completed two years of sixth form education in Manchester.</p>
               </article>
               <article>
-                <span>2022–now</span>
+                <span>2022 to now</span>
                 <strong>Higher education</strong>
                 <p>Digital Marketing at BCU, followed by Business Analytics in Manchester.</p>
               </article>
@@ -146,7 +146,7 @@ export default function ProfilePage() {
               <article data-reveal>
                 <strong>2:1</strong>
                 <span>BA (Hons) Digital Marketing</span>
-                <small>Accelerated two-year programme</small>
+                <small>Accelerated two year programme</small>
               </article>
               <article data-reveal>
                 <strong>85</strong>
@@ -180,7 +180,7 @@ export default function ProfilePage() {
               <article data-reveal>
                 <span>01</span>
                 <h3>Audience and customer understanding</h3>
-                <p>Market research, audience segmentation and customer-centred problem framing.</p>
+                <p>Market research, audience segmentation and customer centred problem framing.</p>
               </article>
               <article data-reveal>
                 <span>02</span>
@@ -284,16 +284,16 @@ export default function ProfilePage() {
           <div className="shell">
             <div className="section-heading" data-reveal>
               <p className="overline">Journey</p>
-              <h2>A cross-disciplinary route from customer context to analytical decisions.</h2>
+              <h2>A cross disciplinary route from customer context to analytical decisions.</h2>
             </div>
             <ol className="journey-list">
               <li data-reveal>
-                <span>2022–2025</span>
+                <span>2022 to 2025</span>
                 <strong>BA (Hons) Digital Marketing</strong>
-                <p>Completed an accelerated two-year programme at Birmingham City University with Upper Second-Class Honours.</p>
+                <p>Completed an accelerated two year programme at Birmingham City University with Upper Second Class Honours.</p>
               </li>
               <li data-reveal>
-                <span>2025–2026</span>
+                <span>2025 to 2026</span>
                 <strong>MSc Business Analytics</strong>
                 <p>Built evidence across statistics, data management, decision modelling, machine learning and transformation.</p>
               </li>
@@ -347,7 +347,7 @@ export default function ProfilePage() {
               <article>
                 <span>Birmingham City University</span>
                 <h2>BA (Hons) Digital Marketing</h2>
-                <p>Upper Second-Class Honours (2:1)</p>
+                <p>Upper Second Class Honours (2:1)</p>
                 <p>Relevant modules: {bcuModules.join(', ')}.</p>
                 <NativeLink className="arrow-link" href="/bcu">Explore BCU projects and modules ↗</NativeLink>
               </article>
@@ -376,10 +376,10 @@ export default function ProfilePage() {
           <div className="shell extras-grid">
             <div data-reveal>
               <p className="overline">Professional experience</p>
-              <h2>Work held alongside full-time study.</h2>
+              <h2>Work held alongside full time study.</h2>
             </div>
             <ul data-reveal>
-              <li><span>Oct 2025 to present</span>Security Officer, Constant Security Services, Manchester. SIA-licensed front-of-house cover at university sites, with accurate incident and handover records.</li>
+              <li><span>Oct 2025 to present</span>Security Officer, Constant Security Services, Manchester. SIA licensed front of house cover at university sites, with accurate incident and handover records.</li>
             </ul>
           </div>
         </section>

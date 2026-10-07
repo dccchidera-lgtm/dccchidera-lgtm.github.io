@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Daniel Christopher",
   },
   description:
-    "Business and data analyst in Manchester: credit risk, customer research, churn modelling, SQL and Power BI case studies by Daniel Christopher, MSc Business Analytics (predicted Distinction).",
+    "Business and data analyst in Manchester, open to remote or hybrid roles: credit risk, customer research, churn modelling, SQL and Power BI case studies by Daniel Christopher, MSc Business Analytics (predicted Distinction).",
   alternates: {
     canonical: "/",
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Daniel Christopher | Business and Data Analyst",
     description:
-      "Business and data analyst in Manchester: credit risk, customer research, churn modelling, SQL and Power BI case studies by Daniel Christopher, MSc Business Analytics (predicted Distinction).",
+      "Business and data analyst in Manchester, open to remote or hybrid roles: credit risk, customer research, churn modelling, SQL and Power BI case studies by Daniel Christopher, MSc Business Analytics (predicted Distinction).",
     type: "website",
     url: siteUrl,
     siteName: "Daniel Christopher",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-daniel-christopher.png`,
         width: 1200,
         height: 630,
-        alt: "A minimal evidence-to-decision diagram for Daniel Christopher’s analytics portfolio",
+        alt: "A minimal evidence to decision diagram for Daniel Christopher’s analytics portfolio",
       },
     ],
   },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Daniel Christopher | Business and Data Analyst",
     description:
-      "Business and data analyst in Manchester: credit risk, customer research, churn modelling, SQL and Power BI case studies by Daniel Christopher, MSc Business Analytics (predicted Distinction).",
+      "Business and data analyst in Manchester, open to remote or hybrid roles: credit risk, customer research, churn modelling, SQL and Power BI case studies by Daniel Christopher, MSc Business Analytics (predicted Distinction).",
     images: [`${siteUrl}/og-daniel-christopher.png`],
   },
 };

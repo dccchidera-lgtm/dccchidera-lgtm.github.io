@@ -5,7 +5,7 @@ import { NativeLink } from '@/components/native-link';
 
 export const metadata = pageMetadata(
   'Building this portfolio | Independent digital project',
-  'A live, self-directed Next.js portfolio build showing information architecture, responsive interfaces, technical implementation and transparent case-study presentation.',
+  'A live, self directed Next.js portfolio build showing information architecture, responsive interfaces, technical implementation and transparent case study presentation.',
   '/site-build/',
 );
 
@@ -36,23 +36,23 @@ export default function SiteBuildPage() {
         <section className="shell site-build-grid" aria-label="Website build details">
           <article>
             <span>01 / Build</span>
-            <h2>Working website, not a mock-up.</h2>
-            <p>A React and Next.js site written in TypeScript, statically built and published through GitHub Pages. Case-study pages and reusable components keep the interface coherent as work is added.</p>
+            <h2>Working website, not a mockup.</h2>
+            <p>A React and Next.js site written in TypeScript, statically built and published through GitHub Pages. Case study pages and reusable components keep the interface coherent as work is added.</p>
           </article>
           <article>
             <span>02 / Navigation</span>
             <h2>Different paths through the work.</h2>
-            <p>Selected-work browsing, a mobile menu and keyboard-searchable commands help a visitor reach a relevant example without reading the entire site.</p>
+            <p>Selected work browsing, a mobile menu and keyboard searchable commands help a visitor reach a relevant example without reading the entire site.</p>
           </article>
           <article>
             <span>03 / Evidence</span>
             <h2>Make provenance visible.</h2>
-            <p>Source-linked project figures, runnable public-data analysis and a clearly labelled Olist reconstruction make it possible to distinguish original coursework from independent follow-on work.</p>
+            <p>Source linked project figures, runnable public data analysis and a clearly labelled Olist reconstruction make it possible to distinguish original coursework from independent follow on work.</p>
           </article>
           <article>
             <span>04 / Iteration</span>
             <h2>Improve the reading experience.</h2>
-            <p>Responsive typography, consistent page alignment, theme controls and print-friendly case studies are part of the ongoing build. The site is refined as new projects and real deliverables are ready to show.</p>
+            <p>Responsive typography, consistent page alignment, theme controls and print friendly case studies are part of the ongoing build. The site is refined as new projects and real deliverables are ready to show.</p>
           </article>
         </section>
         <section className="shell site-build-close">

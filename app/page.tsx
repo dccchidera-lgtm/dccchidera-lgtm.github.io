@@ -12,10 +12,10 @@ const cases = [
     title: 'Testing what drives',
     muted: 'loan affordability risk',
     description:
-      'A four-person team analysis of 44,986 loan records in SPSS: a data audit, correlation and multiple regression (R² .617) showing that credit score and interest rate were not significant once other factors were included.',
+      'A four person team analysis of 44,986 loan records in SPSS: a data audit, correlation and multiple regression (R² .617) showing that credit score and interest rate were not significant once other factors were included.',
     type: 'Team project',
     href: '/credit-risk',
-    linkLabel: 'View case study and try the what-if model',
+    linkLabel: 'View case study and try the what if model',
     visual: 'loan',
     tone: 'paper',
   },
@@ -49,7 +49,7 @@ const cases = [
     title: 'Translating business data flows',
     muted: 'into a documented SQL prototype',
     description:
-      'A four-person team audit of 1,000 merchant records (99.7% of delivery fees missing), followed by a normalised six-table schema and analytical SQL queries.',
+      'A four person team audit of 1,000 merchant records (99.7% of delivery fees missing), followed by a normalised six table schema and analytical SQL queries.',
     type: 'Team project',
     href: '/sql',
     visual: 'data',
@@ -75,8 +75,8 @@ export default function Home() {
         <section className="hero">
           <div className="shell hero-inner">
             <div className="hero-kicker hero-reveal">
-              <p className="overline">Business and data analyst · Manchester, UK</p>
-              <span><i /> Available now for analyst roles</span>
+              <p className="overline">Business and data analyst · Manchester, UK · Remote or hybrid</p>
+              <span><i /> Available now for remote or hybrid analyst roles</span>
             </div>
             <h1 className="hero-title">
               <span className="hero-reveal">Daniel <span className="nowrap">Christopher.</span></span>
@@ -90,7 +90,7 @@ export default function Home() {
             <div className="hero-footer">
               <div className="hero-intro hero-reveal">
                 <p>
-                  From loan-risk regression and churn models to SQL data audits and Power BI
+                  From loan risk regression and churn models to SQL data audits and Power BI
                   reporting, I check the data first and then explain what it means for the decision.
                 </p>
                 <a className="arrow-link" href="#case-index">
@@ -116,7 +116,7 @@ export default function Home() {
           <dl className="shell candidate-facts-grid">
             <div data-reveal><dt>Qualifications</dt><dd>MSc Business Analytics · BA Digital Marketing 2:1</dd></div>
             <div data-reveal><dt>Status</dt><dd>Dissertation submitted</dd></div>
-            <div data-reveal><dt>Based in</dt><dd>Manchester, UK</dd></div>
+            <div data-reveal><dt>Work pattern</dt><dd>Remote or hybrid · Manchester, UK · full UK right to work</dd></div>
             <div data-reveal><dt>Focus</dt><dd>Performance · risk · BI reporting · customer insight</dd></div>
             <div data-reveal><dt>Languages</dt><dd>Native German · fluent English</dd></div>
           </dl>
@@ -130,7 +130,7 @@ export default function Home() {
             </article>
             <article data-reveal>
               <strong>44,986</strong>
-              <span>loan records in the credit-risk study</span>
+              <span>loan records in the credit risk study</span>
             </article>
             <article data-reveal>
               <strong>100,000+</strong>
@@ -140,6 +140,22 @@ export default function Home() {
               <strong>2 / 4</strong>
               <span>individual / team cases, each clearly attributed</span>
             </article>
+          </div>
+        </section>
+
+        <section className="tools-section" id="skills" aria-labelledby="skills-title">
+          <div className="shell tools-grid" data-reveal>
+            <div>
+              <p className="overline">Skills and tools</p>
+              <h2 id="skills-title">Every skill here is backed by a case on this site.</h2>
+            </div>
+            <div className="tool-lines">
+              <p><span>Business analysis</span> Problem framing · data flow mapping · ERDs · stakeholder recommendations</p>
+              <p><span>Data and querying</span> SQL joins and window functions · Excel · data quality audits</p>
+              <p><span>Reporting and BI</span> Power BI and DAX foundations · KPI dashboards · scenario models</p>
+              <p><span>Statistics and modelling</span> SPSS regression · SAS Enterprise Miner classifiers · mediation</p>
+              <p><span>Python and research</span> Pandas with tested scripts · Qualtrics survey design · GA4</p>
+            </div>
           </div>
         </section>
 
@@ -208,7 +224,7 @@ export default function Home() {
             <article data-reveal>
               <span>Professional experience · Oct 2025 to present</span>
               <h3>Security Officer, Constant Security Services</h3>
-              <p>SIA-licensed front-of-house cover at university sites in Manchester, held alongside full-time study. The role depends on reliability, calm judgement and accurate incident and handover records.</p>
+              <p>SIA licensed front of house cover at university sites in Manchester, held alongside full time study. The role depends on reliability, calm judgement and accurate incident and handover records.</p>
             </article>
             <article data-reveal>
               <span>Certifications · 2025</span>
@@ -217,15 +233,15 @@ export default function Home() {
               <NativeLink className="arrow-link" href="/profile">View profile and credentials</NativeLink>
             </article>
             <article data-reveal>
-              <span>Self-initiated follow-on · Python and public data</span>
-              <h3>Olist, revisited, and a service-mix analysis</h3>
+              <span>Self initiated follow on · Python and public data</span>
+              <h3>Olist, revisited, and a service mix analysis</h3>
               <p>An interactive ecommerce dashboard rebuilt from the recovered cleaned workbook of 98,582 orders, plus a runnable Python analysis with data checks and documented limits.</p>
               <NativeLink className="arrow-link" href="/olist-reconstruction">Explore the Olist dashboard</NativeLink>
             </article>
             <article data-reveal>
               <span>BA Digital Marketing · Birmingham City University</span>
               <h3>Audience insight and campaign strategy</h3>
-              <p>Undergraduate research and campaign planning for brands including Nando’s and Mailchimp. It is the customer-side grounding behind my analytical work.</p>
+              <p>Undergraduate research and campaign planning for brands including Nando’s and Mailchimp. It is the customer side grounding behind my analytical work.</p>
               <NativeLink className="arrow-link" href="/bcu">Explore the marketing projects</NativeLink>
             </article>
           </div>
@@ -248,7 +264,7 @@ export default function Home() {
                 <span>Native German · fluent English</span>
                 <span>Analytics + digital marketing</span>
                 <span>Full UK driving licence</span>
-                <span>Open to hybrid, remote or relocation</span>
+                <span>Open to remote, hybrid or relocation</span>
               </div>
               <div className="profile-links">
                 <NativeLink className="arrow-link" href="/profile">
@@ -265,7 +281,7 @@ export default function Home() {
         <footer className="footer">
           <div className="footer-inner">
             <h2>
-              I am open to graduate analyst roles in performance, risk and BI, <span>where clear evidence informs the decision.</span>
+              I am open to remote or hybrid analyst roles in performance, risk and BI, <span>where clear evidence informs the decision.</span>
             </h2>
             <div className="footer-bottom">
               <span>Daniel Christopher · 2026</span>

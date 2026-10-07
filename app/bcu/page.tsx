@@ -36,7 +36,7 @@ export default function BcuPage() {
         </article>
       </div></section>
       <section className="work-digital-feature" id="modules"><div className="shell">
-        <p className="overline">Accelerated two-year degree · 360 credits</p><h2>BA (Hons) Digital Marketing modules</h2>
+        <p className="overline">Accelerated two year degree · 360 credits</p><h2>BA (Hons) Digital Marketing modules</h2>
         <ul className="bcu-modules">{bcuModules.map(module => <li key={module}>{module}</li>)}</ul>
         <p className="bcu-limit">Module titles checked against the BCU transcript. Project descriptions draw on retained coursework and its earlier evidence review. Individual contributions and team outputs are identified where the record supports them.</p>
         <NativeLink className="arrow-link" href="/work">Back to selected work ↗</NativeLink>

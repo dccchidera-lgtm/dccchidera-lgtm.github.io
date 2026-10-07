@@ -42,23 +42,23 @@ export default function WorkPage() {
             <p className="overline">Digital builds & independent work</p>
             <div className="work-digital-heading">
               <h2 id="work-digital-title">Building and analysing beyond the classroom.</h2>
-              <p>A website I designed and deployed, a rebuilt ecommerce dashboard and reproducible public-data work.</p>
+              <p>A website I designed and deployed, a rebuilt ecommerce dashboard and reproducible public data work.</p>
             </div>
             <div className="work-digital-grid">
               <article>
                 <span>01 · Independent digital project</span>
                 <h3>This portfolio website</h3>
-                <p>Built with Next.js, React and TypeScript, with responsive navigation, theme controls and case-study storytelling.</p>
+                <p>Built with Next.js, React and TypeScript, with responsive navigation, theme controls and case study storytelling.</p>
                 <NativeLink className="arrow-link" href="/site-build">Explore the build ↗</NativeLink>
               </article>
               <article>
-                <span>02 · Independent public-data analysis</span>
+                <span>02 · Independent public data analysis</span>
                 <h3>Restaurant service mix</h3>
                 <p>Runnable Python analysis of 244 example bills, with data checks, descriptive findings and limits.</p>
                 <NativeLink className="arrow-link" href="/service-mix">Explore the analysis ↗</NativeLink>
               </article>
               <article>
-                <span>03 · MSc follow-on reconstruction</span>
+                <span>03 · MSc follow on reconstruction</span>
                 <h3>Olist, revisited</h3>
                 <p>Interactive ecommerce reporting rebuilt from the recovered cleaned workbook, distinctly labelled from the original group submission.</p>
                 <NativeLink className="arrow-link" href="/olist-reconstruction">Explore the dashboard ↗</NativeLink>
@@ -106,7 +106,7 @@ export default function WorkPage() {
             <p className="overline">Attribution matters</p>
             <div>
               <p>
-                Two cases are individual projects and four are team projects. The credit risk, data management and decision modelling projects were completed in four-person teams with shared responsibilities; the ecommerce BI project was also shared work.
+                Two cases are individual projects and four are team projects. The credit risk, data management and decision modelling projects were completed in four person teams with shared responsibilities; the ecommerce BI project was also shared work.
               </p>
               <p>
                 Group outputs are always described as “our team’s work.”
@@ -146,7 +146,7 @@ export default function WorkPage() {
             </article>
             <article id="siemens-industry-4" data-reveal>
               <span>Individual analysis</span>
-              <h3>Cyber-physical systems at Siemens</h3>
+              <h3>Cyber physical systems at Siemens</h3>
               <p>
                 Used CPS architecture and a sociotechnical lens to examine operations,
                 workforce capability, cybersecurity and sustainability.

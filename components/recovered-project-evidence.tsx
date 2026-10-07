@@ -12,20 +12,20 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
           <strong>Data quality before database design.</strong>
         </figcaption>
         <p>
-          Our four-person team analysed a 1,000-record Alabama merchant dataset.
-          Delivery-fee values were missing in 997 records (99.7%), while
+          Our four person team analysed a 1,000 record Alabama merchant dataset.
+          Delivery fee values were missing in 997 records (99.7%), while
           promotions were absent in 890 records (89.0%). These are findings about
           the coursework dataset, not claims about Uber Eats’ production systems.
         </p>
         <div className="visual-result-strip visual-result-strip--two">
-          <div><span>Delivery-fee values missing</span><strong>99.7%</strong></div>
+          <div><span>Delivery fee values missing</span><strong>99.7%</strong></div>
           <div><span>Promotion values missing</span><strong>89.0%</strong></div>
         </div>
         <h3>What the proposed schema addressed</h3>
         <p>
           The team proposed separating merchant identity from changing operational
           information in six related tables. The submitted assignment includes a
-          proposed entity-relationship diagram and describes a SQL prototype.
+          proposed entity relationship diagram and describes a SQL prototype.
           No production deployment or achieved commercial improvement is claimed.
         </p>
         <details className="case-model-disclosure">
@@ -34,9 +34,9 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
             <li>Rank merchant ratings within each city.</li>
             <li>Compare delivery fees and their data coverage across cities.</li>
             <li>List promotions alongside review performance.</li>
-            <li>Identify high-rated merchants with active promotions.</li>
+            <li>Identify high rated merchants with active promotions.</li>
             <li>Summarise performance by price category.</li>
-            <li>Assess delivery-time and fee coverage by city.</li>
+            <li>Assess delivery time and fee coverage by city.</li>
             <li>Profile open merchants using available operational fields.</li>
           </ol>
           <p className="visual-caveat">
@@ -45,7 +45,7 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
           </p>
         </details>
         <p className="visual-caveat">
-          Source: Data Management – Group Assignment, submitted MSc coursework.
+          Source: Data Management Group Assignment, submitted MSc coursework.
           Group work is attributed to the team, not solely to Daniel.
         </p>
       </figure>
@@ -70,7 +70,7 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
         <div className="visual-result-strip">
           <div><span>Recovered source sheets</span><strong>8</strong></div>
           <div><span>Orders sheet</span><strong>98,582</strong></div>
-          <div><span>Order-item rows</span><strong>110,929</strong></div>
+          <div><span>Order item rows</span><strong>110,929</strong></div>
         </div>
         <details className="case-model-disclosure">
           <summary>Recovered workbook inventory</summary>
@@ -86,7 +86,7 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
           </ol>
         </details>
         <p>
-          Earlier project documentation describes a nine-table Power BI model
+          Earlier project documentation describes a nine table Power BI model
           and a DAX date table. The recovered workbook itself contains the eight
           source sheets listed above; that distinction is now explicit rather
           than treating all nine as source worksheets.
@@ -126,7 +126,7 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
         </p>
         <p className="visual-caveat">
           Source: Predicting Gym Membership Churn, individual MSc presentation,
-          slides 6–10. The proposed retention and cost reductions in later slides
+          slides 6 to 10. The proposed retention and cost reductions in later slides
           were forecasts, not achieved outcomes.
         </p>
       </figure>
@@ -154,12 +154,12 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
           The estimated indirect association through trust was statistically
           supported, while the direct personalisation coefficient in the joint
           loyalty model was not statistically significant. The research was
-          cross-sectional and cannot establish causal effects or realised
+          cross sectional and cannot establish causal effects or realised
           commercial improvements.
         </p>
         <p className="visual-caveat">
           Source: final individual MSc dissertation, Chapter 4. Raw Qualtrics
-          responses and participant-level information are not published.
+          responses and participant level information are not published.
         </p>
       </figure>
     );
