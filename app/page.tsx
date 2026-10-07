@@ -1,5 +1,5 @@
 import { publicPath } from '@/lib/paths';
-import { ModelExplorer } from '@/components/model-explorer';
+import { ModelPreview } from '@/components/model-preview';
 import { CaseQuickIndex } from '@/components/case-quick-index';
 import { LoanRiskVisual } from '@/components/loan-risk-visual';
 import { NativeLink } from '@/components/native-link';
@@ -59,8 +59,8 @@ const cases = [
 
 function ChapterVisual({ kind }: { kind: string }) {
   if (kind === 'loan') return <div className="chapter-visual"><LoanRiskVisual compact /></div>;
-  const mode = kind === 'model' ? 'network' : kind === 'trust' ? 'trust' : kind === 'data' ? 'data' : 'decision';
-  return <div className="chapter-visual chapter-visual--interactive"><ModelExplorer compact initialMode={mode} /></div>;
+  const mode = kind === 'model' ? 'network' : kind === 'trust' ? 'trust' : 'data';
+  return <div className="chapter-visual chapter-visual--interactive"><ModelPreview mode={mode} /></div>;
 }
 
 export default function Home() {
