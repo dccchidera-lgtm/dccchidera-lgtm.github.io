@@ -19,7 +19,7 @@ const caseStories: Record<string, string[]> = {
     "The most useful result was what did not predict affordability.",
     "You might expect credit score and interest rate to lead any affordability model. Once loan size and income were included, neither was statistically significant: loan amount (β = .767) and income (β = −.488) carried the model. A credit team would want to challenge and investigate a result like that, not ignore it.",
     "The judgement in the work",
-    "We flagged implausible records before modelling, such as 100 years of work experience recorded for a 35-year-old, and checked the diagnostics afterwards. Heteroscedasticity in the residuals meant individual coefficients needed careful reading, which is why I would use robust standard errors in the next iteration."
+    "We flagged implausible records before modelling, such as 100 years of work experience recorded for a 35 year old, and checked the diagnostics afterwards. Heteroscedasticity in the residuals meant individual coefficients needed careful reading, which is why I would use robust standard errors in the next iteration."
   ],
   "decision-intelligence": [
     "A recommendation is only as useful as the assumptions behind it.",
@@ -35,7 +35,7 @@ const caseStories: Record<string, string[]> = {
   ],
   "process-redesign": [
     "A diagram had to become a database that could answer questions.",
-    "Our team moved from data-flow analysis to entity relationships and a proposed SQL prototype. The flat file had one table, no enforced keys and a single scan date, so the new schema separates location, delivery, status, reviews, promotions and scans, each with its own history.",
+    "Our team moved from data flow analysis to entity relationships and a proposed SQL prototype. The flat file had one table, no enforced keys and a single scan date, so the new schema separates location, delivery, status, reviews, promotions and scans, each with its own history.",
     "Where the work could be stronger",
     "The group report identifies substantial missing merchant fields. Adding reproducible test cases would make the prototype checkable by another analyst."
   ],
@@ -43,7 +43,7 @@ const caseStories: Record<string, string[]> = {
     "The quality of the joined data affects the quality of the decision.",
     "Our team prepared nine linked tables from a dataset of more than 100,000 ecommerce orders, cleaning problematic values and relationships before creating Power BI reporting on delivery, sellers and customer satisfaction.",
     "The business finding we can currently substantiate",
-    "Accurate cross-table KPI reporting required data preparation. The original PBIX, exact DAX measures and a measured operational finding about delayed orders or seller performance have not been independently recovered. We should not turn a dashboard topic into an invented business result."
+    "Accurate cross table KPI reporting required data preparation. The original PBIX, exact DAX measures and a measured operational finding about delayed orders or seller performance have not been independently recovered. We should not turn a dashboard topic into an invented business result."
   ],
   "predictive-analytics": [
     "The lowest error rate was the start of a decision, not the end.",
@@ -178,7 +178,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <RecoveredProjectEvidence slug={project.slug} />
                 <OriginalProjectFigures slug={project.slug} />
                 {project.slug === 'customer-intelligence' && (
-                  <a className="arrow-link" href="https://github.com/dccchidera-lgtm/dccchidera-lgtm.github.io/blob/main/docs/Dissertation%20Research%20Brief.md">Read the one-page dissertation research brief ↗</a>
+                  <a className="arrow-link" href="https://github.com/dccchidera-lgtm/dccchidera-lgtm.github.io/blob/main/docs/Dissertation%20Research%20Brief.md">Read the one page dissertation research brief ↗</a>
                 )}
                 {project.slug === 'process-redesign' && (
                   <a className="arrow-link" href="https://github.com/dccchidera-lgtm/dccchidera-lgtm.github.io/blob/main/docs/SQL%20Proposed%20Data%20Dictionary.md">Read the proposed database data dictionary ↗</a>

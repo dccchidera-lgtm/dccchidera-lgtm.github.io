@@ -41,7 +41,7 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
           <div><span>95% bootstrap interval</span><strong>[.199, .422]</strong></div>
           <div><span>Direct coefficient</span><strong>.048 · p = .552</strong></div>
         </div>
-        <p className="visual-caveat">Cross-sectional association; causal inference falls outside the study design.</p>
+        <p className="visual-caveat">Cross sectional association; causal inference falls outside the study design.</p>
       </figure>
     );
   }
@@ -71,7 +71,7 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
         <div className="network-explainer">
           <div>
             <span>Conceptual model map</span>
-            <strong>How a feed-forward network transforms customer attributes into a churn score</strong>
+            <strong>How a feedforward network transforms customer attributes into a churn score</strong>
           </div>
           <p>
             Each hidden unit combines weighted inputs, applies a nonlinear activation and
@@ -83,7 +83,7 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
         <div
           className="neural-network-map"
           role="img"
-          aria-label="Conceptual feed-forward neural network with customer attributes entering an input layer, weighted connections feeding a hidden representation, and a churn probability output"
+          aria-label="Conceptual feedforward neural network with customer attributes entering an input layer, weighted connections feeding a hidden representation, and a churn probability output"
         >
           <div className="network-layer network-layer--input">
             <small>Input layer</small>
@@ -143,7 +143,7 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
           <b aria-hidden="true">→</b>
           <div><span>03</span><strong>Report</strong><small>Power BI / DAX</small></div>
         </div>
-        <p className="visual-caveat">The cleaned eight-sheet workbook has been recovered. The original PBIX is unavailable, so new report visuals will be labelled as a reconstruction rather than original dashboard screenshots.</p>
+        <p className="visual-caveat">The cleaned eight sheet workbook has been recovered. The original PBIX is unavailable, so new report visuals will be labelled as a reconstruction rather than original dashboard screenshots.</p>
       </figure>
     );
   }
@@ -162,7 +162,7 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
           <b aria-hidden="true">→</b>
           <div><span>03</span><strong>Build & query</strong><small>SQL</small></div>
         </div>
-        <p className="visual-caveat">Scope: assessed four-person team prototype; production deployment falls outside the project evidence.</p>
+        <p className="visual-caveat">Scope: assessed four person team prototype; production deployment falls outside the project evidence.</p>
       </figure>
     );
   }
@@ -176,10 +176,10 @@ export function CaseEvidenceVisual({ slug }: CaseEvidenceVisualProps) {
       <div className="decision-loop">
         <div><span>01</span><strong>Audit</strong><small>Quality & cleaning</small></div>
         <div><span>02</span><strong>Explore</strong><small>Interactive KPIs</small></div>
-        <div className="decision-loop__focus"><span>03</span><strong>Stress-test</strong><small>60–70% margins</small></div>
+        <div className="decision-loop__focus"><span>03</span><strong>Stress test</strong><small>60 to 70% margins</small></div>
         <div><span>04</span><strong>Optimise</strong><small>Location & format</small></div>
       </div>
-      <p className="visual-caveat">Scope: assessed four-person team model; the project produced a recommendation rather than realised commercial impact.</p>
+      <p className="visual-caveat">Scope: assessed four person team model; the project produced a recommendation rather than realised commercial impact.</p>
     </figure>
   );
 }

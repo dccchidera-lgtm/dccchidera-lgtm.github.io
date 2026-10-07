@@ -13,7 +13,7 @@ export function LoanRiskVisual({ compact = false }: { compact?: boolean }) {
     <figure className={`case-visual case-visual--models${compact ? ' case-visual--compact' : ''}`} aria-labelledby={captionId}>
       <figcaption id={captionId}>
         <span>Standardised coefficients (|β|) · 44,986 records</span>
-        <strong>What drove the loan-to-income ratio.</strong>
+        <strong>What drove the loan to income ratio.</strong>
       </figcaption>
       <div className="model-bars">
         {predictors.map((item) => (

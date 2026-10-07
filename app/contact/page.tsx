@@ -6,7 +6,7 @@ import { SiteHeader } from '@/components/site-header';
 
 export const metadata = pageMetadata(
   'Contact',
-  'Contact Daniel Christopher about graduate data, BI, performance and risk analyst roles. Available immediately, based in Manchester, with full UK right to work.',
+  'Contact Daniel Christopher about remote or hybrid data, BI, performance and risk analyst roles. Available immediately, based in Manchester, with full UK right to work.',
   '/contact/',
 );
 
@@ -30,7 +30,7 @@ export default function ContactPage() {
             <p className="contact-intro">
               I’m open to graduate analyst roles in performance, risk, BI reporting and
               customer insight, particularly in financial services. I’m available
-              immediately, based in Manchester and open to hybrid work across the North
+              immediately, based in Manchester and open to fully remote roles across the UK or hybrid work across the North
               West, Yorkshire, the Midlands or London. I have full UK right to work and
               need no sponsorship. To discuss a role or a case study, email me or connect
               with me on LinkedIn.
@@ -58,7 +58,7 @@ export default function ContactPage() {
             </a>
             <a href={publicPath('/Daniel_Christopher_Public_CV.pdf')} className="contact-row" download>
               <span>CV</span>
-              <strong>Download the one-page analyst CV</strong>
+              <strong>Download the one page analyst CV</strong>
               <span>PDF</span>
             </a>
             <div className="contact-row contact-location" data-reveal>

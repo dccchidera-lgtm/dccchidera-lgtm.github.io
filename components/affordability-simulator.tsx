@@ -77,7 +77,7 @@ export function AffordabilitySimulator() {
   return (
     <aside className="case-visual afford-sim" aria-labelledby={`${id}-title`}>
       <p className="overline">Interactive · built from the reported coefficients</p>
-      <h3 id={`${id}-title`}>Try the model: what moves the loan-to-income estimate?</h3>
+      <h3 id={`${id}-title`}>Try the model: what moves the loan to income estimate?</h3>
       <p>
         Change a borrower and watch the regression’s estimate respond. The strongest test of the
         finding is the credit score slider: across its full range it barely moves the result.
@@ -166,9 +166,9 @@ export function AffordabilitySimulator() {
         Illustrative only, not a lending tool. It applies the team’s published SPSS coefficients to
         inputs you choose, with amounts in the public dataset’s units. SPSS rounded some
         coefficients to .000, so interest rate, employment experience and gender are held at zero.
-        The ratio is loan ÷ income by definition, so a straight-line model misses it at low incomes
+        The ratio is loan ÷ income by definition, so a straight line model misses it at low incomes
         and large loans. That is why the next iteration adds robust standard errors and a
-        non-linear comparison model.
+        nonlinear comparison model.
       </p>
     </aside>
   );

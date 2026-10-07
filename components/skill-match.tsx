@@ -13,7 +13,7 @@ const skills: Skill[] = [
     label: 'SQL',
     keywords: ['sql', 'database', 'queries', 'query', 'relational', 'data model', 'schema', 't-sql', 'postgres', 'mysql', 'bigquery', 'snowflake'],
     proof: [
-      { title: 'Data Management', detail: 'Normalised six-table schema with primary and foreign keys, plus seven queries using joins, window functions and aggregation.', ownership: 'Team project, SQL build focus', href: '/sql' },
+      { title: 'Data Management', detail: 'Normalised six table schema with primary and foreign keys, plus seven queries using joins, window functions and aggregation.', ownership: 'Team project, SQL build focus', href: '/sql' },
       { title: 'HackerRank SQL (Basic)', detail: 'Certified 2025.', ownership: 'Certification', href: '/profile' },
     ],
   },
@@ -23,7 +23,7 @@ const skills: Skill[] = [
     keywords: ['power bi', 'powerbi', 'dax', 'power query', 'dashboard', 'dashboards', 'tableau', 'bi ', 'business intelligence', 'visualisation', 'visualization', 'reporting'],
     proof: [
       { title: 'Ecommerce Business Intelligence', detail: 'Nine linked tables and 100,000+ orders cleaned and modelled in Power Query, with DAX measures and report pages.', ownership: 'MSc team project', href: '/powerbi' },
-      { title: 'Olist, revisited', detail: 'Interactive dashboard rebuilt from the recovered cleaned workbook of 98,582 orders.', ownership: 'Independent follow-on', href: '/olist-reconstruction' },
+      { title: 'Olist, revisited', detail: 'Interactive dashboard rebuilt from the recovered cleaned workbook of 98,582 orders.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
     ],
   },
   {
@@ -31,7 +31,7 @@ const skills: Skill[] = [
     label: 'Excel & modelling',
     keywords: ['excel', 'spreadsheet', 'spreadsheets', 'pivot', 'vlookup', 'xlookup', 'scenario', 'forecast', 'forecasting', 'optimisation', 'optimization', 'solver'],
     proof: [
-      { title: 'Decision Intelligence', detail: 'Management dashboard with 60–70% margin scenarios and optimisation behind a location recommendation.', ownership: 'Four-person team', href: '/decisions' },
+      { title: 'Decision Intelligence', detail: 'Management dashboard with 60 to 70% margin scenarios and optimisation behind a location recommendation.', ownership: 'Four person team', href: '/decisions' },
     ],
   },
   {
@@ -40,7 +40,7 @@ const skills: Skill[] = [
     keywords: ['python', 'pandas', 'numpy', 'jupyter', 'scripting', 'automation', 'programming'],
     proof: [
       { title: 'Restaurant service mix', detail: 'Runnable Pandas analysis with automated data checks and exported results.', ownership: 'Independent project', href: '/service-mix' },
-      { title: 'Olist reconstruction', detail: 'Python rebuild script with tests that produces the dashboard data.', ownership: 'Independent follow-on', href: '/olist-reconstruction' },
+      { title: 'Olist reconstruction', detail: 'Python rebuild script with tests that produces the dashboard data.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
     ],
   },
   {
@@ -48,7 +48,7 @@ const skills: Skill[] = [
     label: 'Statistics & regression',
     keywords: ['statistic', 'statistics', 'statistical', 'regression', 'spss', 'hypothesis', 'significance', 'correlation', 'quantitative', 'econometric', 'modelling', 'modeling'],
     proof: [
-      { title: 'Credit Risk Analytics', detail: '12-predictor regression on 44,986 loan records (R² .617) with full diagnostics, plus an interactive what-if model.', ownership: 'Four-person team', href: '/credit-risk' },
+      { title: 'Credit Risk Analytics', detail: '12 predictor regression on 44,986 loan records (R² .617) with full diagnostics, plus an interactive what if model.', ownership: 'Four person team', href: '/credit-risk' },
       { title: 'Customer Intelligence dissertation', detail: 'Reliability testing, factor analysis, robust regression and bootstrapped mediation in reproducible SPSS syntax.', ownership: 'Individual', href: '/research-case' },
     ],
   },
@@ -65,7 +65,7 @@ const skills: Skill[] = [
     label: 'Credit & risk',
     keywords: ['risk', 'credit', 'lending', 'loan', 'affordability', 'financial services', 'bank', 'banking', 'finance', 'financial', 'arrears', 'collections', 'fraud'],
     proof: [
-      { title: 'Credit Risk Analytics', detail: 'Found that credit score and interest rate were not significant once loan size and income were included.', ownership: 'Four-person team', href: '/credit-risk' },
+      { title: 'Credit Risk Analytics', detail: 'Found that credit score and interest rate were not significant once loan size and income were included.', ownership: 'Four person team', href: '/credit-risk' },
     ],
   },
   {
@@ -73,9 +73,9 @@ const skills: Skill[] = [
     label: 'Data quality',
     keywords: ['data quality', 'cleansing', 'cleaning', 'accuracy', 'validation', 'integrity', 'governance', 'reconciliation', 'audit', 'etl'],
     proof: [
-      { title: 'Data Management', detail: 'Audited 1,000 merchant records: delivery fees missing for 99.7% and ratings for 58.2%.', ownership: 'Four-person team', href: '/sql' },
+      { title: 'Data Management', detail: 'Audited 1,000 merchant records: delivery fees missing for 99.7% and ratings for 58.2%.', ownership: 'Four person team', href: '/sql' },
       { title: 'Ecommerce Business Intelligence', detail: 'Fixed nulls, duplicates, orphaned keys and impossible delivery dates before reporting.', ownership: 'MSc team project', href: '/powerbi' },
-      { title: 'Credit Risk Analytics', detail: 'Flagged implausible records, such as 100 years of work experience for a 35-year-old.', ownership: 'Four-person team', href: '/credit-risk' },
+      { title: 'Credit Risk Analytics', detail: 'Flagged implausible records, such as 100 years of work experience for a 35 year old.', ownership: 'Four person team', href: '/credit-risk' },
     ],
   },
   {
@@ -84,7 +84,7 @@ const skills: Skill[] = [
     keywords: ['kpi', 'kpis', 'performance', 'metrics', 'mi ', 'management information', 'insight', 'insights', 'trend', 'trends', 'variance'],
     proof: [
       { title: 'Ecommerce Business Intelligence', detail: 'Report pages on delivery, sellers and customer satisfaction.', ownership: 'MSc team project', href: '/powerbi' },
-      { title: 'Olist, revisited', detail: 'Monthly orders, late-delivery rates and category and state breakdowns.', ownership: 'Independent follow-on', href: '/olist-reconstruction' },
+      { title: 'Olist, revisited', detail: 'Monthly orders, late delivery rates and category and state breakdowns.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
     ],
   },
   {
@@ -92,8 +92,8 @@ const skills: Skill[] = [
     label: 'Stakeholder communication',
     keywords: ['stakeholder', 'stakeholders', 'communication', 'communicate', ' present ', 'presentation', 'presenting', 'non-technical', 'storytelling', 'business partner', 'collaborat'],
     proof: [
-      { title: 'Predictive Analytics', detail: 'Kept the decision tree alongside the best model so flags could be explained to non-technical stakeholders.', ownership: 'Individual', href: '/churn' },
-      { title: 'Ecommerce Business Intelligence', detail: 'Presented the dashboard in a 15-minute group talk.', ownership: 'MSc team project', href: '/powerbi' },
+      { title: 'Predictive Analytics', detail: 'Kept the decision tree alongside the best model so flags could be explained to nontechnical stakeholders.', ownership: 'Individual', href: '/churn' },
+      { title: 'Ecommerce Business Intelligence', detail: 'Presented the dashboard in a 15 minute group talk.', ownership: 'MSc team project', href: '/powerbi' },
     ],
   },
   {
