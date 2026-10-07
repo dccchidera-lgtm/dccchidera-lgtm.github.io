@@ -104,3 +104,9 @@ a.contact-row:hover { background: color-mix(in srgb, var(--accent) 5%, var(--bac
   .hero, .page-hero, .chapter.ink, .chapter.mist { background: white; color: black; }
   .chapter-visual--interactive { display: none; }
 }
+
+/* Homepage model previews: static stills instead of live WebGL scenes. */
+.model-viewport--still { cursor: default; overflow: hidden; }
+.model-viewport--still:active { cursor: default; }
+.model-viewport--still img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.model-explorer--preview .model-controls a { color: #c7f58b; font-size: .875rem; text-decoration: underline; text-underline-offset: 3px; }
