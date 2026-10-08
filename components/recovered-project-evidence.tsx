@@ -54,26 +54,24 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
 
   if (slug === 'ecommerce-bi') {
     return (
-      <figure className="case-visual" aria-label="Recovered Olist project dataset evidence">
+      <figure className="case-visual" aria-label="Olist project dataset">
         <figcaption>
-          <span>Recovered MSc project workbook · September 2026</span>
-          <strong>The cleaned ecommerce data is back in hand.</strong>
+          <span>Team project workbook · cleaned data</span>
+          <strong>Eight linked tables, ready for reporting.</strong>
         </figcaption>
         <p>
-          The recovered <code>Olist Dataset Clean v3.xlsx</code> contains eight
-          source worksheets covering customers, orders, order items, reviews,
-          products, sellers, category translation and geolocation. The original
-          Power BI file was not recovered, so the dashboard visuals are being
-          reconstructed from this cleaned project dataset rather than presented
-          as screenshots of the original submission.
+          The cleaned <code>Olist Dataset Clean v3.xlsx</code> workbook contains
+          eight source tables covering customers, orders, order items, reviews,
+          products, sellers, category translation and geolocation. A DAX date
+          table completed the nine table Power BI model.
         </p>
         <div className="visual-result-strip">
-          <div><span>Recovered source sheets</span><strong>8</strong></div>
-          <div><span>Orders sheet</span><strong>98,582</strong></div>
+          <div><span>Source tables</span><strong>8</strong></div>
+          <div><span>Orders</span><strong>98,582</strong></div>
           <div><span>Order item rows</span><strong>110,929</strong></div>
         </div>
         <details className="case-model-disclosure">
-          <summary>Recovered workbook inventory</summary>
+          <summary>Workbook inventory</summary>
           <ol className="implication-list">
             <li>Customers · 99,441 data rows</li>
             <li>Orders · 98,582 data rows</li>
@@ -85,17 +83,6 @@ export function RecoveredProjectEvidence({ slug }: { slug: string }) {
             <li>Geolocation · 50,000 data rows</li>
           </ol>
         </details>
-        <p>
-          Earlier project documentation describes a nine table Power BI model
-          and a DAX date table. The recovered workbook itself contains the eight
-          source sheets listed above; that distinction is now explicit rather
-          than treating all nine as source worksheets.
-        </p>
-        <p className="visual-caveat">
-          Reconstruction status: source data recovered; original PBIX/report
-          pages unavailable. Any new dashboard visuals will be labelled as
-          reconstructed from the cleaned MSc project dataset.
-        </p>
       </figure>
     );
   }

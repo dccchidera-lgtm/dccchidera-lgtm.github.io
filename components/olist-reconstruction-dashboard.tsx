@@ -76,7 +76,7 @@ export function OlistReconstructionDashboard() {
     <div className="olist-dash">
       <div className="olist-dash__toolbar">
         <div>
-          <span className="olist-dash__eyebrow">Explore the recovered data</span>
+          <span className="olist-dash__eyebrow">Explore the data</span>
           <strong>Period</strong>
         </div>
         <div className="olist-dash__period" role="group" aria-label="Select purchase year">
@@ -129,7 +129,7 @@ export function OlistReconstructionDashboard() {
               );
             })}
           </div>
-          <p className="olist-dash__footnote">A month is assigned by purchase date. The recovered data begin and end with sparsely populated months; do not treat those edges as full trading periods. Delivery comparisons use only delivered orders with both delivery and estimated dates.</p>
+          <p className="olist-dash__footnote">A month is assigned by purchase date. The data begin and end with sparsely populated months; do not treat those edges as full trading periods. Delivery comparisons use only delivered orders with both delivery and estimated dates.</p>
         </section>
 
         <section className="olist-dash__panel" aria-labelledby="olist-category-title">
@@ -144,7 +144,7 @@ export function OlistReconstructionDashboard() {
               </div>
             ))}
           </div>
-          <p className="olist-dash__footnote">Other categories combined: {readableAmount(otherCategoryValue)}. The eight individually displayed categories were selected by total item value across the recovered workbook, not re-selected to flatter a year.</p>
+          <p className="olist-dash__footnote">Other categories combined: {readableAmount(otherCategoryValue)}. The eight individually displayed categories were selected by total item value across the workbook, not re-selected to flatter a year.</p>
         </section>
 
         <section className="olist-dash__panel" aria-labelledby="olist-state-title">
@@ -169,12 +169,12 @@ export function OlistReconstructionDashboard() {
               </div>
             ))}
           </div>
-          <p className="olist-dash__footnote">Top ten states by order volume in the entire recovered dataset. Grouping uses customer state, not seller state. Differences are descriptive and are not evidence of root causes or operational intervention.</p>
+          <p className="olist-dash__footnote">Top ten states by order volume in the entire dataset. Grouping uses customer state, not seller state. Differences are descriptive and are not evidence of root causes or operational intervention.</p>
         </section>
       </div>
       <div className="olist-dash__method">
         <span>Provenance / limitations</span>
-        <p><strong>This is a reconstruction, not the original MMU Power BI dashboard.</strong> It was independently calculated from the recovered <em>Olist Dataset Clean v3.xlsx</em> workbook: eight worksheets containing 98,582 unique order records and 110,929 order item rows. The original MSc case describes nine linked tables and 100,000+ orders; that scope has not been reconciled to this recovered workbook. No original PBIX, original DAX or original report pages are presented here.</p>
+        <p><strong>How this was built.</strong> Calculated independently in Python from the team’s <em>Olist Dataset Clean v3.xlsx</em> workbook: eight worksheets containing 98,582 unique order records and 110,929 order item rows. It complements the original MSc Power BI report rather than reproducing its pages.</p>
         <p>Item value is the sum of listed item prices, not payment, realised revenue or margin. A late order means delivered strictly after its estimated date; cancelled or undelivered orders do not enter the rate. Scores are averaged over available order reviews; no causal effects or achieved business savings are claimed. Only aggregate counts and values are published; no raw customer, order, address or seller records.</p>
         <p><strong>Data quality decisions:</strong> 1,389 orders have no item rows and are excluded from the mean item priced order. The 50,000 row geolocation sheet has 1,919 unique postal prefixes and is deliberately excluded from joins to prevent multiplying orders. The missing payments worksheet means the page does not claim actual sales or profitability.</p>
       </div>

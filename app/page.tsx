@@ -170,7 +170,7 @@ export default function Home() {
             <div className="digital-feature-details" data-reveal aria-label="Portfolio website build features">
               <div><span>01 / Product</span><strong>Next.js · React · TypeScript</strong></div>
               <div><span>02 / Experience</span><strong>Responsive layout · theme · navigation</strong></div>
-              <div><span>03 / Evidence</span><strong>Original work and reconstructions distinguished</strong></div>
+              <div><span>03 / Evidence</span><strong>Original work and follow on analysis distinguished</strong></div>
               <div><span>04 / Delivery</span><strong>Live on GitHub Pages</strong></div>
             </div>
           </div>
@@ -235,7 +235,7 @@ export default function Home() {
             <article data-reveal>
               <span>Self initiated follow on · Python and public data</span>
               <h3>Olist, revisited, and a service mix analysis</h3>
-              <p>An interactive ecommerce dashboard rebuilt from the recovered cleaned workbook of 98,582 orders, plus a runnable Python analysis with data checks and documented limits.</p>
+              <p>An interactive ecommerce dashboard built from our team’s cleaned workbook of 98,582 orders, plus a runnable Python analysis with data checks and documented limits.</p>
               <NativeLink className="arrow-link" href="/olist-reconstruction">Explore the Olist dashboard</NativeLink>
             </article>
             <article data-reveal>

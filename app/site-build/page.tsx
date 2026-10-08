@@ -19,7 +19,7 @@ export default function SiteBuildPage() {
           <div className="shell">
             <small>Independent digital build · ongoing</small>
             <h1>Designing the experience.<br /><span>Not just presenting the work.</span></h1>
-            <p>This portfolio is a live website that I build and maintain. The aim is to make different kinds of work easy to navigate, easy to inspect, and clear about what was done individually, as a team or as a later reconstruction.</p>
+            <p>This portfolio is a live website that I build and maintain. The aim is to make different kinds of work easy to navigate, easy to inspect, and clear about what was done individually, as a team or as later follow on work.</p>
             <div className="site-build-links">
               <a className="arrow-link" href="https://github.com/dccchidera-lgtm/dccchidera-lgtm.github.io" target="_blank" rel="noopener noreferrer">Explore the source code ↗</a>
               <NativeLink className="arrow-link" href="/work">Explore the work ↗</NativeLink>
@@ -47,7 +47,7 @@ export default function SiteBuildPage() {
           <article>
             <span>03 / Evidence</span>
             <h2>Make provenance visible.</h2>
-            <p>Source linked project figures, runnable public data analysis and a clearly labelled Olist reconstruction make it possible to distinguish original coursework from independent follow on work.</p>
+            <p>Source linked project figures, runnable public data analysis and a clearly labelled Olist dashboard make it possible to distinguish original coursework from independent follow on work.</p>
           </article>
           <article>
             <span>04 / Iteration</span>

@@ -23,7 +23,7 @@ const skills: Skill[] = [
     keywords: ['power bi', 'powerbi', 'dax', 'power query', 'dashboard', 'dashboards', 'tableau', 'bi ', 'business intelligence', 'visualisation', 'visualization', 'reporting'],
     proof: [
       { title: 'Ecommerce Business Intelligence', detail: 'Nine linked tables and 100,000+ orders cleaned and modelled in Power Query, with DAX measures and report pages.', ownership: 'MSc team project', href: '/powerbi' },
-      { title: 'Olist, revisited', detail: 'Interactive dashboard rebuilt from the recovered cleaned workbook of 98,582 orders.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
+      { title: 'Olist, revisited', detail: 'Interactive dashboard built from the cleaned workbook of 98,582 orders.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
     ],
   },
   {
@@ -40,7 +40,7 @@ const skills: Skill[] = [
     keywords: ['python', 'pandas', 'numpy', 'jupyter', 'scripting', 'automation', 'programming'],
     proof: [
       { title: 'Restaurant service mix', detail: 'Runnable Pandas analysis with automated data checks and exported results.', ownership: 'Independent project', href: '/service-mix' },
-      { title: 'Olist reconstruction', detail: 'Python rebuild script with tests that produces the dashboard data.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
+      { title: 'Olist dashboard', detail: 'Python rebuild script with tests that produces the dashboard data.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
     ],
   },
   {

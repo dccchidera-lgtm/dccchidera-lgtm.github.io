@@ -34,7 +34,7 @@ export const projectSummaries: Record<
   },
   "ecommerce-bi": {
     headline: "What makes ecommerce reporting reliable?",
-    result: "Nine related source tables covering 100,000+ orders required data preparation before cross table reporting.",
+    result: "Eight linked source tables covering 98,582 orders were cleaned before cross table reporting.",
     takeaway: "Check data quality, joins and KPI definitions before making business recommendations.",
     category: "Business intelligence",
   },

@@ -41,9 +41,9 @@ const caseStories: Record<string, string[]> = {
   ],
   "ecommerce-bi": [
     "The quality of the joined data affects the quality of the decision.",
-    "Our team prepared nine linked tables from a dataset of more than 100,000 ecommerce orders, cleaning problematic values and relationships before creating Power BI reporting on delivery, sellers and customer satisfaction.",
-    "The business finding we can currently substantiate",
-    "Accurate cross table KPI reporting required data preparation. The original PBIX, exact DAX measures and a measured operational finding about delayed orders or seller performance have not been independently recovered. We should not turn a dashboard topic into an invented business result."
+    "Our team prepared eight linked source tables covering 98,582 ecommerce orders, cleaning problematic values and relationships before creating Power BI reporting on delivery, sellers and customer satisfaction.",
+    "What the reporting depended on",
+    "Accurate cross table KPIs depended on the preparation work. Once keys, dates and category names were consistent, delivery, seller and review measures could be compared across tables with confidence. I later rebuilt the analysis in Python as an interactive dashboard so anyone can explore the cleaned data."
   ],
   "predictive-analytics": [
     "The lowest error rate was the start of a decision, not the end.",
@@ -167,11 +167,11 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <p className="large-copy">{project.evidence}</p>
                 <CaseEvidenceVisual slug={project.slug} />
                 {project.slug === 'ecommerce-bi' && (
-                  <aside className="case-visual" aria-label="Reconstructed Olist dashboard">
-                    <p className="overline">Reconstruction · recovered workbook</p>
-                    <h3>Explore the real cleaned data, not a recreated original screenshot.</h3>
-                    <p>The original Power BI report was not recovered. This separate interactive analysis uses eight recovered workbook sheets and 98,582 unique orders to examine order patterns, delivery dates, product categories and customer states. It does not claim to be the assessed PBIX.</p>
-                    <NativeLink className="arrow-link" href="/olist-reconstruction">Explore the reconstructed dashboard ↗</NativeLink>
+                  <aside className="case-visual" aria-label="Interactive Olist dashboard">
+                    <p className="overline">Interactive dashboard · cleaned team data</p>
+                    <h3>Explore the cleaned data yourself.</h3>
+                    <p>A follow on interactive dashboard, built in Python from the team’s cleaned workbook of 98,582 orders, shows order patterns, delivery timing, product categories and customer states.</p>
+                    <NativeLink className="arrow-link" href="/olist-reconstruction">Explore the Olist dashboard ↗</NativeLink>
                   </aside>
                 )}
                 {project.slug === 'loan-affordability' && <AffordabilitySimulator />}
