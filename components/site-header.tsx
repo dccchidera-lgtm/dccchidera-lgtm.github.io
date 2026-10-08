@@ -8,7 +8,7 @@ import { ThemeSwitch } from '@/components/theme-switch';
 
 const navigation = [
   { label: 'Work', href: '/work' },
-  { label: 'Research', href: '/research' },
+  { label: 'Dissertation', href: '/dissertation' },
   { label: 'Profile', href: '/profile' },
   { label: 'Contact', href: '/contact' },
 ];

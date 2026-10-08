@@ -14,7 +14,7 @@ const routes = [
   "/work/process-redesign",
   "/work/predictive-analytics",
   "/work/ecommerce-bi",
-  "/research",
+  "/dissertation",
   "/profile",
   "/contact",
   "/site-build",

@@ -50,7 +50,7 @@ export function ProjectCards({ projects }: { projects: CaseStudy[] }) {
                   </div>
                 </>
               ) : project.slug === "ecommerce-bi" ? (
-                <><strong>100,000+<span>orders</span></strong><div className="signal-caption">9 linked tables<br />Power BI<br />Shared team project</div></>
+                <><strong>98,582<span>orders</span></strong><div className="signal-caption">9 table model<br />Power BI<br />Shared team project</div></>
               ) : project.slug === "process-redesign" ? (
                 <div className="schema-labels">
                   <span>DFD</span>

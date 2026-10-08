@@ -165,9 +165,9 @@ export const cases: CaseStudy[] = [
     label: 'MSc team project',
     title: 'Preparing ecommerce data for delivery and customer reporting',
     lead:
-      'Our MSc team prepared the Olist ecommerce data and developed a nine table Power BI model to examine delivery performance, seller activity and customer satisfaction. Eight cleaned source worksheets have now been recovered; earlier project documentation identifies the additional model table as a DAX date table.',
+      'Our MSc team cleaned the Olist ecommerce data and built a nine table Power BI model, eight linked source tables plus a DAX date table, to report on delivery performance, seller activity and customer satisfaction.',
     facts: [
-      { value: '98,582', label: 'Recovered order rows' },
+      { value: '98,582', label: 'Cleaned order rows' },
       { value: '8 + date', label: 'Source sheets + DAX date table' },
       { value: '3', label: 'Reporting themes' },
     ],
@@ -180,16 +180,16 @@ export const cases: CaseStudy[] = [
       'We organised the pages around operational questions rather than presenting metrics without a decision context.',
     ],
     evidence:
-      'The recovered cleaned workbook contains eight source worksheets, including 98,582 order rows and 110,929 order item rows. Earlier project documentation identifies a DAX date table as the ninth Power BI model table. The confirmed business finding remains a data quality and reporting one: source inconsistencies had to be resolved before linked delivery, seller and customer measures could be interpreted reliably.',
+      'The cleaned workbook holds eight source tables, including 98,582 orders and 110,929 order items, with a DAX date table completing the nine table model. The key finding was about data quality: source inconsistencies had to be resolved before delivery, seller and customer measures could be compared reliably across tables.',
     implications: [
       'Validate join keys and date logic before comparing ecommerce metrics across related tables.',
       'Separate reliable measures from unavailable or incomplete ones when reporting to decision makers.',
-      'Use delivery, seller and customer views to investigate operational questions in the reconstructed reporting.',
+      'Use delivery, seller and customer views to investigate operational questions, as the interactive Olist dashboard on this site does.',
     ],
     limitations:
-      'The original PBIX and exported dashboard screenshots have not been recovered. The cleaned project workbook has been recovered and can support a clearly labelled reconstruction. This was team coursework, not a deployed reporting system or a documented business improvement.',
+      'This was assessed team coursework on a public dataset rather than a deployed reporting system, so the outcome is a reporting design and data preparation approach, not a measured business improvement.',
     improvement:
-      'Reconstruct the report from the recovered cleaned workbook, document each tested measure and add only findings that can be reproduced from the recovered data.',
+      'Publish each DAX measure with a test against the cleaned data, and extend the delivery analysis to compare late delivery rates by seller and region.',
     contribution:
       'This was a shared responsibility MSc team project. The data model, DAX measures and dashboard pages are described as our team’s work.',
     tools: ['Power BI', 'Power Query', 'DAX', 'Data preparation', 'Ecommerce reporting'],

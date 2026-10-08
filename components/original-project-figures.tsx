@@ -98,7 +98,7 @@ export function OriginalProjectFigures({ slug }: { slug: string }) {
         <a href={publicPath('/evidence/dissertation-mediation.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the original dissertation mediation figure at full size">
           <Image src={publicPath('/evidence/dissertation-mediation.jpg')} alt="Original dissertation mediation diagram linking perceived personalisation, customer trust and customer loyalty, with path coefficients, the nonsignificant direct association and the bootstrap confidence interval for the indirect association." width={1536} height={663} sizes="(max-width: 760px) 100vw, 900px" loading="lazy" style={imageStyle}/>
         </a>
-        <p className="visual-caveat">Source: figure recovered from Daniel’s final MSc dissertation. Participant level records are not published.</p>
+        <p className="visual-caveat">Source: figure from Daniel’s final MSc dissertation. Participant level records are not published.</p>
       </figure>
     );
   }

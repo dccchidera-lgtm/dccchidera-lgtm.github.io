@@ -58,9 +58,9 @@ export default function WorkPage() {
                 <NativeLink className="arrow-link" href="/service-mix">Explore the analysis ↗</NativeLink>
               </article>
               <article>
-                <span>03 · MSc follow on reconstruction</span>
+                <span>03 · MSc follow on analysis</span>
                 <h3>Olist, revisited</h3>
-                <p>Interactive ecommerce reporting rebuilt from the recovered cleaned workbook, distinctly labelled from the original group submission.</p>
+                <p>Interactive ecommerce reporting built in Python from our team’s cleaned workbook of 98,582 orders.</p>
                 <NativeLink className="arrow-link" href="/olist-reconstruction">Explore the dashboard ↗</NativeLink>
               </article>
             </div>
