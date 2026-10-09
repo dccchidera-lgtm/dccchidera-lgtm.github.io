@@ -8,6 +8,7 @@ import "./visual-polish.css";
 import "./layout-refinement.css";
 import "./editorial-type.css";
 import "./type-and-layout-fixes.css";
+import "./ai-workflow.css";
 
 const grotesk = localFont({ src: [
   { path: "../public/fonts/space-grotesk-400.woff2", weight: "400", style: "normal" },
