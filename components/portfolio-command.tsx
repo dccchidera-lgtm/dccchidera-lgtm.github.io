@@ -13,6 +13,7 @@ const destinations = [
   { label: 'Data Management', detail: 'DFD, ERD and SQL prototype', href: '/work/process-redesign', type: 'Team case' },
   { label: 'Predictive Analytics', detail: 'Churn model comparison and validation', href: '/work/predictive-analytics', type: 'Individual case' },
   { label: 'This portfolio website', detail: 'Independent Next.js and TypeScript digital build', href: '/site-build', type: 'Digital project' },
+  { label: 'How I work with AI', detail: 'Claude Opus 5.5 leads, Codex codes, Claude helpers research, review and write', href: '/ai-workflow', type: 'Page' },
   { label: 'Restaurant service mix', detail: 'Independent public data Python analysis and reproducible code', href: '/service-mix', type: 'Independent project' },
   { label: 'Olist dashboard', detail: 'Interactive order, delivery and category reporting from the cleaned workbook', href: '/olist-reconstruction', type: 'Interactive analysis' },
   { label: 'MSc dissertation', detail: 'AI personalisation, trust and loyalty: method and results', href: '/dissertation', type: 'Page' },

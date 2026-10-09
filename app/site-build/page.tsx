@@ -23,6 +23,7 @@ export default function SiteBuildPage() {
             <div className="site-build-links">
               <a className="arrow-link" href="https://github.com/dccchidera-lgtm/dccchidera-lgtm.github.io" target="_blank" rel="noopener noreferrer">Explore the source code ↗</a>
               <NativeLink className="arrow-link" href="/work">Explore the work ↗</NativeLink>
+              <NativeLink className="arrow-link" href="/ai-workflow">See the AI team behind it ↗</NativeLink>
             </div>
           </div>
         </section>

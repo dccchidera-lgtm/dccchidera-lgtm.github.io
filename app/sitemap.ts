@@ -18,6 +18,7 @@ const routes = [
   "/profile",
   "/contact",
   "/site-build",
+  "/ai-workflow",
   "/service-mix",
   "/olist-reconstruction",
 ];
