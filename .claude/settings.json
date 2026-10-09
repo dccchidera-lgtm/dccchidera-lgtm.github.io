@@ -1,0 +1,21 @@
+{
+  "model": "opus",
+  "permissions": {
+    "allow": [
+      "Bash(.claude/codex.sh:*)",
+      "Bash(codex exec:*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session_start.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
