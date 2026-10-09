@@ -6631,6 +6631,11 @@ dialog.command-overlay { background: transparent; }
 .olist-dash__period { display: flex; gap: .35rem; flex-wrap: wrap; }
 .olist-dash__period button { min-width: 65px; min-height: 44px; padding: .55rem .95rem; border: 1px solid var(--separator); background: transparent; border-radius: 0; color: inherit; cursor: pointer; }
 .olist-dash__period button[aria-pressed="true"] { background: var(--label); color: var(--background); border-color: var(--label); }
+.olist-dash__findings { padding-block: 1.5rem .5rem; }
+.olist-dash__findings h2 { margin: 0 0 1rem; font: 600 clamp(1.5rem, 3vw, 2.1rem)/1.16 var(--display-serif); }
+.olist-dash__findings ul { display: grid; gap: .85rem; max-width: 85ch; margin: 0; padding-left: 1.2rem; line-height: 1.6; }
+.olist-dash__findings strong { font-weight: 600; font-variant-numeric: tabular-nums; }
+.olist-dash__findings .olist-dash__footnote { margin-top: 1rem; }
 .olist-dash__kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-block: 1.5rem 3rem; border: 1px solid var(--separator); background: var(--separator); }
 .olist-dash__kpis > div { display: flex; flex-direction: column; gap: .35rem; min-width: 0; min-height: 145px; padding: clamp(1rem, 2vw, 1.7rem); background: var(--background); }
 .olist-dash__kpis span { font-size: .8rem; color: var(--secondary-label); }
@@ -6644,10 +6649,14 @@ dialog.command-overlay { background: transparent; }
 .olist-dash__paneltop label { display: flex; flex-direction: column; gap: .4rem; min-width: 13rem; font-size: .8rem; color: var(--secondary-label); }
 .olist-dash__panel select { width: 100%; min-height: 44px; padding: .55rem .7rem; font: inherit; font-size: .86rem; border: 1px solid var(--separator); border-radius: 0; background: var(--background); color: var(--label); }
 .olist-dash__trend { display: flex; align-items: stretch; gap: .35rem; width: 100%; min-height: 290px; padding-block: 1rem; overflow-x: auto; }
-.olist-dash__trenditem { display: flex; flex: 1 0 37px; flex-direction: column; align-items: center; gap: .5rem; min-width: 37px; font-variant-numeric: tabular-nums; }
+.olist-dash__trenditem { display: flex; flex: 1 0 40px; flex-direction: column; align-items: center; gap: .5rem; min-width: 40px; font-variant-numeric: tabular-nums; }
+.olist-dash__trenditem:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .olist-dash__trendvalue { height: 1.7rem; align-self: center; font-size: .62rem; white-space: nowrap; color: var(--secondary-label); }
 .olist-dash__trendtrack { position: relative; display: flex; flex: 1; align-items: flex-end; justify-content: center; width: 100%; min-height: 170px; border-bottom: 1px solid var(--separator); }
 .olist-dash__trendtrack > span { display: block; width: min(80%, 2rem); min-height: 0; background: var(--label); }
+.olist-dash__trendtrack > .olist-dash__trendabove { background: repeating-linear-gradient(135deg, var(--accent) 0 4px, transparent 4px 6px); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.olist-dash__legend { display: flex; align-items: baseline; gap: .5rem; margin-top: .75rem; font-size: .77rem; color: var(--secondary-label); }
+.olist-dash__legend > span { flex: none; width: .75rem; height: .75rem; background: repeating-linear-gradient(135deg, var(--accent) 0 3px, transparent 3px 5px); box-shadow: inset 0 0 0 1.5px var(--accent); }
 .olist-dash__trendlabel { display: block; font-size: .61rem; white-space: nowrap; color: var(--secondary-label); transform: rotate(-45deg); transform-origin: 50% 50%; padding: .4rem 0 1rem; }
 .olist-dash__bars { display: grid; gap: 1.2rem; margin-top: 1.7rem; }
 .olist-dash__bar > div { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; margin-bottom: .4rem; font-size: .87rem; }
@@ -6668,7 +6677,6 @@ dialog.command-overlay { background: transparent; }
  .olist-dash__kpis { grid-template-columns: repeat(2, minmax(0,1fr)); }
  .olist-dash__grid { grid-template-columns: minmax(0,1fr); }
  .olist-dash__panel--wide { grid-column: auto; }
- .olist-dash__trenditem { flex-basis: 42px; }
 }
 @media (max-width: 550px) {
  .olist-dash__toolbar, .olist-dash__paneltop { flex-direction: column; }
@@ -6677,8 +6685,17 @@ dialog.command-overlay { background: transparent; }
  .olist-dash__kpis > div { padding: 1rem; min-height: 130px; }
  .olist-dash__kpis strong { font-size: clamp(1.5rem, 7vw, 2rem); }
  .olist-dash__paneltop label { width: 100%; }
- .olist-dash__trenditem { flex-basis: 47px; }
  .olist-dash__bar > div { font-size: .8rem; }
+}
+@media (max-width: 600px) {
+ .olist-dash__toolbar, .olist-dash__paneltop { flex-direction: column; }
+ .olist-dash__paneltop label { width: 100%; min-width: 0; }
+ .olist-dash__trend { gap: .15rem; }
+ .olist-dash__trenditem { flex: 1 1 0; min-width: 0; }
+ .olist-dash__trendvalue { display: none; }
+ .olist-dash__trendlabel { transform: none; padding: .4rem 0; }
+ .olist-dash__trenditem:not(:nth-child(4n + 1)) .olist-dash__trendlabel { visibility: hidden; }
+ .olist-dash__trenditem:first-child .olist-dash__trendlabel { align-self: flex-start; }
 }
 @media print {
  .olist-dash__period, .olist-dash__panel select { display: none; }

@@ -24,6 +24,7 @@ export default function OlistReconstructionPage() {
             <small>Interactive analysis · MSc team project data</small>
             <h1>Olist, revisited.<br /><span>From source tables to decision ready evidence.</span></h1>
             <p>A follow on to our team’s Power BI project. I rebuilt the analysis in Python from the cleaned workbook so anyone can explore orders, delivery timing, product categories and customer geography in the browser.</p>
+            <p><strong>My part.</strong> I shared responsibilities on the original MSc team Power BI report. I independently built this Python rebuild, its tests and this interactive dashboard as my own follow on work.</p>
             <NativeLink className="arrow-link" href="/powerbi">View the original MSc team project case study ↗</NativeLink>
           </div>
         </section>
