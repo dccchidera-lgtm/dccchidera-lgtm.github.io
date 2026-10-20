@@ -54,12 +54,8 @@ export function CountUp({ value }: { value: string }) {
       frame = window.requestAnimationFrame(tick);
     }, { threshold: 0.6 });
     observer.observe(element);
-    window.addEventListener('beforeprint', finish);
 
-    return () => {
-      window.removeEventListener('beforeprint', finish);
-      finish();
-    };
+    return finish;
   }, [value]);
 
   return (
