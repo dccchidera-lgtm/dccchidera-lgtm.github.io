@@ -129,14 +129,16 @@ export function AffordabilitySimulator() {
         <div className="afford-sim__output" aria-live="polite">
           <div>
             <span>Model estimate</span>
-            <strong>{(estimate * 100).toFixed(1)}%</strong>
-            <small>of annual income</small>
+            <strong>{estimate < 0 ? 'Below 0%' : `${(estimate * 100).toFixed(1)}%`}</strong>
+            <small>{estimate < 0 ? 'a straight line goes below zero here' : 'of annual income'}</small>
           </div>
           <div>
             <span>Actual ratio (loan ÷ income)</span>
             <strong>{(actual * 100).toFixed(1)}%</strong>
             <small>
-              {Math.abs(gap) < 0.03
+              {estimate < 0
+                ? 'A ratio cannot be negative, so the linear model breaks down for this borrower.'
+                : Math.abs(gap) < 0.03
                 ? 'The linear model is close for this borrower.'
                 : gap > 0
                   ? `The model underestimates by ${Math.abs(gap * 100).toFixed(1)} pts, the pattern behind the large residuals.`
