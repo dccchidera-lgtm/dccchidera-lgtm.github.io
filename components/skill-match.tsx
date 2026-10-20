@@ -20,7 +20,7 @@ const skills: Skill[] = [
   {
     id: 'powerbi',
     label: 'Power BI & DAX',
-    keywords: ['power bi', 'powerbi', 'dax', 'power query', 'dashboard', 'dashboards', 'tableau', 'bi ', 'business intelligence', 'visualisation', 'visualization', 'reporting'],
+    keywords: ['power bi', 'powerbi', 'dax', 'power query', 'dashboard', 'dashboards', 'tableau', 'bi', 'business intelligence', 'visualisation', 'visualization', 'reporting'],
     proof: [
       { title: 'Ecommerce Business Intelligence', detail: 'Nine linked tables and 100,000+ orders cleaned and modelled in Power Query, with DAX measures and report pages.', ownership: 'MSc team project', href: '/powerbi' },
       { title: 'Olist, revisited', detail: 'Interactive dashboard built from the cleaned workbook of 98,582 orders.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
@@ -81,7 +81,7 @@ const skills: Skill[] = [
   {
     id: 'performance',
     label: 'KPIs & performance',
-    keywords: ['kpi', 'kpis', 'performance', 'metrics', 'mi ', 'management information', 'insight', 'insights', 'trend', 'trends', 'variance'],
+    keywords: ['kpi', 'kpis', 'performance', 'metrics', 'mi', 'management information', 'insight', 'insights', 'trend', 'trends', 'variance'],
     proof: [
       { title: 'Ecommerce Business Intelligence', detail: 'Report pages on delivery, sellers and customer satisfaction.', ownership: 'MSc team project', href: '/powerbi' },
       { title: 'Olist, revisited', detail: 'Monthly orders, late delivery rates and category and state breakdowns.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
@@ -90,7 +90,7 @@ const skills: Skill[] = [
   {
     id: 'stakeholders',
     label: 'Stakeholder communication',
-    keywords: ['stakeholder', 'stakeholders', 'communication', 'communicate', ' present ', 'presentation', 'presenting', 'non-technical', 'storytelling', 'business partner', 'collaborat'],
+    keywords: ['stakeholder', 'stakeholders', 'communication', 'communicate', 'present', 'presentation', 'presenting', 'non-technical', 'storytelling', 'business partner', 'collaborate', 'collaboration', 'collaborative'],
     proof: [
       { title: 'Predictive Analytics', detail: 'Kept the decision tree alongside the best model so flags could be explained to nontechnical stakeholders.', ownership: 'Individual', href: '/churn' },
       { title: 'Ecommerce Business Intelligence', detail: 'Presented the dashboard in a 15 minute group talk.', ownership: 'MSc team project', href: '/powerbi' },
@@ -116,9 +116,14 @@ const skills: Skill[] = [
   },
 ];
 
+const escapeRegExp = (text: string) => text.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
+// Whole words with common endings, so 'credit' skips 'accredited' and 'excel' skips 'excellent'.
+const patterns = skills.map((skill) =>
+  new RegExp(`(?:^|[^a-z0-9])(?:${skill.keywords.map(escapeRegExp).join('|')})(?:s|es|ing|ed)?(?![a-z0-9])`));
+
 function matchSkills(text: string) {
   const haystack = ` ${text.toLowerCase().replace(/\s+/g, ' ')} `;
-  return skills.filter((skill) => skill.keywords.some((keyword) => haystack.includes(keyword)));
+  return skills.filter((_, index) => patterns[index].test(haystack));
 }
 
 export function SkillMatch() {
