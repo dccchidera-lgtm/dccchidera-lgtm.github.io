@@ -6,6 +6,7 @@ import { WorkBrowser } from '@/components/work-browser';
 import { InteractiveEvidenceLab } from '@/components/interactive-evidence-lab';
 import { bcuProjects } from '@/lib/bcu-projects';
 import { cases } from '@/lib/cases';
+import { HeroField } from '@/components/hero-field';
 
 export const metadata = pageMetadata(
   'Work',
@@ -23,6 +24,7 @@ export default function WorkPage() {
 
       <main id="main-content">
         <section className="page-hero">
+          <HeroField motif="corner" />
           <div className="shell">
             <small>Selected work · Undergraduate, postgraduate & independent</small>
             <h1>

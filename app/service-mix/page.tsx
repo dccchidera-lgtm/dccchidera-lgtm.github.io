@@ -2,6 +2,7 @@ import { pageMetadata } from '@/lib/page-metadata';
 import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
 import { NativeLink } from '@/components/native-link';
+import { HeroField } from '@/components/hero-field';
 
 export const metadata = pageMetadata(
   'Restaurant service mix | Independent analysis',
@@ -16,6 +17,7 @@ export default function ServiceMixPage() {
       <SiteHeader />
       <main id="main-content">
         <section className="case-hero">
+          <HeroField motif="clusters" />
           <div className="shell">
             <p className="overline">Independent public data project · Python / Pandas</p>
             <h1>When does a restaurant check look different?</h1>

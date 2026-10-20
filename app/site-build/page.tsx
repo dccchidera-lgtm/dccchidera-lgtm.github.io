@@ -2,6 +2,7 @@ import { pageMetadata } from '@/lib/page-metadata';
 import { SiteHeader } from '@/components/site-header';
 import { PageFooter } from '@/components/page-footer';
 import { NativeLink } from '@/components/native-link';
+import { HeroField } from '@/components/hero-field';
 
 export const metadata = pageMetadata(
   'Building this portfolio | Independent digital project',
@@ -16,6 +17,7 @@ export default function SiteBuildPage() {
       <SiteHeader />
       <main id="main-content">
         <section className="page-hero site-build-hero">
+          <HeroField motif="corner" />
           <div className="shell">
             <small>Independent digital build · ongoing</small>
             <h1>Designing the experience.<br /><span>Not just presenting the work.</span></h1>

@@ -3,6 +3,7 @@ import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
 import { NativeLink } from '@/components/native-link';
 import { bcuModules, bcuProjects } from '@/lib/bcu-projects';
+import { HeroField } from '@/components/hero-field';
 
 export const metadata = pageMetadata('BCU Digital Marketing Projects', 'Audience research, consumer insight, content strategy and campaign planning from Daniel Christopher’s BA (Hons) Digital Marketing at Birmingham City University.', '/bcu/');
 
@@ -11,7 +12,7 @@ export default function BcuPage() {
     <a className="skip-link" href="#main-content">Skip to content</a>
     <SiteHeader />
     <main id="main-content" className="bcu-page">
-      <section className="page-hero"><div className="shell">
+      <section className="page-hero"><HeroField motif="corner" /><div className="shell">
         <small>Birmingham City University · BA (Hons) Digital Marketing · 2:1</small>
         <h1>Customer research.<br /><span>Campaigns with a clear purpose.</span></h1>
         <p>Undergraduate work in audience insight, content marketing and campaign planning. These projects show the commercial and customer perspective I later developed through MSc Business Analytics.</p>

@@ -13,6 +13,18 @@ import { cases, getCase } from '@/lib/cases';
 import { projectSummaries } from '@/lib/project-summaries';
 import { casePath } from '@/lib/case-links';
 import { pageMetadata } from '@/lib/page-metadata';
+import { HeroField } from '@/components/hero-field';
+import type { Motif } from '@/lib/hero-motifs';
+
+/** Conceptual hero motif for each case; shapes are illustrative, not the project data. */
+const caseMotifs: Record<string, Motif> = {
+  'loan-affordability': 'regression',
+  'decision-intelligence': 'branches',
+  'customer-intelligence': 'pathway',
+  'process-redesign': 'tables',
+  'ecommerce-bi': 'bars',
+  'predictive-analytics': 'network',
+};
 
 const caseStories: Record<string, string[]> = {
   "loan-affordability": [
@@ -92,6 +104,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       <main id="main-content">
         <section className={`case-hero case-hero--${project.slug}`}>
+          <HeroField motif={caseMotifs[project.slug] ?? 'corner'} />
           <div className="shell">
             <div className="case-kicker">
               <span>
