@@ -77,7 +77,7 @@ export default function ProfilePage() {
             </article>
             <article className="snapshot-card snapshot-status" data-reveal>
               <span className="snapshot-label">Current stage</span>
-              <strong>MSc dissertation submitted</strong>
+              <strong>MSc Business Analytics completed</strong>
               <small>Predicted Distinction</small>
             </article>
           </div>
@@ -123,7 +123,7 @@ export default function ProfilePage() {
                 <p>Completed two years of sixth form education in Manchester.</p>
               </article>
               <article>
-                <span>2022 to now</span>
+                <span>2022 to 2026</span>
                 <strong>Higher education</strong>
                 <p>Digital Marketing at BCU, followed by Business Analytics in Manchester.</p>
               </article>
@@ -342,7 +342,7 @@ export default function ProfilePage() {
               <article>
                 <span>Manchester Metropolitan University</span>
                 <h2>MSc Business Analytics</h2>
-                <p>Dissertation submitted · Predicted Distinction</p>
+                <p>Completed · Predicted Distinction, final award pending</p>
               </article>
               <article>
                 <span>Birmingham City University</span>
@@ -376,10 +376,10 @@ export default function ProfilePage() {
           <div className="shell extras-grid">
             <div data-reveal>
               <p className="overline">Professional experience</p>
-              <h2>Work held alongside full time study.</h2>
+              <h2>Current role.</h2>
             </div>
             <ul data-reveal>
-              <li><span>Oct 2025 to present</span>Security Officer, Constant Security Services, Manchester. SIA licensed front of house cover at university sites, with accurate incident and handover records.</li>
+              <li><span>Oct 2025 to present</span>Security Officer, Constant Security Services, Manchester. SIA licensed officer working shifts at client sites around Manchester, with accurate incident and handover records.</li>
             </ul>
           </div>
         </section>

@@ -109,7 +109,7 @@ export default function Home() {
               <small className="hero-reveal">
                 MSc Business Analytics
                 <br />
-                Dissertation submitted · Predicted Distinction
+                Completed · Predicted Distinction
               </small>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
         <section className="candidate-facts" aria-label="Candidate profile at a glance">
           <dl className="shell candidate-facts-grid">
             <div data-reveal><dt>Qualifications</dt><dd>MSc Business Analytics · BA Digital Marketing 2:1</dd></div>
-            <div data-reveal><dt>Status</dt><dd>Dissertation submitted</dd></div>
+            <div data-reveal><dt>Status</dt><dd>MSc completed, final award pending · available immediately</dd></div>
             <div data-reveal><dt>Work pattern</dt><dd>Remote or hybrid · Manchester, UK · full UK right to work</dd></div>
             <div data-reveal><dt>Focus</dt><dd>Performance · risk · BI reporting · customer insight</dd></div>
             <div data-reveal><dt>Languages</dt><dd>Native German · fluent English</dd></div>
@@ -227,7 +227,7 @@ export default function Home() {
             <article data-reveal>
               <span>Professional experience · Oct 2025 to present</span>
               <h3>Security Officer, Constant Security Services</h3>
-              <p>SIA licensed front of house cover at university sites in Manchester, held alongside full time study. The role depends on reliability, calm judgement and accurate incident and handover records.</p>
+              <p>SIA licensed officer working shifts at client sites around Manchester. The role depends on reliability, calm judgement and accurate incident and handover records.</p>
             </article>
             <article data-reveal>
               <span>Certifications · 2025</span>
