@@ -111,10 +111,20 @@ a.contact-row:hover { background: color-mix(in srgb, var(--accent) 5%, var(--bac
 .model-viewport--still img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .model-explorer--preview .model-controls a { color: #c7f58b; font-size: .875rem; text-decoration: underline; text-underline-offset: 3px; }
 
-/* Homepage hero: lazy loaded WebGL constellation, kept to the upper right and away from the text. */
-.hero-field { position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0; transition: opacity 1.4s var(--ease); -webkit-mask-image: radial-gradient(ellipse 50% 64% at 80% 28%, #000 30%, transparent 78%); mask-image: radial-gradient(ellipse 50% 64% at 80% 28%, #000 30%, transparent 78%); }
+/* Hero fields: lazy loaded WebGL motifs, kept to the upper right and away from the text. */
+.hero-field { position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0; transition: opacity 1.4s var(--ease); }
 .hero-field.is-ready { opacity: 1; }
 .hero-field canvas { display: block; width: 100%; height: 100%; }
-@media (max-width: 640px) { .hero-field { -webkit-mask-image: radial-gradient(ellipse 90% 42% at 62% 18%, #000 30%, transparent 85%); mask-image: radial-gradient(ellipse 90% 42% at 62% 18%, #000 30%, transparent 85%); } .hero-field.is-ready { opacity: .75; } }
+.hero-field--home { -webkit-mask-image: radial-gradient(ellipse 50% 64% at 80% 28%, #000 30%, transparent 78%); mask-image: radial-gradient(ellipse 50% 64% at 80% 28%, #000 30%, transparent 78%); }
+.hero-field--motif { -webkit-mask-image: radial-gradient(ellipse 46% 62% at 78% 30%, #000 35%, transparent 80%); mask-image: radial-gradient(ellipse 46% 62% at 78% 30%, #000 35%, transparent 80%); }
+.hero-field--corner { -webkit-mask-image: radial-gradient(ellipse 32% 54% at 89% 24%, #000 25%, transparent 76%); mask-image: radial-gradient(ellipse 32% 54% at 89% 24%, #000 25%, transparent 76%); }
+.hero-field--corner.is-ready { opacity: .75; }
+.contact-hero { position: relative; isolation: isolate; }
+@media (max-width: 640px) {
+  .hero-field--home { -webkit-mask-image: radial-gradient(ellipse 90% 42% at 62% 18%, #000 30%, transparent 85%); mask-image: radial-gradient(ellipse 90% 42% at 62% 18%, #000 30%, transparent 85%); }
+  .hero-field--motif, .hero-field--corner { -webkit-mask-image: radial-gradient(ellipse 85% 34% at 66% 16%, #000 25%, transparent 82%); mask-image: radial-gradient(ellipse 85% 34% at 66% 16%, #000 25%, transparent 82%); }
+  .hero-field.is-ready { opacity: .75; }
+  .hero-field--corner.is-ready { opacity: .6; }
+}
 @media (prefers-reduced-motion: reduce) { .hero-field { display: none; } }
 @media print { .hero-field { display: none; } }

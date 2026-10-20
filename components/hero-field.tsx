@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import type { Motif, MotifShape } from '@/lib/hero-motifs';
 
 type Three = typeof import('three');
 
@@ -22,25 +23,14 @@ function prefersSavingData() {
   return connection?.saveData === true;
 }
 
-// Seeded so the constellation has the same shape on every visit.
-function seededRandom(seed: number) {
-  let state = seed;
-  return () => {
-    state = (state + 0x6d2b79f5) | 0;
-    let value = Math.imul(state ^ (state >>> 15), 1 | state);
-    value = (value + Math.imul(value ^ (value >>> 7), 61 | value)) ^ value;
-    return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
 function token(styles: CSSStyleDeclaration, name: string, fallback: string) {
   return styles.getPropertyValue(name).trim() || fallback;
 }
 
-function createScene(T: Three, host: HTMLDivElement, count: number, onLost: () => void) {
+function createScene(T: Three, host: HTMLDivElement, shape: MotifShape, onLost: () => void) {
   const renderer = new T.WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'low-power' });
   try {
-    return buildField(T, renderer, host, count, onLost);
+    return buildField(T, renderer, host, shape, onLost);
   } catch (error) {
     renderer.dispose();
     renderer.forceContextLoss();
@@ -49,7 +39,7 @@ function createScene(T: Three, host: HTMLDivElement, count: number, onLost: () =
   }
 }
 
-function buildField(T: Three, renderer: InstanceType<Three['WebGLRenderer']>, host: HTMLDivElement, count: number, onLost: () => void) {
+function buildField(T: Three, renderer: InstanceType<Three['WebGLRenderer']>, host: HTMLDivElement, shape: MotifShape, onLost: () => void) {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = T.SRGBColorSpace;
@@ -64,35 +54,12 @@ function buildField(T: Three, renderer: InstanceType<Three['WebGLRenderer']>, ho
   const group = new T.Group();
   scene.add(group);
 
-  const random = seededRandom(20261020);
-  const points: Array<InstanceType<Three['Vector3']>> = [];
-  while (points.length < count) {
-    const x = random() * 2 - 1;
-    const y = random() * 2 - 1;
-    const z = random() * 2 - 1;
-    if (x * x + y * y + z * z > 1) continue;
-    points.push(new T.Vector3(x * 6, y * 3.6, z * 3));
-  }
-
-  const threshold = 1.9 * Math.cbrt(140 / count);
-  const degree = new Array<number>(count).fill(0);
-  const edges: number[] = [];
-  for (let a = 0; a < count; a += 1) {
-    for (let b = a + 1; b < count && degree[a] < 3; b += 1) {
-      if (degree[b] >= 3 || points[a].distanceTo(points[b]) > threshold) continue;
-      edges.push(...points[a].toArray(), ...points[b].toArray());
-      degree[a] += 1;
-      degree[b] += 1;
-    }
-  }
-
-  const highlightIndices = points.map((_, index) => index).filter((index) => index % 9 === 4);
-  const baseGeometry = new T.BufferGeometry().setFromPoints(points.filter((_, index) => index % 9 !== 4));
-  const highlightGeometry = new T.BufferGeometry().setFromPoints(highlightIndices.map((index) => points[index]));
-  const highlightColours = new Float32Array(highlightIndices.length * 3);
+  const toVectors = (points: MotifShape['points']) => points.map(([x, y, z]) => new T.Vector3(x, y, z));
+  const baseGeometry = new T.BufferGeometry().setFromPoints(toVectors(shape.points));
+  const highlightGeometry = new T.BufferGeometry().setFromPoints(toVectors(shape.highlights));
+  const highlightColours = new Float32Array(shape.highlights.length * 3);
   highlightGeometry.setAttribute('color', new T.BufferAttribute(highlightColours, 3));
-  const lineGeometry = new T.BufferGeometry();
-  lineGeometry.setAttribute('position', new T.Float32BufferAttribute(edges, 3));
+  const lineGeometry = new T.BufferGeometry().setFromPoints(toVectors(shape.segments));
 
   const spriteCanvas = document.createElement('canvas');
   spriteCanvas.width = 64;
@@ -110,7 +77,7 @@ function buildField(T: Three, renderer: InstanceType<Three['WebGLRenderer']>, ho
   sprite.colorSpace = T.SRGBColorSpace;
 
   const baseMaterial = new T.PointsMaterial({ size: 0.16, map: sprite, transparent: true, depthWrite: false });
-  const highlightMaterial = new T.PointsMaterial({ size: 0.3, map: sprite, transparent: true, depthWrite: false, vertexColors: true });
+  const highlightMaterial = new T.PointsMaterial({ size: shape.highlightSize, map: sprite, transparent: true, depthWrite: false, vertexColors: true });
   const lineMaterial = new T.LineBasicMaterial({ transparent: true, depthWrite: false });
   group.add(new T.LineSegments(lineGeometry, lineMaterial));
   group.add(new T.Points(baseGeometry, baseMaterial));
@@ -135,7 +102,7 @@ function buildField(T: Three, renderer: InstanceType<Three['WebGLRenderer']>, ho
     highlightMaterial.opacity = dark ? 1 : 0.85;
     lineMaterial.color.copy(accent);
     lineMaterial.opacity = dark ? 0.22 : 0.16;
-    highlightIndices.forEach((_, index) => {
+    shape.highlights.forEach((_, index) => {
       const colour = (index % 2 ? cyan : signal).clone();
       if (!dark) colour.lerp(accent, 0.4);
       colour.toArray(highlightColours, index * 3);
@@ -149,14 +116,10 @@ function buildField(T: Three, renderer: InstanceType<Three['WebGLRenderer']>, ho
     camera.updateProjectionMatrix();
     const halfHeight = Math.tan(T.MathUtils.degToRad(camera.fov / 2)) * camera.position.z;
     const halfWidth = halfHeight * camera.aspect;
-    // Keep the field to the upper right, away from the hero text in the lower left.
-    if (width < NARROW) {
-      group.position.set(halfWidth * 0.25, halfHeight * 0.45, 0);
-      group.scale.setScalar(0.75);
-    } else {
-      group.position.set(halfWidth * 0.42, halfHeight * 0.22, 0);
-      group.scale.setScalar(1);
-    }
+    // Each motif keeps to the upper right, away from the hero text in the lower left.
+    const placement = width < NARROW ? shape.narrow : shape.wide;
+    group.position.set(halfWidth * placement.x, halfHeight * placement.y, 0);
+    group.scale.setScalar(placement.scale);
   };
 
   const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
@@ -165,8 +128,14 @@ function buildField(T: Three, renderer: InstanceType<Three['WebGLRenderer']>, ho
     elapsed += delta;
     pointer.x += (pointer.targetX - pointer.x) * 0.04;
     pointer.y += (pointer.targetY - pointer.y) * 0.04;
-    group.rotation.y = 0.35 + elapsed * 0.035;
-    group.rotation.x = Math.sin(elapsed * 0.1) * 0.08;
+    if (shape.motion === 'spin') {
+      group.rotation.y = 0.35 + elapsed * 0.035;
+      group.rotation.x = Math.sin(elapsed * 0.1) * 0.08;
+    } else {
+      // Structured motifs sway rather than spin so their shape stays readable.
+      group.rotation.y = -0.35 + Math.sin(elapsed * 0.12) * 0.3;
+      group.rotation.x = 0.12 + Math.sin(elapsed * 0.09) * 0.05;
+    }
     camera.position.x = pointer.x * 0.8;
     camera.position.y = -pointer.y * 0.5;
     camera.lookAt(0, 0, 0);
@@ -190,7 +159,9 @@ function buildField(T: Three, renderer: InstanceType<Three['WebGLRenderer']>, ho
 
 type Field = ReturnType<typeof buildField>;
 
-export function HeroField() {
+const fieldKind = (motif: Motif) => (motif === 'constellation' ? 'home' : motif === 'corner' ? 'corner' : 'motif');
+
+export function HeroField({ motif = 'constellation' }: { motif?: Motif }) {
   const mount = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -252,9 +223,9 @@ export function HeroField() {
       }
       loading = true;
       try {
-        const T = await import('three');
+        const [T, { buildMotif }] = await Promise.all([import('three'), import('@/lib/hero-motifs')]);
         if (disposed || motion.matches || !inView) return;
-        field = createScene(T, host, host.clientWidth < NARROW ? 70 : 140, () => {
+        field = createScene(T, host, buildMotif(motif, host.clientWidth < NARROW), () => {
           failed = true;
           teardown();
         });
@@ -318,7 +289,7 @@ export function HeroField() {
       window.removeEventListener('pointermove', updatePointer);
       teardown();
     };
-  }, []);
+  }, [motif]);
 
-  return <div ref={mount} className="hero-field" aria-hidden="true" />;
+  return <div ref={mount} className={`hero-field hero-field--${fieldKind(motif)}`} aria-hidden="true" />;
 }

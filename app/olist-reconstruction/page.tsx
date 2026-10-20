@@ -4,6 +4,7 @@ import { SiteHeader } from '@/components/site-header';
 import { PageFooter } from '@/components/page-footer';
 import { NativeLink } from '@/components/native-link';
 import { OlistReconstructionDashboard } from '@/components/olist-reconstruction-dashboard';
+import { HeroField } from '@/components/hero-field';
 
 export const metadata: Metadata = {
   ...pageMetadata(
@@ -20,6 +21,7 @@ export default function OlistReconstructionPage() {
       <SiteHeader />
       <main id="main-content">
         <section className="page-hero">
+          <HeroField motif="corner" />
           <div className="shell">
             <small>Interactive analysis · MSc team project data</small>
             <h1>Olist, revisited.<br /><span>From source tables to decision ready evidence.</span></h1>

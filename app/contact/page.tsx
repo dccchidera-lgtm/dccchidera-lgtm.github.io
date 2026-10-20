@@ -3,6 +3,7 @@ import { pageMetadata } from '@/lib/page-metadata';
 import { CopyEmail } from '@/components/copy-email';
 import { NativeLink } from '@/components/native-link';
 import { SiteHeader } from '@/components/site-header';
+import { HeroField } from '@/components/hero-field';
 
 export const metadata = pageMetadata(
   'Contact',
@@ -20,6 +21,7 @@ export default function ContactPage() {
 
       <main id="main-content" className="contact-page">
         <section className="contact-hero">
+          <HeroField motif="corner" />
           <div className="shell">
             <p className="overline">Contact · Manchester, UK</p>
             <h1>

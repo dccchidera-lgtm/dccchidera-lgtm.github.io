@@ -2,6 +2,7 @@ import { pageMetadata } from '@/lib/page-metadata';
 import { SiteHeader } from '@/components/site-header';
 import { PageFooter } from '@/components/page-footer';
 import { NativeLink } from '@/components/native-link';
+import { HeroField } from '@/components/hero-field';
 
 export const metadata = pageMetadata(
   'How I work with AI | Independent workflow',
@@ -77,6 +78,7 @@ export default function AiWorkflowPage() {
       <SiteHeader />
       <main id="main-content">
         <section className="page-hero">
+          <HeroField motif="corner" />
           <div className="shell">
             <small>Independent workflow · set up October 2026</small>
             <h1>One lead model.<br /><span>Four specialists.</span></h1>

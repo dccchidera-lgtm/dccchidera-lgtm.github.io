@@ -2,6 +2,7 @@ import { pageMetadata } from '@/lib/page-metadata';
 import { NativeLink } from '@/components/native-link';
 import { PageFooter } from '@/components/page-footer';
 import { SiteHeader } from '@/components/site-header';
+import { HeroField } from '@/components/hero-field';
 
 export const metadata = pageMetadata(
   'MSc dissertation',
@@ -28,6 +29,7 @@ export default function DissertationPage() {
 
       <main id="main-content">
         <section className="page-hero research-hero">
+          <HeroField motif="corner" />
           <div className="shell">
             <small>MSc dissertation · individual research · submitted August 2026</small>
             <h1>
