@@ -87,7 +87,7 @@ export default function Home() {
             </h1>
             <div className="recruiter-actions">
               <NativeLink href="/work" className="button">Explore selected work</NativeLink>
-              <a href={publicPath('/Daniel_Christopher_Public_CV.pdf')} download>Download CV <span aria-hidden="true">↗</span></a>
+              <a href={publicPath('/Daniel%20Christopher%20CV.pdf')} download="Daniel Christopher CV.pdf">Download CV <span aria-hidden="true">↗</span></a>
               <NativeLink href="/contact">Contact Daniel</NativeLink>
             </div>
             <div className="hero-footer">

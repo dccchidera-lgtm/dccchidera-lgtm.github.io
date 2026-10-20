@@ -44,7 +44,7 @@ export default function ProfilePage() {
                 Marketing, bringing customer understanding, structured analysis and an
                 adaptable international perspective to early career roles.
               </p>
-              <div className="profile-opening-links"><a href={publicPath('/Daniel_Christopher_Public_CV.pdf')} download>Download CV ↗</a><NativeLink href="/contact">Get in touch ↗</NativeLink></div>
+              <div className="profile-opening-links"><a href={publicPath('/Daniel%20Christopher%20CV.pdf')} download="Daniel Christopher CV.pdf">Download CV ↗</a><NativeLink href="/contact">Get in touch ↗</NativeLink></div>
             </div>
           </div>
         </section>
