@@ -41,6 +41,41 @@ export function SiteEffects() {
 
     window.addEventListener('pointermove', updatePointer, { passive: true });
 
+    // Gentle hover tilt on [data-tilt] panels, for a fine mouse pointer only.
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    let tiltTarget: HTMLElement | null = null;
+    let tiltFrame = 0;
+    let tiltEvent: PointerEvent | null = null;
+    const resetTilt = () => {
+      if (tiltFrame) window.cancelAnimationFrame(tiltFrame);
+      tiltFrame = 0;
+      tiltEvent = null;
+      tiltTarget?.style.removeProperty('--tilt-x');
+      tiltTarget?.style.removeProperty('--tilt-y');
+      tiltTarget = null;
+    };
+    const applyTilt = () => {
+      tiltFrame = 0;
+      const event = tiltEvent;
+      if (!event) return;
+      const target = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-tilt]') : null;
+      if (target !== tiltTarget) resetTilt();
+      if (!target) return;
+      const rect = target.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      target.style.setProperty('--tilt-x', `${(x * 6).toFixed(2)}deg`);
+      target.style.setProperty('--tilt-y', `${(-y * 6).toFixed(2)}deg`);
+      tiltTarget = target;
+    };
+    const updateTilt = (event: PointerEvent) => {
+      if (motionPreference.matches || !finePointer.matches || event.pointerType !== 'mouse') return;
+      tiltEvent = event;
+      if (!tiltFrame) tiltFrame = window.requestAnimationFrame(applyTilt);
+    };
+    window.addEventListener('pointermove', updateTilt, { passive: true });
+    document.documentElement.addEventListener('pointerleave', resetTilt);
+
     const registered = new WeakSet<HTMLElement>();
     const observer = new IntersectionObserver(
       (entries) => {
@@ -84,6 +119,7 @@ export function SiteEffects() {
       if (!motionPreference.matches) return;
       if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
       pointerFrame = 0;
+      resetTilt();
       observer.disconnect();
       document.querySelectorAll<HTMLElement>('.reveal-pending').forEach((element) => {
         element.classList.add('is-revealed');
@@ -107,6 +143,9 @@ export function SiteEffects() {
       window.removeEventListener('scroll', updateProgress);
       window.removeEventListener('resize', updateProgress);
       window.removeEventListener('pointermove', updatePointer);
+      window.removeEventListener('pointermove', updateTilt);
+      document.documentElement.removeEventListener('pointerleave', resetTilt);
+      resetTilt();
       if (frame) window.cancelAnimationFrame(frame);
     };
   }, []);
