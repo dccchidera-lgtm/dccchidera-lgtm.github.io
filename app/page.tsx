@@ -1,6 +1,7 @@
 import { publicPath } from '@/lib/paths';
 import { ModelPreview } from '@/components/model-preview';
 import { CaseQuickIndex } from '@/components/case-quick-index';
+import { HeroField } from '@/components/hero-field';
 import { LoanRiskVisual } from '@/components/loan-risk-visual';
 import { NativeLink } from '@/components/native-link';
 import { SiteHeader } from '@/components/site-header';
@@ -73,6 +74,7 @@ export default function Home() {
 
       <main id="main-content">
         <section className="hero">
+          <HeroField />
           <div className="shell hero-inner">
             <div className="hero-kicker hero-reveal">
               <p className="overline">Business and data analyst · Manchester, UK · Remote or hybrid</p>
