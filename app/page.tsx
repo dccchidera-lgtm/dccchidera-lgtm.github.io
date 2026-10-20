@@ -1,6 +1,7 @@
 import { publicPath } from '@/lib/paths';
 import { ModelPreview } from '@/components/model-preview';
 import { CaseQuickIndex } from '@/components/case-quick-index';
+import { CountUp } from '@/components/count-up';
 import { HeroField } from '@/components/hero-field';
 import { LoanRiskVisual } from '@/components/loan-risk-visual';
 import { NativeLink } from '@/components/native-link';
@@ -59,9 +60,9 @@ const cases = [
 ];
 
 function ChapterVisual({ kind }: { kind: string }) {
-  if (kind === 'loan') return <div className="chapter-visual"><LoanRiskVisual compact /></div>;
+  if (kind === 'loan') return <div className="chapter-visual" data-tilt><LoanRiskVisual compact /></div>;
   const mode = kind === 'model' ? 'network' : kind === 'trust' ? 'trust' : 'data';
-  return <div className="chapter-visual chapter-visual--interactive"><ModelPreview mode={mode} /></div>;
+  return <div className="chapter-visual chapter-visual--interactive" data-tilt><ModelPreview mode={mode} /></div>;
 }
 
 export default function Home() {
@@ -127,19 +128,19 @@ export default function Home() {
         <section className="proof-strip" aria-label="Portfolio evidence at a glance">
           <div className="shell proof-grid">
             <article data-reveal>
-              <strong>06</strong>
+              <strong><CountUp value="06" /></strong>
               <span>analytics case studies</span>
             </article>
             <article data-reveal>
-              <strong>44,986</strong>
+              <strong><CountUp value="44,986" /></strong>
               <span>loan records in the credit risk study</span>
             </article>
             <article data-reveal>
-              <strong>100,000+</strong>
+              <strong><CountUp value="100,000+" /></strong>
               <span>ecommerce orders modelled in Power BI</span>
             </article>
             <article data-reveal>
-              <strong>2 / 4</strong>
+              <strong><CountUp value="2 / 4" /></strong>
               <span>individual / team cases, each clearly attributed</span>
             </article>
           </div>
