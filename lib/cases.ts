@@ -145,7 +145,7 @@ export const cases: CaseStudy[] = [
       'We wrote seven analytical queries, including window functions to rank merchants by rating within each city and aggregations to segment performance by price tier.',
     ],
     evidence:
-      'The submitted coursework identifies 997 missing delivery fee values out of 1,000 merchant records (99.7%) Review ratings were missing for 58.2%, and 98.6% of merchants were recorded as closed; with a single scan date for every record, genuine closures could not be told apart from merchants that were simply closed at scan time. The proposed six table schema and seven analytical queries were designed to make pricing, performance benchmarking and promotion analysis reliable.',
+      'The submitted coursework identifies 997 missing delivery fee values out of 1,000 merchant records (99.7%). Review ratings were missing for 58.2%, and 98.6% of merchants were recorded as closed; with a single scan date for every record, genuine closures could not be told apart from merchants that were simply closed at scan time. The proposed six table schema and seven analytical queries were designed to make pricing, performance benchmarking and promotion analysis reliable.',
     implications: [
       'Agree the business entities and relationships before building reports on top of them.',
       'Use the same business rules in the conceptual model and the implemented schema.',
@@ -162,7 +162,7 @@ export const cases: CaseStudy[] = [
   {
     slug: 'ecommerce-bi',
     name: 'Ecommerce Business Intelligence',
-    label: 'MSc team project',
+    label: 'Four person MSc team project',
     title: 'Preparing ecommerce data for delivery and customer reporting',
     lead:
       'Our MSc team cleaned the Olist ecommerce data and built a nine table Power BI model, eight linked source tables plus a DAX date table, to report on delivery performance, seller activity and customer satisfaction.',

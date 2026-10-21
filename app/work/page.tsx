@@ -108,7 +108,7 @@ export default function WorkPage() {
             <p className="overline">Attribution matters</p>
             <div>
               <p>
-                Two cases are individual projects and four are team projects. The credit risk, data management and decision modelling projects were completed in four person teams with shared responsibilities; the ecommerce BI project was also shared work.
+                Two cases are individual projects and four are team projects. The credit risk, data management, decision modelling and ecommerce BI projects were all completed in four person teams with shared responsibilities.
               </p>
               <p>
                 Group outputs are always described as “our team’s work.”

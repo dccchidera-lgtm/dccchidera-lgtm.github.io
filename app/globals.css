@@ -660,11 +660,6 @@ html[data-scrolled] .site-header {
   background: var(--accent);
 }
 
-.proof-strip {
-  padding: 0 0 clamp(5rem, 9vw, 9rem);
-  background: var(--background);
-}
-
 .candidate-facts {
   padding: clamp(2rem, 4vw, 4rem) 0 0;
   background: var(--background);
@@ -745,7 +740,7 @@ html[data-scrolled] .site-header {
 .quick-index-header,
 .quick-index-row {
   display: grid;
-  grid-template-columns: 1.05fr 1.45fr 1.25fr 1.35fr 0.72fr;
+  grid-template-columns: 1.05fr 1.45fr 1.7fr 0.72fr;
   gap: 1.25rem;
   align-items: start;
 }
@@ -826,51 +821,6 @@ html[data-scrolled] .site-header {
   text-underline-offset: 0.25rem;
 }
 
-.proof-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--separator);
-  border-bottom: 1px solid var(--separator);
-}
-
-.proof-grid article {
-  min-height: 170px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.25rem;
-  border-right: 1px solid var(--separator);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.proof-grid article:last-child {
-  border-right: 0;
-}
-
-.proof-grid article:hover {
-  background: var(--accent-solid);
-  color: var(--accent-solid-text);
-}
-
-.proof-grid strong {
-  font-family: var(--display-serif);
-  font-size: clamp(2.7rem, 5vw, 5rem);
-  font-style: italic;
-  font-weight: 400;
-  line-height: 0.9;
-  letter-spacing: -0.06em;
-}
-
-.proof-grid span {
-  max-width: 150px;
-  color: var(--secondary-label);
-  font-size: 0.64rem;
-}
-
-.proof-grid article:hover span {
-  color: var(--accent-solid-muted);
-}
-
 .signal-marquee {
   overflow: hidden;
   border-top: 1px solid var(--separator);
@@ -942,6 +892,12 @@ html[data-scrolled] .site-header {
 .chapter-link,
 .footer-bottom a {
   color: var(--link);
+}
+
+.chapter p.chapter-analyst {
+  margin-top: 0.75rem;
+  color: var(--tertiary-label);
+  font-size: 0.78rem;
 }
 
 .arrow-link,
@@ -4382,18 +4338,6 @@ a.contact-row:hover {
     margin-top: 1rem;
   }
 
-  .proof-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .proof-grid article:nth-child(2) {
-    border-right: 0;
-  }
-
-  .proof-grid article:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--separator);
-  }
-
   .candidate-facts-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -4426,7 +4370,8 @@ a.contact-row:hover {
     padding: 1.75rem 0;
   }
 
-  .quick-index-row > div {
+  .quick-index-row > div,
+  .quick-index-row > p:nth-of-type(2) {
     grid-column: 1 / -1;
   }
 
@@ -5017,8 +4962,10 @@ a.contact-row:hover {
     font-size: clamp(3.5rem, 18vw, 5rem);
   }
 
-  .hero-kicker > span {
-    display: none;
+  .hero-kicker {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
 
   .profile-navigator a {
@@ -5105,21 +5052,6 @@ a.contact-row:hover {
   .hero-footer p,
   .chapter p {
     font-size: 0.88rem;
-  }
-
-  .proof-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .proof-grid article,
-  .proof-grid article:nth-child(2) {
-    min-height: 135px;
-    border-right: 0;
-    border-bottom: 1px solid var(--separator);
-  }
-
-  .proof-grid article:last-child {
-    border-bottom: 0;
   }
 
   .principle p {
