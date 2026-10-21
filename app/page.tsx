@@ -216,7 +216,7 @@ export default function Home() {
               <p>SIA licensed officer working shifts at client sites around Manchester. The role depends on reliability, calm judgement and accurate incident and handover records.</p>
             </article>
             <article data-reveal>
-              <span>Certifications · 2025</span>
+              <span>Certifications · 2024 to 2025</span>
               <h3>Google Data Analytics and more</h3>
               <p>Google Data Analytics Professional Certificate, Google Analytics (GA4), HackerRank SQL (Basic), DMI Certified Digital Marketing Associate and HubSpot Content Marketing.</p>
               <NativeLink className="arrow-link" href="/profile">View profile and credentials</NativeLink>

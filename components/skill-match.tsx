@@ -22,7 +22,7 @@ const skills: Skill[] = [
     label: 'Power BI & DAX',
     keywords: ['power bi', 'powerbi', 'dax', 'power query', 'dashboard', 'dashboards', 'tableau', 'bi', 'business intelligence', 'visualisation', 'visualization', 'reporting'],
     proof: [
-      { title: 'Ecommerce Business Intelligence', detail: 'Nine linked tables and 100,000+ orders cleaned and modelled in Power Query, with DAX measures and report pages.', ownership: 'MSc team project', href: '/powerbi' },
+      { title: 'Ecommerce Business Intelligence', detail: 'Eight linked tables and 98,582 orders cleaned and modelled in Power Query, with DAX measures and report pages.', ownership: 'MSc team project', href: '/powerbi' },
       { title: 'Olist, revisited', detail: 'Interactive dashboard built from the cleaned workbook of 98,582 orders.', ownership: 'Independent follow on', href: '/olist-reconstruction' },
     ],
   },

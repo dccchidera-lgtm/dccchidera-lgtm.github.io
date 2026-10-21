@@ -365,9 +365,8 @@ export default function ProfilePage() {
               <li><span>01</span>Google Data Analytics Professional Certificate</li>
               <li><span>02</span>HackerRank SQL (Basic)</li>
               <li><span>03</span>Google Analytics (GA4)</li>
-              <li><span>04</span>Microsoft Power BI</li>
-              <li><span>05</span>DMI Certified Digital Marketing Associate</li>
-              <li><span>06</span>HubSpot Content Marketing</li>
+              <li><span>04</span>DMI Certified Digital Marketing Associate</li>
+              <li><span>05</span>HubSpot Content Marketing</li>
             </ul>
           </div>
         </section>
