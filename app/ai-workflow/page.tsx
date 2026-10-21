@@ -6,7 +6,7 @@ import { HeroField } from '@/components/hero-field';
 
 export const metadata = pageMetadata(
   'How I work with AI | Independent workflow',
-  'How this portfolio is built and maintained with a small AI team: Claude Opus 5.5 leads, OpenAI Codex writes code, and Claude Sonnet 5.5 helpers research, review and write.',
+  'How this portfolio is built and maintained with a small AI team: Claude Opus 5.5 leads, OpenAI Codex is set up to write code, and Claude Sonnet 5.5 helpers research, review and write.',
   '/ai-workflow/',
 );
 
@@ -26,7 +26,7 @@ const helpers: Helper[] = [
     role: 'Coder',
     provider: 'openai',
     model: 'OpenAI Codex',
-    job: 'Writes the code.',
+    job: 'Writes the code once connected.',
     examples: ['New pages and features', 'Changes across many files', 'Hard bugs'],
     access: 'Edits files',
   },
@@ -59,14 +59,14 @@ const helpers: Helper[] = [
 const steps = [
   { who: 'Opus', title: 'Plans the job', detail: 'Works out what a new case study page needs and which files it touches.' },
   { who: 'Researcher', title: 'Gathers context', detail: 'Pulls the project notes and shows how existing case pages are built.' },
-  { who: 'Codex', title: 'Builds it', detail: 'Receives a full written brief and writes the page code.' },
+  { who: 'Codex', title: 'Builds it', detail: 'Is given a full written brief and writes the page code once connected.' },
   { who: 'Reviewer', title: 'Checks it', detail: 'Runs the site checks and lists anything that is broken or unclear.' },
   { who: 'Opus and me', title: 'Signs it off', detail: 'Opus fixes what was flagged and reports back. I read it before it goes live.' },
 ];
 
 const reasons = [
   { label: 'Specialists', title: 'Each model does the job it is best at.', body: 'A coding agent handles code, a fast model handles research and review, and the strongest model is kept for planning and judgement.' },
-  { label: 'Independent checks', title: 'The builder never marks its own work.', body: 'Every change Codex makes is checked by a separate reviewer before it is committed, the way a second analyst would check a model.' },
+  { label: 'Independent checks', title: 'The builder never marks its own work.', body: 'Every change is checked by a separate reviewer before it is committed, the way a second analyst would check a model.' },
   { label: 'Parallel work', title: 'Research and review run at the same time.', body: 'Helpers that do not depend on each other work side by side, so a task takes the time of its slowest step rather than the sum of them all.' },
   { label: 'Accountability', title: 'I stay responsible for what is published.', body: 'The rules the team follows are written down in the repository, and nothing reaches the live site without passing the build checks and my review.' },
 ];
@@ -146,7 +146,7 @@ export default function AiWorkflowPage() {
         <section className="shell site-build-close">
           <p className="overline">What this does not claim</p>
           <h2>The AI does not choose my work or my conclusions.</h2>
-          <p>The models write code and drafts when asked. I choose what to build, read changes before they are published, and the ownership of each case study is stated on its own page. When this page launched in October 2026, Codex was not yet connected, so Opus built it directly with my approval.</p>
+          <p>The models write code and drafts when asked. I choose what to build, read changes before they are published, and the ownership of each case study is stated on its own page. Codex is set up as the coder but has not yet run on this site. So far, Opus has built every change directly with my approval.</p>
           <div className="site-build-links ai-close-links">
             <a className="arrow-link" href={rulesUrl} target="_blank" rel="noopener noreferrer">Read the team&rsquo;s rules ↗</a>
             <NativeLink className="arrow-link" href="/site-build">See how the site was built ↗</NativeLink>
