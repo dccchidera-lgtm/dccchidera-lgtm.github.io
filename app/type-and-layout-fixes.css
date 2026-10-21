@@ -20,7 +20,7 @@ main :is(p, li, dd, figcaption) { overflow-wrap: break-word; }
 }
 .hero-title { max-width: 100%; line-height: 1.06; }
 .hero-title > span { display: block; min-width: 0; }
-.hero-title .secondary { max-width: min(100%, 19ch); line-height: 1.14; text-wrap: pretty; }
+.hero-title .secondary { max-width: min(100%, 34ch); font-size: clamp(1.65rem, 3.5vw, 3rem); line-height: 1.14; text-wrap: pretty; }
 .chapter-copy h2 { max-width: 16ch; line-height: 1.07; text-wrap: pretty; }
 .chapter-copy h2 span { line-height: 1.12; }
 .chapter-copy p { max-width: 61ch; }

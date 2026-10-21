@@ -1,7 +1,6 @@
 import { publicPath } from '@/lib/paths';
 import { ModelPreview } from '@/components/model-preview';
 import { CaseQuickIndex } from '@/components/case-quick-index';
-import { CountUp } from '@/components/count-up';
 import { HeroField } from '@/components/hero-field';
 import { LoanRiskVisual } from '@/components/loan-risk-visual';
 import { NativeLink } from '@/components/native-link';
@@ -14,7 +13,9 @@ const cases = [
     title: 'Testing what drives',
     muted: 'loan affordability risk',
     description:
-      'A four person team analysis of 44,986 loan records in SPSS: a data audit, correlation and multiple regression (R² .617) showing that credit score and interest rate were not significant once other factors were included.',
+      'Our four person team tested what makes a loan hard to afford for a borrower. Loan size and income explained it far better than credit score or interest rate, which were not significant once other factors were counted. Assessed coursework on 44,986 public loan records.',
+    analyst:
+      'SPSS multiple regression on 44,986 loan records; R² .617, credit score not significant.',
     type: 'Team project',
     href: '/credit-risk',
     linkLabel: 'View case study and try the what if model',
@@ -27,7 +28,9 @@ const cases = [
     title: 'Examining trust in the relationship',
     muted: 'between personalisation and loyalty',
     description:
-      'My individual MSc dissertation: an ethically approved survey of 139 UK online shoppers, showing that trust carried the link between AI personalisation and loyalty.',
+      'My individual MSc dissertation, an ethically approved survey of 139 UK online shoppers, found that AI personalisation was linked to loyalty largely through trust. A survey shows links, not cause.',
+    analyst:
+      'Qualtrics survey, 139 responses, bootstrapped mediation; indirect effect .303, 95% interval .199 to .422.',
     type: 'Individual dissertation',
     href: '/research-case',
     visual: 'trust',
@@ -39,7 +42,9 @@ const cases = [
     title: 'Comparing churn models',
     muted: 'for targeted retention decisions',
     description:
-      'An individual comparison of three churn classifiers in SAS Enterprise Miner on 4,000 gym members. The neural network reached 95.6% validation accuracy, and early tenure emerged as the main churn driver.',
+      'Of three ways to predict which gym members might leave, a neural network was the most accurate, at 95.6% on data held back for checking. Early membership stood out as the main warning sign. My individual project, not deployed.',
+    analyst:
+      'SAS Enterprise Miner, 4,000 records; tree, logistic regression, neural network; 95.6% validation accuracy.',
     type: 'Individual project',
     href: '/churn',
     visual: 'model',
@@ -51,7 +56,9 @@ const cases = [
     title: 'Translating business data flows',
     muted: 'into a documented SQL prototype',
     description:
-      'A four person team audit of 1,000 merchant records (99.7% of delivery fees missing), followed by a normalised six table schema and analytical SQL queries.',
+      'Our four person team found 99.7% of delivery fees missing from 1,000 merchant records, then designed a six table database and SQL queries so reporting could be reliable. Assessed coursework, a documented prototype.',
+    analyst:
+      'Data audit of 1,000 records, normalised six table design, seven SQL queries with window functions.',
     type: 'Team project',
     href: '/sql',
     visual: 'data',
@@ -78,7 +85,7 @@ export default function Home() {
           <HeroField />
           <div className="shell hero-inner">
             <div className="hero-kicker hero-reveal">
-              <p className="overline">Business and data analyst · Manchester, UK · Remote or hybrid</p>
+              <p className="overline">Business and data analyst · Manchester, UK · Full UK right to work</p>
               <span><i /> Available now for remote or hybrid analyst roles</span>
             </div>
             <h1 className="hero-title">
@@ -93,8 +100,7 @@ export default function Home() {
             <div className="hero-footer">
               <div className="hero-intro hero-reveal">
                 <p>
-                  From loan risk regression and churn models to SQL data audits and Power BI
-                  reporting, I check the data first and then explain what it means for the decision.
+                  I check that business data can be trusted, find what it shows, and explain what it means for the decision. My projects cover loan risk, customer loyalty, gym members leaving, data quality and business reporting.
                 </p>
                 <a className="arrow-link" href="#case-index">
                   Compare the case studies
@@ -123,27 +129,6 @@ export default function Home() {
             <div data-reveal><dt>Focus</dt><dd>Performance · risk · BI reporting · customer insight</dd></div>
             <div data-reveal><dt>Languages</dt><dd>Native German · fluent English</dd></div>
           </dl>
-        </section>
-
-        <section className="proof-strip" aria-label="Portfolio evidence at a glance">
-          <div className="shell proof-grid">
-            <article data-reveal>
-              <strong><CountUp value="06" /></strong>
-              <span>analytics case studies</span>
-            </article>
-            <article data-reveal>
-              <strong><CountUp value="44,986" /></strong>
-              <span>loan records in the credit risk study</span>
-            </article>
-            <article data-reveal>
-              <strong><CountUp value="100,000+" /></strong>
-              <span>ecommerce orders modelled in Power BI</span>
-            </article>
-            <article data-reveal>
-              <strong><CountUp value="2 / 4" /></strong>
-              <span>individual / team cases, each clearly attributed</span>
-            </article>
-          </div>
         </section>
 
         <section className="tools-section" id="skills" aria-labelledby="skills-title">
@@ -209,6 +194,7 @@ export default function Home() {
                     <span>{item.muted}</span>
                   </h2>
                   <p>{item.description}</p>
+                  <p className="chapter-analyst">{item.analyst}</p>
                   <NativeLink className="chapter-link" href={item.href}>
                     {'linkLabel' in item ? item.linkLabel : 'View case study'}
                   </NativeLink>

@@ -6,8 +6,7 @@ const caseRows = [
     name: 'Credit Risk Analytics',
     href: '/credit-risk',
     question: 'Which factors are associated with loan affordability risk?',
-    method: 'Data audit · correlation · multiple regression',
-    evidence: '44,986 records · R² .617 · credit score not significant',
+    found: 'Loan size and income mattered most; credit score and interest rate showed no significant effect.',
     ownership: 'Four person team',
   },
   {
@@ -15,17 +14,15 @@ const caseRows = [
     name: 'Decision Intelligence',
     href: '/decisions',
     question: 'Which store configuration best supports the management objective?',
-    method: 'Data audit · dashboard · scenarios · optimisation',
-    evidence: '60 to 70% margin range stress tested before the recommendation',
+    found: 'Tested margin scenarios from 60% to 70% before recommending a store location and setup.',
     ownership: 'Four person team',
   },
   {
     number: '03',
     name: 'Customer Intelligence',
     href: '/research-case',
-    question: 'Does trust mediate the association between personalisation and loyalty?',
-    method: 'Survey · EFA · robust regression · mediation',
-    evidence: 'Indirect effect .303 · 95% CI [.199, .422]',
+    question: 'Is the link between AI personalised shopping and customer loyalty carried by trust?',
+    found: 'Personalisation was linked to loyalty largely through trust, in a survey of 139 shoppers.',
     ownership: 'Individual dissertation',
   },
   {
@@ -33,27 +30,24 @@ const caseRows = [
     name: 'Data Management',
     href: '/sql',
     question: 'How can clearer data structure support reliable reporting?',
-    method: 'Data flow diagram · ERD · SQL prototype',
-    evidence: '99.7% of delivery fees missing · six table schema',
+    found: 'Almost all delivery fees were missing; we designed a six table database for reliable reporting.',
     ownership: 'Four person team',
   },
   {
     number: '05',
     name: 'Predictive Analytics',
     href: '/churn',
-    question: 'Which classifier best identifies members at risk of churn?',
-    method: 'Three classifiers · 40 / 30 / 30 partition',
-    evidence: 'Neural network · 4.42% validation misclassification',
+    question: 'Which of three prediction methods best spots gym members at risk of leaving?',
+    found: 'A neural network spotted likely leavers best, 95.6% accurate on held back checking data.',
     ownership: 'Individual project',
   },
   {
     number: '06',
     name: 'Ecommerce Business Intelligence',
     href: '/powerbi',
-    question: 'How can related ecommerce data support reliable cross table reporting?',
-    method: 'Power Query · Power BI · DAX · team analysis',
-    evidence: 'Nine tables · 100,000+ orders · Power BI dashboard',
-    ownership: 'MSc team project',
+    question: 'How can ecommerce data spread across linked tables support reliable reporting?',
+    found: 'Inconsistent data had to be cleaned before delivery, seller and customer figures could be compared.',
+    ownership: 'Four person team',
   },
 ];
 
@@ -66,8 +60,7 @@ export function CaseQuickIndex() {
           <h2 id="quick-index-title">Six case studies compared in one view.</h2>
         </div>
         <p>
-          Each row identifies the business question, method, strongest evidence and
-          ownership before you open the full case study.
+          Each row gives the business question, what the work found and who did it, before you open the full case study.
         </p>
       </div>
 
@@ -75,8 +68,7 @@ export function CaseQuickIndex() {
         <div className="quick-index-header" role="row">
           <span role="columnheader">Case</span>
           <span role="columnheader">Business question</span>
-          <span role="columnheader">Method</span>
-          <span role="columnheader">Selected evidence</span>
+          <span role="columnheader">What it found</span>
           <span role="columnheader">Ownership</span>
         </div>
         {caseRows.map((item) => (
@@ -86,8 +78,7 @@ export function CaseQuickIndex() {
               <NativeLink href={item.href}>{item.name}</NativeLink>
             </div>
             <p role="cell" data-label="Business question">{item.question}</p>
-            <p role="cell" data-label="Method">{item.method}</p>
-            <p role="cell" data-label="Selected evidence">{item.evidence}</p>
+            <p role="cell" data-label="What it found">{item.found}</p>
             <small role="cell" data-label="Ownership">{item.ownership}</small>
           </article>
         ))}
