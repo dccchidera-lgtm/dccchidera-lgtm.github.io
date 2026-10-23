@@ -71,7 +71,7 @@ export default function CottonAndCrumbPage() {
           <article>
             <span>02 / Motion</span>
             <h2>Editorial motion, with fallbacks.</h2>
-            <p>A pinned scroll Process section in a dark night bake style includes a 36 hour proofing dial. A scroll speed marquee, self drawing line illustrations, word by word heading reveals, parallax and page transitions add character, and each one has a reduced motion fallback.</p>
+            <p>A pinned scroll Process section in a dark night bake style includes a 36 hour proofing dial. Self drawing line illustrations, word by word heading reveals, parallax and page transitions add character, and each one has a reduced motion fallback.</p>
           </article>
           <article>
             <span>03 / Engineering</span>
