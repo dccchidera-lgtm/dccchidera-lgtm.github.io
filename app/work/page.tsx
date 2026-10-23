@@ -44,7 +44,7 @@ export default function WorkPage() {
             <p className="overline">Digital builds & independent work</p>
             <div className="work-digital-heading">
               <h2 id="work-digital-title">Building and analysing beyond the classroom.</h2>
-              <p>A website I designed and deployed, a rebuilt ecommerce dashboard and reproducible public data work.</p>
+              <p>A website I designed and deployed, a bakery preorder study, a rebuilt ecommerce dashboard and reproducible public data work.</p>
             </div>
             <div className="work-digital-grid">
               <article>
@@ -64,6 +64,12 @@ export default function WorkPage() {
                 <h3>Olist, revisited</h3>
                 <p>Interactive ecommerce reporting built in Python from our team’s cleaned workbook of 98,582 orders.</p>
                 <NativeLink className="arrow-link" href="/olist-reconstruction">Explore the dashboard ↗</NativeLink>
+              </article>
+              <article>
+                <span>04 · Independent design and engineering study</span>
+                <h3>Cotton & Crumb bakery</h3>
+                <p>A fictional Manchester sourdough bakery with an editorial site and a working preorder system, built with React, TypeScript and GSAP and no backend.</p>
+                <NativeLink className="arrow-link" href="/cotton-and-crumb">Explore the build ↗</NativeLink>
               </article>
             </div>
           </div>

@@ -16,6 +16,7 @@ const destinations = [
   { label: 'How I work with AI', detail: 'Claude Opus 5.5 leads, Codex is set up as the coder, Claude helpers research, review and write', href: '/ai-workflow', type: 'Page' },
   { label: 'Restaurant service mix', detail: 'Independent public data Python analysis and reproducible code', href: '/service-mix', type: 'Independent project' },
   { label: 'Olist dashboard', detail: 'Interactive order, delivery and category reporting from the cleaned workbook', href: '/olist-reconstruction', type: 'Interactive analysis' },
+  { label: 'Cotton & Crumb bakery', detail: 'Fictional bakery site with a working preorder system, built with React and GSAP', href: '/cotton-and-crumb', type: 'Digital project' },
   { label: 'MSc dissertation', detail: 'AI personalisation, trust and loyalty: method and results', href: '/dissertation', type: 'Page' },
   { label: 'Profile', detail: 'Bilingual background, skills and credentials', href: '/profile', type: 'Page' },
   { label: 'Digital Marketing', detail: 'Customer context, measurement and strategy', href: '/profile#marketing-foundation', type: 'Profile section' },

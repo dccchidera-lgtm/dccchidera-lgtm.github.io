@@ -21,6 +21,7 @@ const routes = [
   "/ai-workflow",
   "/service-mix",
   "/olist-reconstruction",
+  "/cotton-and-crumb",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
