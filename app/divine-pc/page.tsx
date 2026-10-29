@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     description: "Your PC. Eight carefully selected parts. One clear shopping list. Built for 1440p gaming and future upgrades.",
     url: siteUrl,
     type: "website",
+    images: [{ url: "https://pcbuild.bg/assets/products/000/000/328/000000328839--kutiya-montech-air-100-lite-micro-atx-case-tg-white.jpg", alt: "Divine Ojiaku gaming PC build" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Divine Ojiaku | Your Gaming PC",
+    description: "Eight carefully chosen PC parts with prices, pictures and shops. Built for Divine.",
+    images: ["https://pcbuild.bg/assets/products/000/000/328/000000328839--kutiya-montech-air-100-lite-micro-atx-case-tg-white.jpg"],
   },
 };
 
